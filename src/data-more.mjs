@@ -29,7 +29,7 @@ export const apps = [
     who: ['People with a USCIS case, and employers who track petitions', 'Personas con un caso de USCIS y empleadores que siguen peticiones'],
   },
   {
-    slug: 'recalert', name: 'Recalert', icon: null, letter: 'R', thumb: null, panel: { bg: '#0b1220', fg: '#ffffff', sub: 'CPSC · FSIS · NHTSA · FDA' },
+    slug: 'recalert', name: 'Recalert', icon: 'recalert-icon.webp', thumb: 'recalert-thumb.webp',
     site: 'https://recalert.us', status: 'web',
     desc: ['Product recall lookup and nightly inventory checks for U.S. businesses, across CPSC, FSIS, NHTSA and FDA.', 'Búsqueda de retiros de producto y revisión nocturna de inventario para negocios en EE.UU., en CPSC, FSIS, NHTSA y FDA.'],
     who: ['Retailers, distributors and anyone who sells physical products', 'Tiendas, distribuidores y quien vende productos físicos'],
