@@ -1,0 +1,65 @@
+# VARGERSOFT
+
+> VARGERSOFT is the software division of VARGER Group LLC (Conroe, Texas, USA). It builds bilingual (English/Spanish) AI agents, apps and AI-ready websites for small and mid-size businesses, at fixed prices. Contact: sales@vargersoft.com.
+
+Prices in USD. AI agents are set up in 7 business days and billed month to month. A Spanish version of every page is under /es/.
+
+## AI agents and services
+
+- [AI Agents for Small and Mid-Size Businesses](https://www.vargersoft.com/ai/): Eight AI services that answer calls and chats, book appointments, send quotes, follow up and make your business readable to AI. English and Spanish. Prices on the page.
+- [AI Phone Receptionist for Small Business](https://www.vargersoft.com/ai/ai-receptionist/): A natural-sounding AI receptionist that answers every call in English or Spanish, books appointments and takes messages. $1,950 setup + $349/month.
+- [Website AI Assistant and Chatbot](https://www.vargersoft.com/ai/website-assistant/): An AI chat assistant for your website that answers questions, captures leads and books appointments in English and Spanish. $850 setup + $179/month.
+- [AI Appointment Scheduling Agent](https://www.vargersoft.com/ai/appointment-agent/): An AI agent that books, confirms and reschedules appointments by phone and text in English and Spanish. $1,450 setup + $249/month.
+- [AI Quote and Lead Follow-up Agent](https://www.vargersoft.com/ai/quote-follow-up-agent/): An AI agent that answers SMS and WhatsApp, sends quotes and follows up with every lead in English and Spanish. $2,450 setup + $399/month.
+- [AI Payment Reminder Agent](https://www.vargersoft.com/ai/collections-agent/): An AI agent that sends polite, scheduled payment reminders to your own customers by voice, text and email. $1,250 setup + $229/month.
+- [AI-Ready Website Design and Updates](https://www.vargersoft.com/ai/ai-ready-websites/): We build or update your website so Google, ChatGPT and other AI assistants can read every page: fast, bilingual and structured. New site $2,450, update $1,250.
+- [AI Visibility: GEO and AEO Services](https://www.vargersoft.com/ai/ai-visibility/): GEO and AEO for small business: structured data, answer-ready content and monthly tracking so AI assistants can read and cite you. $1,500 setup + $299/month.
+- [Agent-Ready Websites: MCP and WebMCP Setup](https://www.vargersoft.com/ai/agent-ready-websites/): We prepare your website for AI agents: an MCP server for your catalog and bookings, WebMCP tools on your pages and clean machine-readable data. $1,950 setup + $199/month.
+
+## Prices
+
+- AI Phone Receptionist: Setup $1,950 (one time), Monthly service $349 (per month)
+- Website AI Assistant: Setup $850 (one time), Monthly service $179 (per month)
+- Appointment Agent: Setup $1,450 (one time), Monthly service $249 (per month)
+- Quote & Follow-up Agent: Setup $2,450 (one time), Monthly service $399 (per month)
+- Payment Reminder Agent: Setup $1,250 (one time), Monthly service $229 (per month)
+- AI-Ready Websites: New website $2,450 (one time), Update of an existing website $1,250 (one time), Care plan (optional) $149 (per month)
+- AI Visibility (GEO): Setup $1,500 (one time), Monthly service $299 (per month)
+- Agent-Ready Websites: Setup $1,950 (one time), Monthly service $199 (per month)
+
+## Apps built by VARGERSOFT
+
+- [DERATE](https://www.derate.app): Photograph a truck dashboard or scanner and get the fault code cause, urgency and estimated cost.
+- [Paternoster](https://praypaternoster.com): Pray and listen to the Our Father in five languages, with words that light up as they are spoken.
+- [Fresh or Toss](https://freshortoss.app): Search any of 695 foods and see how long it lasts in the fridge, freezer or pantry, with a reminder before it runs out.
+- [CaseAlerta](https://casealerta.com): Plain-Spanish explanations of your USCIS case status, with alerts when it changes.
+- [Recalert](https://recalert.us): Product recall lookup and nightly inventory checks for U.S. businesses, across CPSC, FSIS, NHTSA and FDA.
+- [SignatureForever](https://signatureforever.com): A polished email signature in about two minutes that looks the same in Gmail, Outlook and Apple Mail.
+- [Scorlee](https://scorlee.com): Shows renters how many months of rent could count toward their credit. No SSN or bank needed to start.
+- [BajaBill](https://bajabill.com): AI review of hospital bills for overcharges, in Spanish and English, for Latino families in the U.S.
+
+## Guides
+
+- [Resources: Plain Guides on AI for Business](https://www.vargersoft.com/resources/): Plain-language guides on AI receptionists, SEO, AEO and GEO, llms.txt, MCP and WebMCP, and what a small business should automate first.
+- [How much does an AI receptionist cost for a small business?](https://www.vargersoft.com/resources/ai-receptionist-cost-small-business/): What you pay for an AI phone receptionist: setup, monthly fee and minutes, with VARGERSOFT prices and the questions to ask any provider.
+- [AI receptionist vs. answering service vs. hiring: which fits?](https://www.vargersoft.com/resources/ai-receptionist-vs-answering-service-vs-hiring/): A plain comparison of an AI receptionist, a live answering service and a hired receptionist: hours, languages, what each handles well and where each falls short.
+- [How to answer business calls in English and Spanish without hiring](https://www.vargersoft.com/resources/answer-business-calls-in-english-and-spanish/): Four ways a small business can answer callers in English and Spanish, from a phone menu to an AI receptionist that detects the language on its own.
+- [SEO vs. AEO vs. GEO: what each one means](https://www.vargersoft.com/resources/seo-vs-aeo-vs-geo/): SEO, AEO and GEO explained in plain words: what each one optimizes for, how they overlap and what a small business should do first.
+- [What is llms.txt, and does your website need it?](https://www.vargersoft.com/resources/what-is-llms-txt/): llms.txt explained honestly: what the file is, who proposed it, what the 2026 evidence says about AI crawlers using it, and what matters more.
+- [What are MCP and WebMCP, in plain words?](https://www.vargersoft.com/resources/what-is-mcp-and-webmcp/): MCP and WebMCP explained for business owners: what each one does, how they differ, what works today and what is still an early draft.
+- [How to prepare your website for AI agents](https://www.vargersoft.com/resources/how-to-prepare-your-website-for-ai-agents/): A practical checklist to make a business website usable by AI assistants and agents: readable pages, structured data, open crawler rules and clear actions.
+- [What should a small business automate first?](https://www.vargersoft.com/resources/what-to-automate-first-in-a-small-business/): How to choose the first process to automate in a small business: find the repeated task that costs customers, fix the process, then automate and measure.
+
+## Company
+
+- [VARGERSOFT | AI Agents, Apps and Websites for Small Business](https://www.vargersoft.com/): VARGERSOFT builds bilingual AI agents, apps and AI-ready websites for small and mid-size businesses. Fixed prices. Conroe / Houston, Texas.
+- [Apps Built by VARGERSOFT](https://www.vargersoft.com/apps/): Eight apps designed, built and run by VARGERSOFT: DERATE, Paternoster, Fresh or Toss, CaseAlerta, Recalert, SignatureForever, Scorlee and BajaBill.
+- [Our Work: App Design, Mascots, Paywalls and Screens](https://www.vargersoft.com/work/): Real art and product from apps VARGERSOFT designed and built: mascots, app screens, store pages, paywalls and full-screen illustration.
+- [Templates and Kits: Excel, Google Sheets and Notion](https://www.vargersoft.com/downloads/): Operations templates for inventory, quality, cash flow, point of sale and fleet maintenance, plus AI kits launching soon.
+- [AI Agents by Industry](https://www.vargersoft.com/industries/): How AI agents fit repair shops, clinics, contractors, law firms, retail and distribution, with the agents we recommend for each.
+- [Frequently Asked Questions](https://www.vargersoft.com/faq/): Answers about VARGERSOFT AI agents: prices, setup time, languages, contracts, data ownership and how to get started.
+- [About VARGERSOFT](https://www.vargersoft.com/about/): VARGERSOFT is the software division of VARGER Group LLC, Conroe, Texas: engineers with 24 years in operations who build AI agents, apps and websites.
+- [Contact VARGERSOFT](https://www.vargersoft.com/contact/): Tell us what is slowing your business down. We reply within one business day, in English or Spanish. sales@vargersoft.com
+- [Support](https://www.vargersoft.com/support/): Support for VARGERSOFT products and services: sales@vargersoft.com, reply within one business day, English and Spanish.
+- [Privacy Policy](https://www.vargersoft.com/privacy/): How VARGERSOFT, a division of VARGER Group LLC, collects, uses and protects information on vargersoft.com and in its services.
+- [Terms of Service](https://www.vargersoft.com/terms/): The terms that apply to vargersoft.com and to services purchased from VARGERSOFT, a division of VARGER Group LLC.
