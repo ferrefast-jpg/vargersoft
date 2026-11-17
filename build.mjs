@@ -7,7 +7,8 @@ import { guides } from './src/guides.mjs';
 import { privacy, terms, legalUpdated } from './src/legal.mjs';
 import { icon, illus, appleLogo } from './src/icons.mjs';
 
-const OUT = 'dist';
+const STAGING = process.env.STAGING === '1'; // dirección de prueba: no indexar
+const OUT = STAGING ? 'dist-staging' : 'dist';
 const LANGS = ['en', 'es'];
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const money = n => '$' + n.toLocaleString('en-US');
@@ -133,7 +134,7 @@ function layout(c, p) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(title)}</title>
+${STAGING ? '<meta name="robots" content="noindex, nofollow">\n' : ''}<title>${esc(title)}</title>
 <meta name="description" content="${esc(p.desc)}">
 <link rel="canonical" href="${url}">
 <link rel="alternate" hreflang="en" href="${abs(p.path)}">
@@ -452,7 +453,7 @@ ${pages.map(p => `<url><loc>${abs(p.path)}</loc><lastmod>${site.updated}</lastmo
 </urlset>
 `);
 const bots = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Googlebot', 'Bingbot', 'Applebot', 'Applebot-Extended', 'DuckDuckBot', 'CCBot'];
-fs.writeFileSync(path.join(OUT, 'robots.txt'), `# vargersoft.com — todos los rastreadores son bienvenidos, incluidos los de IA.\nUser-agent: *\nAllow: /\nDisallow: /contact.php\n\n${bots.map(b => `User-agent: ${b}\nAllow: /`).join('\n\n')}\n\nSitemap: ${site.url}/sitemap.xml\n`);
+fs.writeFileSync(path.join(OUT, 'robots.txt'), STAGING ? 'User-agent: *\nDisallow: /\n' : `# vargersoft.com — todos los rastreadores son bienvenidos, incluidos los de IA.\nUser-agent: *\nAllow: /\nDisallow: /contact.php\n\n${bots.map(b => `User-agent: ${b}\nAllow: /`).join('\n\n')}\n\nSitemap: ${site.url}/sitemap.xml\n`);
 fs.writeFileSync(path.join(OUT, 'site.webmanifest'), JSON.stringify({ name: site.name, short_name: site.name, start_url: '/', display: 'standalone', background_color: '#000000', theme_color: '#000000', icons: [{ src: '/img/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/img/icon-512.png', sizes: '512x512', type: 'image/png' }] }));
 // llms.txt y llms-full.txt (inglés; el sitio completo está en HTML)
 {
