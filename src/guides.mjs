@@ -1,0 +1,158 @@
+// Guías. Formato de respuesta directa: el primer párrafo contesta el título. [inglés, español]
+export const guides = [
+  {
+    slug: 'ai-receptionist-cost-small-business', icon: 'tag',
+    title: ['How much does an AI receptionist cost for a small business?', '¿Cuánto cuesta una recepcionista con IA para un negocio pequeño?'],
+    desc: ['What you pay for an AI phone receptionist: setup, monthly fee and minutes, with VARGERSOFT prices and the questions to ask any provider.', 'Lo que se paga por una recepcionista telefónica con IA: instalación, mensualidad y minutos, con los precios de VARGERSOFT y las preguntas para cualquier proveedor.'],
+    answer: ['An AI receptionist is usually paid in two parts: a one-time setup fee and a monthly fee that includes a block of call minutes. At VARGERSOFT the AI Phone Receptionist costs $1,950 to set up and $349 a month with 500 minutes included, and $0.35 for each extra minute.', 'Una recepcionista con IA normalmente se paga en dos partes: un pago único de instalación y una mensualidad que incluye un bloque de minutos. En VARGERSOFT la Recepcionista IA por Teléfono cuesta $1,950 de instalación y $349 al mes con 500 minutos incluidos, y $0.35 por cada minuto extra.'],
+    sections: [
+      { h: ['What the setup fee pays for', 'Qué cubre la instalación'], p: [['Setup is the work of making the agent yours: writing the script around your services and prices, choosing the voice, connecting your calendar, setting the rules for when a call goes to a person, and testing it with real scenarios in both languages.', 'La instalación es el trabajo de hacer tuyo al agente: escribir el guion con tus servicios y precios, elegir la voz, conectar tu calendario, definir cuándo una llamada pasa a una persona y probarlo con casos reales en ambos idiomas.']] },
+      { h: ['What the monthly fee pays for', 'Qué cubre la mensualidad'], p: [['The monthly fee covers the phone line, the voice and AI usage for your included minutes, the call summaries, and the monthly review where the script is adjusted from real calls.', 'La mensualidad cubre la línea telefónica, el uso de voz e IA de tus minutos incluidos, los resúmenes de llamadas y la revisión mensual donde se ajusta el guion con llamadas reales.']] },
+      { h: ['How to estimate your minutes', 'Cómo calcular tus minutos'], p: [['Count the calls you get in a normal week and multiply by the length of a typical call. A shop with 40 calls a week at about three minutes each uses roughly 480 minutes a month. If you do not know your numbers, your phone bill or carrier portal shows them.', 'Cuenta las llamadas de una semana normal y multiplícalas por lo que dura una llamada típica. Un negocio con 40 llamadas por semana de unos tres minutos usa cerca de 480 minutos al mes. Si no conoces tus números, tu recibo telefónico o el portal de tu compañía los muestra.']] },
+      { h: ['Questions to ask any provider', '¿Qué preguntarle a cualquier proveedor?'], list: [
+        ['Is there a contract, or is it month to month?', '¿Hay contrato o es mes a mes?'],
+        ['What happens when I pass my included minutes?', '¿Qué pasa si rebaso mis minutos incluidos?'],
+        ['Does it really answer in Spanish, or only read a translated script?', '¿De verdad contesta en español, o solo lee un guion traducido?'],
+        ['Who owns the call summaries and recordings?', '¿De quién son los resúmenes y las grabaciones?'],
+        ['Can it transfer to a person, and can I keep my number?', '¿Puede transferir a una persona, y puedo conservar mi número?'],
+      ] },
+    ],
+    related: ['ai-receptionist', 'appointment-agent'],
+  },
+  {
+    slug: 'ai-receptionist-vs-answering-service-vs-hiring', icon: 'scale',
+    title: ['AI receptionist vs. answering service vs. hiring: which fits?', 'Recepcionista con IA, servicio de contestación o contratar: ¿cuál conviene?'],
+    desc: ['A plain comparison of an AI receptionist, a live answering service and a hired receptionist: hours, languages, what each handles well and where each falls short.', 'Comparación clara entre recepcionista con IA, servicio de contestación con personas y recepcionista contratada: horario, idiomas, qué resuelve bien cada una y dónde se queda corta.'],
+    answer: ['An AI receptionist fits when most calls are routine: hours, prices, booking and messages. It answers at any hour in English and Spanish. A live answering service fits when callers need a person but not your person. A hired receptionist fits when the job is much more than the phone. Many businesses combine an AI receptionist with staff who take the transferred calls.', 'Una recepcionista con IA conviene cuando la mayoría de las llamadas son de rutina: horario, precios, citas y recados. Contesta a cualquier hora en inglés y español. Un servicio de contestación conviene cuando el cliente necesita una persona, pero no a tu persona. Una recepcionista contratada conviene cuando el puesto es mucho más que el teléfono. Muchos negocios combinan la IA con personal que recibe las llamadas transferidas.'],
+    table: {
+      head: [['', ''], ['AI receptionist', 'Recepcionista IA'], ['Answering service', 'Servicio de contestación'], ['Hired receptionist', 'Recepcionista contratada']],
+      rows: [
+        [['Hours', 'Horario'], ['Every hour, every day', 'Todas las horas, todos los días'], ['Depends on the plan', 'Depende del plan'], ['Their shift', 'Su turno']],
+        [['Languages', 'Idiomas'], ['English and Spanish on every call', 'Inglés y español en cada llamada'], ['Depends on who is on shift', 'Depende de quién esté en turno'], ['Depends on the person', 'Depende de la persona']],
+        [['Several calls at once', 'Varias llamadas a la vez'], ['Yes', 'Sí'], ['Depends on staffing', 'Depende del personal'], ['One at a time', 'Una a la vez']],
+        [['Books on your calendar', 'Agenda en tu calendario'], ['Yes', 'Sí'], ['Sometimes', 'A veces'], ['Yes', 'Sí']],
+        [['Unusual or sensitive calls', 'Llamadas inusuales o delicadas'], ['Transfers to a person', 'Transfiere a una persona'], ['Takes a message', 'Toma el recado'], ['Handles them', 'Las resuelve']],
+        [['Other front-desk work', 'Otro trabajo de recepción'], ['No', 'No'], ['No', 'No'], ['Yes', 'Sí']],
+      ],
+    },
+    sections: [
+      { h: ['Where an AI receptionist is the wrong choice', '¿Cuándo no conviene una recepcionista con IA?'], p: [['When most calls are emotional, complex or negotiated, a person should answer. The AI is still useful after hours and for overflow, but it should not be the only voice a caller can reach.', 'Cuando la mayoría de las llamadas son emocionales, complejas o de negociación, debe contestar una persona. La IA sigue siendo útil fuera de horario y en saturación, pero no debe ser la única voz disponible.']] },
+      { h: ['A simple way to decide', 'Una forma simple de decidir'], p: [['Write down the last twenty calls and mark each one as routine or not. If fifteen or more are routine, an AI receptionist will carry most of the load and your staff keep the rest.', 'Anota las últimas veinte llamadas y marca cada una como de rutina o no. Si quince o más son de rutina, una recepcionista con IA cargará la mayor parte y tu personal se queda con el resto.']] },
+    ],
+    related: ['ai-receptionist'],
+  },
+  {
+    slug: 'answer-business-calls-in-english-and-spanish', icon: 'globe',
+    title: ['How to answer business calls in English and Spanish without hiring', '¿Cómo contestar llamadas de negocio en inglés y español sin contratar?'],
+    desc: ['Four ways a small business can answer callers in English and Spanish, from a phone menu to an AI receptionist that detects the language on its own.', 'Cuatro formas en que un negocio pequeño puede atender llamadas en inglés y español, desde un menú telefónico hasta una recepcionista con IA que detecta el idioma sola.'],
+    answer: ['The simplest way to answer calls in both languages without hiring is an AI receptionist that detects the caller\'s language and answers in it. The caller does not press a button or wait for a bilingual employee. Other options are a phone menu, a bilingual answering service, or forwarding Spanish calls to one bilingual person.', 'La forma más simple de contestar en ambos idiomas sin contratar es una recepcionista con IA que detecta el idioma de quien llama y contesta en ese idioma. El cliente no oprime un botón ni espera a un empleado bilingüe. Otras opciones son un menú telefónico, un servicio de contestación bilingüe o desviar las llamadas en español a una persona bilingüe.'],
+    sections: [
+      { h: ['Option 1: a phone menu', 'Opción 1: un menú telefónico'], p: [['"For English press 1, para español oprima 2." It is cheap and familiar. Its weakness is what happens after the button: someone still has to answer in that language.', '"For English press 1, para español oprima 2." Es barato y conocido. Su debilidad es lo que pasa después del botón: alguien todavía tiene que contestar en ese idioma.']] },
+      { h: ['Option 2: one bilingual employee', 'Opción 2: un empleado bilingüe'], p: [['It works until that person is at lunch, on another call or on vacation. The business then answers in one language again.', 'Funciona hasta que esa persona está comiendo, en otra llamada o de vacaciones. Entonces el negocio vuelve a contestar en un solo idioma.']] },
+      { h: ['Option 3: a bilingual answering service', 'Opción 3: un servicio de contestación bilingüe'], p: [['A person answers and takes a message in either language. Ask whether Spanish is covered at every hour or only during certain shifts.', 'Una persona contesta y toma el recado en cualquiera de los dos idiomas. Pregunta si el español está cubierto a toda hora o solo en ciertos turnos.']] },
+      { h: ['Option 4: an AI receptionist', 'Opción 4: una recepcionista con IA'], p: [['The agent listens to the first words, recognizes the language and continues in it. It can book, answer questions and take messages, and it sends you the summary in the language you choose.', 'El agente escucha las primeras palabras, reconoce el idioma y continúa en él. Puede agendar, responder preguntas y tomar recados, y te envía el resumen en el idioma que elijas.']] },
+      { h: ['What to check before you choose', '¿Qué revisar antes de elegir?'], list: [
+        ['Call your own number after hours and see what a customer hears.', 'Llama a tu propio número fuera de horario y escucha lo que oye un cliente.'],
+        ['Ask a Spanish speaker to test any service with a real question.', 'Pide a alguien que hable español que pruebe el servicio con una pregunta real.'],
+        ['Make sure written follow-ups, such as texts and emails, are bilingual too.', 'Confirma que los seguimientos escritos, como mensajes y correos, también sean bilingües.'],
+      ] },
+    ],
+    related: ['ai-receptionist', 'website-assistant'],
+  },
+  {
+    slug: 'seo-vs-aeo-vs-geo', icon: 'layers',
+    title: ['SEO vs. AEO vs. GEO: what each one means', 'SEO, AEO y GEO: qué significa cada uno'],
+    desc: ['SEO, AEO and GEO explained in plain words: what each one optimizes for, how they overlap and what a small business should do first.', 'SEO, AEO y GEO explicados con palabras claras: qué optimiza cada uno, en qué coinciden y qué debe hacer primero un negocio pequeño.'],
+    answer: ['SEO, search engine optimization, helps your pages rank in search results. AEO, answer engine optimization, shapes your content so a search engine or assistant can lift a direct answer from it. GEO, generative engine optimization, helps AI assistants such as ChatGPT, Claude and Perplexity read, trust and cite your business when they write an answer. The three share one foundation: pages a machine can read and content that answers real questions.', 'SEO, optimización para buscadores, ayuda a que tus páginas aparezcan en los resultados de búsqueda. AEO, optimización para motores de respuesta, da forma a tu contenido para que un buscador o asistente pueda tomar de él una respuesta directa. GEO, optimización para motores generativos, ayuda a que asistentes de IA como ChatGPT, Claude y Perplexity lean, confíen y citen tu negocio cuando redactan una respuesta. Los tres comparten una base: páginas que una máquina puede leer y contenido que responde preguntas reales.'],
+    table: {
+      head: [['', ''], ['SEO', 'SEO'], ['AEO', 'AEO'], ['GEO', 'GEO']],
+      rows: [
+        [['Where you appear', 'Dónde apareces'], ['The list of search results', 'La lista de resultados'], ['The direct answer box', 'El cuadro de respuesta directa'], ['Inside an AI-written answer', 'Dentro de una respuesta escrita por IA']],
+        [['What it rewards', 'Qué premia'], ['Relevant, trusted pages', 'Páginas relevantes y confiables'], ['Short, clear answers to a question', 'Respuestas cortas y claras a una pregunta'], ['Facts that are easy to read and verify', 'Datos fáciles de leer y verificar']],
+        [['Typical work', 'Trabajo típico'], ['Titles, speed, links, content', 'Títulos, velocidad, enlaces, contenido'], ['Question headings, FAQ pages', 'Encabezados en pregunta, páginas de FAQ'], ['Structured data, consistent business facts', 'Datos estructurados, datos del negocio consistentes']],
+      ],
+    },
+    sections: [
+      { h: ['What should a small business do first?', '¿Qué debe hacer primero un negocio pequeño?'], list: [
+        ['Make sure each page arrives as complete HTML, with its own title and description.', 'Asegura que cada página llegue como HTML completo, con su propio título y descripción.'],
+        ['Write one page per service, and answer the main question in the first two sentences.', 'Escribe una página por servicio y responde la pregunta principal en las primeras dos frases.'],
+        ['Publish your prices, hours, service area and contact details in text, not only in images.', 'Publica precios, horario, zona de servicio y contacto en texto, no solo en imágenes.'],
+        ['Add structured data for your business, services and FAQs.', 'Agrega datos estructurados de tu negocio, servicios y preguntas frecuentes.'],
+        ['Keep your name, address and phone identical everywhere they appear.', 'Mantén nombre, dirección y teléfono idénticos en todos los lugares donde aparezcan.'],
+      ] },
+      { h: ['What nobody can promise', 'Lo que nadie puede prometer'], p: [['No one controls what a search engine ranks or what an AI assistant says. Honest work removes the technical reasons you are ignored and measures the result over time. Be careful with anyone who guarantees a first position or a recommendation.', 'Nadie controla qué posiciona un buscador ni qué dice un asistente de IA. El trabajo honesto quita las razones técnicas por las que te ignoran y mide el resultado con el tiempo. Ten cuidado con quien garantice el primer lugar o una recomendación.']] },
+    ],
+    related: ['ai-visibility', 'ai-ready-websites'],
+  },
+  {
+    slug: 'what-is-llms-txt', icon: 'file',
+    title: ['What is llms.txt, and does your website need it?', '¿Qué es llms.txt y lo necesita tu sitio web?'],
+    desc: ['llms.txt explained honestly: what the file is, who proposed it, what the 2026 evidence says about AI crawlers using it, and what matters more.', 'llms.txt explicado con honestidad: qué es el archivo, quién lo propuso, qué dice la evidencia de 2026 sobre su uso por rastreadores de IA y qué importa más.'],
+    answer: ['llms.txt is a plain Markdown file placed at the root of a website that gives AI systems a short summary of the site and links to its most important pages. It is a proposal from 2024, not an official standard. Studies published in 2026 found that AI crawlers rarely request it, and Google has said its search products do not use it. It costs little to publish, but it will not make an unreadable website readable.', 'llms.txt es un archivo de texto en formato Markdown que se coloca en la raíz de un sitio y da a los sistemas de IA un resumen corto del sitio y enlaces a sus páginas más importantes. Es una propuesta de 2024, no un estándar oficial. Estudios publicados en 2026 encontraron que los rastreadores de IA casi nunca lo solicitan, y Google ha dicho que sus productos de búsqueda no lo usan. Publicarlo cuesta poco, pero no vuelve legible un sitio que no lo es.'],
+    sections: [
+      { h: ['What goes inside the file', 'Qué lleva el archivo'], p: [['A title, a one-paragraph description of the business, and short lists of links grouped under headings such as Services, Pricing and Contact. A second file, llms-full.txt, can hold the full text of those pages.', 'Un título, una descripción del negocio en un párrafo y listas cortas de enlaces agrupadas bajo encabezados como Servicios, Precios y Contacto. Un segundo archivo, llms-full.txt, puede llevar el texto completo de esas páginas.']] },
+      { h: ['What the evidence says', '¿Qué dice la evidencia?'], p: [['Independent studies in 2026 measured how often AI crawlers ask for the file, and the answer was almost never. One analysis reported that most sites with a valid file received no requests for it in a month. The tools that do read it today are mostly coding assistants working with developer documentation.', 'Estudios independientes de 2026 midieron qué tan seguido los rastreadores de IA piden el archivo, y la respuesta fue casi nunca. Un análisis reportó que la mayoría de los sitios con un archivo válido no recibieron ninguna solicitud en un mes. Las herramientas que sí lo leen hoy son sobre todo asistentes de programación que trabajan con documentación para desarrolladores.']] },
+      { h: ['Should you publish one?', '¿Conviene publicarlo?'], p: [['Yes, if it takes minutes, because a short accurate summary does no harm. Do not pay for it as if it were a ranking tool. Put the real effort into the things assistants demonstrably read: complete HTML pages, clear answers and structured data.', 'Sí, si toma minutos, porque un resumen corto y exacto no hace daño. No pagues por él como si fuera una herramienta de posicionamiento. Pon el esfuerzo real en lo que los asistentes sí leen de forma comprobada: páginas HTML completas, respuestas claras y datos estructurados.']] },
+      { h: ['The file that matters more: robots.txt', 'El archivo que importa más: robots.txt'], p: [['robots.txt decides which crawlers may read your site at all, and the major AI crawlers follow it. A robots file that blocks them removes you from their answers, whatever your llms.txt says.', 'robots.txt decide qué rastreadores pueden leer tu sitio, y los principales rastreadores de IA lo respetan. Un archivo robots que los bloquea te saca de sus respuestas, diga lo que diga tu llms.txt.']] },
+    ],
+    sources: [
+      ['llmstxt.org: the llms.txt proposal', 'https://llmstxt.org/'],
+      ['Ahrefs: What is llms.txt, and should you care?', 'https://ahrefs.com/blog/what-is-llms-txt/'],
+      ['Optimizely: Does llms.txt work?', 'https://www.optimizely.com/field-notes/articles/does-llms-txt-work/'],
+    ],
+    related: ['ai-visibility', 'ai-ready-websites'],
+  },
+  {
+    slug: 'what-is-mcp-and-webmcp', icon: 'plug',
+    title: ['What are MCP and WebMCP, in plain words?', '¿Qué son MCP y WebMCP, con palabras claras?'],
+    desc: ['MCP and WebMCP explained for business owners: what each one does, how they differ, what works today and what is still an early draft.', 'MCP y WebMCP explicados para dueños de negocio: qué hace cada uno, en qué se diferencian, qué funciona hoy y qué sigue siendo un borrador temprano.'],
+    answer: ['MCP, the Model Context Protocol, is an open standard that lets an AI assistant connect to outside tools and data, such as a catalog, a calendar or a booking system. WebMCP is a newer proposal that lets a web page offer its own tools to an AI agent running in the visitor\'s browser. MCP is in wide use today. WebMCP is still a draft, in trial in Chrome, and not yet available to every user.', 'MCP, el Model Context Protocol, es un estándar abierto que permite a un asistente de IA conectarse a herramientas y datos externos, como un catálogo, un calendario o un sistema de citas. WebMCP es una propuesta más nueva que permite a una página web ofrecer sus propias herramientas a un agente de IA que corre en el navegador del visitante. MCP ya tiene uso amplio hoy. WebMCP sigue siendo un borrador, en prueba en Chrome, y todavía no está disponible para todos los usuarios.'],
+    sections: [
+      { h: ['MCP: a standard plug for AI', 'MCP: un enchufe estándar para la IA'], p: [['Before MCP, every connection between an assistant and a system was built by hand. MCP, introduced by Anthropic in November 2024, defines one way to describe a tool: what it does, what it needs and what it returns. A business that publishes an MCP server lets compatible assistants look up its services or availability directly.', 'Antes de MCP, cada conexión entre un asistente y un sistema se construía a mano. MCP, presentado por Anthropic en noviembre de 2024, define una sola forma de describir una herramienta: qué hace, qué necesita y qué devuelve. Un negocio que publica un servidor MCP permite a los asistentes compatibles consultar sus servicios o disponibilidad de forma directa.']] },
+      { h: ['WebMCP: tools inside the page', 'WebMCP: herramientas dentro de la página'], p: [['With WebMCP the page itself tells the agent what it can do there, for example "search products" or "request a quote", instead of the agent guessing from buttons and forms. As of late 2026 it is a draft from a W3C community group. Chrome offers it through a trial, and the way a page declares its tools changed during 2026, so early tutorials are already out of date.', 'Con WebMCP la propia página le dice al agente qué puede hacer ahí, por ejemplo "buscar productos" o "pedir cotización", en lugar de que el agente adivine entre botones y formularios. A finales de 2026 es un borrador de un grupo comunitario del W3C. Chrome lo ofrece mediante una prueba, y la forma en que una página declara sus herramientas cambió durante 2026, así que los primeros tutoriales ya están desactualizados.']] },
+      { h: ['What should a business do now?', '¿Qué debe hacer un negocio ahora?'], list: [
+        ['First make the site readable: complete HTML, clear pages, structured data.', 'Primero vuelve legible el sitio: HTML completo, páginas claras, datos estructurados.'],
+        ['Publish an MCP server if customers or partners already use assistants that support it.', 'Publica un servidor MCP si tus clientes o socios ya usan asistentes que lo soportan.'],
+        ['Add WebMCP tools as an experiment, and expect to update them as the draft changes.', 'Agrega herramientas WebMCP como experimento, y cuenta con actualizarlas conforme cambie el borrador.'],
+        ['Decide which actions an agent may take alone and which need a person to approve.', 'Decide qué acciones puede hacer un agente solo y cuáles necesita aprobar una persona.'],
+      ] },
+    ],
+    sources: [
+      ['Model Context Protocol: official site', 'https://modelcontextprotocol.io/'],
+      ['WebMCP explainer (W3C Web Machine Learning community group)', 'https://github.com/webmachinelearning/webmcp'],
+      ['Chromium blink-dev: Intent to Experiment, WebMCP', 'https://groups.google.com/a/chromium.org/g/blink-dev/c/gmYffo5WOE8'],
+    ],
+    related: ['agent-ready-websites', 'ai-visibility'],
+  },
+  {
+    slug: 'how-to-prepare-your-website-for-ai-agents', icon: 'bot',
+    title: ['How to prepare your website for AI agents', '¿Cómo preparar tu sitio web para agentes de IA?'],
+    desc: ['A practical checklist to make a business website usable by AI assistants and agents: readable pages, structured data, open crawler rules and clear actions.', 'Lista práctica para que un sitio de negocio sea utilizable por asistentes y agentes de IA: páginas legibles, datos estructurados, reglas abiertas para rastreadores y acciones claras.'],
+    answer: ['To prepare a website for AI agents, make every page readable without running scripts, state your services, prices, hours and location in plain text, add structured data, allow AI crawlers in robots.txt, and give agents a clear way to act, such as a simple form or an MCP server. Most of this is the same work that helps search engines and people.', 'Para preparar un sitio para agentes de IA, haz que cada página sea legible sin ejecutar scripts, declara tus servicios, precios, horario y ubicación en texto claro, agrega datos estructurados, permite los rastreadores de IA en robots.txt y da a los agentes una forma clara de actuar, como un formulario simple o un servidor MCP. Casi todo es el mismo trabajo que ayuda a los buscadores y a las personas.'],
+    sections: [
+      { h: ['Step 1: check what a machine sees', 'Paso 1: revisa lo que ve una máquina'], p: [['Open a page, choose "View page source" and search for a sentence you can read on screen. If it is missing, the content is added later by scripts, and many crawlers will never see it.', 'Abre una página, elige "Ver código fuente" y busca una frase que puedas leer en pantalla. Si no está, el contenido se agrega después con scripts, y muchos rastreadores nunca lo verán.']] },
+      { h: ['Step 2: say the facts in text', 'Paso 2: di los datos en texto'], p: [['Agents compare businesses on facts: what you do, where, when, and for how much. Put them in sentences and tables. A price that only appears inside an image does not exist for a machine.', 'Los agentes comparan negocios con datos: qué haces, dónde, cuándo y por cuánto. Ponlos en frases y tablas. Un precio que solo aparece dentro de una imagen no existe para una máquina.']] },
+      { h: ['Step 3: add structured data', 'Paso 3: agrega datos estructurados'], p: [['Structured data is a labeled copy of the same facts in a format machines read without guessing: this is the business name, this is a service, this is its price. It is invisible to visitors and useful to every crawler.', 'Los datos estructurados son una copia etiquetada de los mismos datos en un formato que las máquinas leen sin adivinar: este es el nombre del negocio, este es un servicio, este es su precio. Son invisibles para los visitantes y útiles para todo rastreador.']] },
+      { h: ['Step 4: open the door', 'Paso 4: abre la puerta'], p: [['Check robots.txt. If it blocks AI crawlers, assistants cannot use your pages in their answers. Allow the ones you want and keep a sitemap that lists every page.', 'Revisa robots.txt. Si bloquea a los rastreadores de IA, los asistentes no pueden usar tus páginas en sus respuestas. Permite los que quieras y mantén un sitemap con todas las páginas.']] },
+      { h: ['Step 5: make the action simple', 'Paso 5: haz simple la acción'], p: [['An agent that wants to book or ask for a quote needs a short path: a form with clear labels, or tools published through an MCP server. Decide which requests can be confirmed automatically and which a person approves.', 'Un agente que quiere agendar o pedir una cotización necesita un camino corto: un formulario con etiquetas claras, o herramientas publicadas en un servidor MCP. Decide qué solicitudes se confirman solas y cuáles aprueba una persona.']] },
+    ],
+    related: ['agent-ready-websites', 'ai-ready-websites', 'ai-visibility'],
+  },
+  {
+    slug: 'what-to-automate-first-in-a-small-business', icon: 'gear',
+    title: ['What should a small business automate first?', '¿Qué debe automatizar primero un negocio pequeño?'],
+    desc: ['How to choose the first process to automate in a small business: find the repeated task that costs customers, fix the process, then automate and measure.', 'Cómo elegir el primer proceso a automatizar en un negocio pequeño: encuentra la tarea repetida que cuesta clientes, arregla el proceso, luego automatiza y mide.'],
+    answer: ['Automate first the task that is repeated every day, follows the same steps each time and costs you customers when it is done late. For most small businesses that is answering the phone, following up on quotes or confirming appointments. Fix the process before you automate it, because automating a broken process only makes it fail faster.', 'Automatiza primero la tarea que se repite todos los días, sigue los mismos pasos cada vez y te cuesta clientes cuando se hace tarde. En la mayoría de los negocios pequeños eso es contestar el teléfono, dar seguimiento a cotizaciones o confirmar citas. Arregla el proceso antes de automatizarlo, porque automatizar un proceso roto solo lo hace fallar más rápido.'],
+    sections: [
+      { h: ['Three questions to find the task', 'Tres preguntas para encontrar la tarea'], list: [
+        ['Does it happen at least once a day?', '¿Ocurre al menos una vez al día?'],
+        ['Could you write its steps on one page?', '¿Podrías escribir sus pasos en una página?'],
+        ['Does a customer wait, or leave, when it is late?', '¿Un cliente espera, o se va, cuando se atrasa?'],
+      ], after: [['A task with three yes answers is a good first candidate. A task that needs judgment every time is not.', 'Una tarea con tres respuestas afirmativas es buena primera candidata. Una tarea que requiere criterio cada vez no lo es.']] },
+      { h: ['Fix it on paper first', 'Arréglalo primero en papel'], p: [['Write the steps as they really happen, not as they should. Remove the ones nobody needs. Decide what the right result looks like. Only then choose a tool.', 'Escribe los pasos como realmente ocurren, no como deberían. Quita los que nadie necesita. Decide cómo se ve el resultado correcto. Solo entonces elige una herramienta.']] },
+      { h: ['Set one number and one date', 'Fija un número y una fecha'], p: [['Before you start, pick the number the automation should move, such as missed calls per week or days to collect an invoice, and the date you will check it. If the number has not moved by that date, change the plan.', 'Antes de empezar, elige el número que la automatización debe mover, como llamadas perdidas por semana o días para cobrar una factura, y la fecha en que lo vas a revisar. Si el número no se movió para esa fecha, cambia el plan.']] },
+      { h: ['What to leave alone', '¿Qué conviene dejar sin automatizar?'], p: [['Keep people on the moments that build trust: a complaint, a negotiation, bad news. Automation should carry the routine so your team has time for those.', 'Deja a las personas en los momentos que construyen confianza: una queja, una negociación, una mala noticia. La automatización debe cargar la rutina para que tu equipo tenga tiempo para esos momentos.']] },
+    ],
+    related: ['ai-receptionist', 'quote-follow-up-agent', 'appointment-agent'],
+  },
+];
