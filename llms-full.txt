@@ -1,0 +1,579 @@
+# VARGERSOFT: full text of services, guides and FAQ
+
+# AI Phone Receptionist
+
+URL: https://www.vargersoft.com/ai/ai-receptionist/
+Price: Setup: $1,950 one time; Monthly service: $349 per month
+
+A phone line that always answers, in the language your caller speaks.
+
+A missed call is usually a customer who calls the next business on the list. Most small businesses miss calls at lunch, after hours and whenever the counter is busy. And when the caller speaks Spanish and nobody on shift does, the call ends in thirty seconds.
+
+Answers every call, day or night, with a natural human-sounding voice.
+
+Detects whether the caller speaks English or Spanish and answers in that language.
+
+Books, confirms and reschedules appointments on your calendar.
+
+Answers common questions: hours, location, services, prices you approve.
+
+Transfers to a person when the caller asks or the situation needs it.
+
+Emails you a written summary of every call.
+
+A new phone number, or your current number forwarded to the agent.
+
+Your choice of voice and a bilingual script written around your business.
+
+Calendar connection and call-transfer rules.
+
+500 minutes of calls every month. Extra minutes at $0.35.
+
+Monthly review of call summaries and script adjustments.
+
+Q: Will callers know they are talking to an AI?
+A: Yes. The agent says it is a virtual assistant at the start of the call. It sounds natural, but we do not present it as a person.
+
+Q: Can I keep my current phone number?
+A: Yes. You forward your number to the agent, either always or only when you do not pick up.
+
+Q: What happens when the agent cannot answer a question?
+A: It takes the message, tells the caller when to expect a call back and emails you the details. It does not make up an answer.
+
+Q: How long does setup take?
+A: Seven business days from the day we receive your business information and calendar access.
+
+---
+
+# Website AI Assistant
+
+URL: https://www.vargersoft.com/ai/website-assistant/
+Price: Setup: $850 one time; Monthly service: $179 per month
+
+Your website answers back, at any hour, in both languages.
+
+Most visitors leave a website with a question they never asked. A contact form asks them to wait a day for an answer. By then they have already called someone else.
+
+Answers questions from your own approved information, not from guesses.
+
+Captures name, phone and what the visitor needs, and sends it to you right away.
+
+Gives quotes from the price rules you set.
+
+Books appointments on your calendar.
+
+Works in English and Spanish and switches when the visitor does.
+
+Chat widget installed on your site and matched to your brand.
+
+Knowledge base built from your services, prices, policies and FAQs.
+
+Lead notifications by email.
+
+Monthly review of conversations and content updates.
+
+Q: Does it work on any website?
+A: Yes. It installs with one snippet of code on WordPress, Wix, Shopify, Hostinger and custom sites.
+
+Q: Where do the answers come from?
+A: From the information you approve. When a question falls outside it, the assistant offers to take the visitor's contact details instead.
+
+Q: Who owns the conversations?
+A: You do. You can export them whenever you ask.
+
+---
+
+# Appointment Agent
+
+URL: https://www.vargersoft.com/ai/appointment-agent/
+Price: Setup: $1,450 one time; Monthly service: $249 per month
+
+A full calendar, without the phone tag.
+
+Scheduling eats the day in small pieces: a call to book, a call to confirm, a call to move it. Every appointment nobody confirmed is an empty slot you already paid staff to cover.
+
+Books appointments by phone and text against your real availability.
+
+Sends a confirmation and a reminder before each appointment.
+
+Lets the customer reschedule or cancel without calling the front desk.
+
+Offers a freed slot to the next customer on your waiting list.
+
+Connection to Google Calendar, Outlook or your booking system.
+
+Bilingual confirmation and reminder messages.
+
+Text-messaging registration with the phone carriers, handled for you.
+
+Monthly report: booked, confirmed, rescheduled and missed.
+
+Q: Does it replace my booking system?
+A: No. It works on top of the calendar or booking system you already use.
+
+Q: Do customers need an app?
+A: No. They answer a call or reply to a text.
+
+Q: Who can it text?
+A: Customers who gave you their number and agreed to be contacted. Every message includes a way to opt out.
+
+---
+
+# Quote & Follow-up Agent
+
+URL: https://www.vargersoft.com/ai/quote-follow-up-agent/
+Price: Setup: $2,450 one time; Monthly service: $399 per month
+
+Every lead gets an answer in minutes and a follow-up until they decide.
+
+Leads go cold while the quote sits in someone's inbox. Following up five times is the job nobody has time for, so most leads get one reply and then silence.
+
+Replies to new text and WhatsApp messages within minutes.
+
+Asks the questions needed to quote, then sends the quote from your price rules.
+
+Follows up on a schedule you approve until the lead answers.
+
+Hands the conversation to a person when the lead is ready to buy.
+
+Business texting and WhatsApp numbers, registered with the carriers and Meta.
+
+Quote rules and approved message templates in both languages.
+
+A lead log you can open and export at any time.
+
+Monthly report: leads, quotes sent, replies and closed sales you record.
+
+Q: Can it quote jobs that need an inspection?
+A: It gives a range from your rules and books the visit. The final number stays with you.
+
+Q: How many times does it follow up?
+A: As many as you approve. A common schedule is five messages over two weeks, and it stops the moment the lead replies or opts out.
+
+Q: Does it work with my CRM?
+A: Yes, when your CRM has an integration or accepts imports. We confirm it before setup starts.
+
+---
+
+# Payment Reminder Agent
+
+URL: https://www.vargersoft.com/ai/collections-agent/
+Price: Setup: $1,250 one time; Monthly service: $229 per month
+
+Invoices get paid sooner when someone remembers to ask.
+
+Nobody likes calling a good customer about a late invoice, so the call does not happen. The invoice ages, the cash is tied up, and the awkward conversation only gets harder.
+
+Sends a friendly reminder before the due date and on the due date.
+
+Follows a schedule you approve after the due date: email, then text, then a call.
+
+Includes the payment link so the customer can pay on the spot.
+
+Records promises to pay and tells you when one is missed.
+
+Reminder schedule and wording written with you, in both languages.
+
+Connection to your invoicing system or a spreadsheet of open invoices.
+
+Monthly report: reminders sent, payments received and open balances.
+
+Q: Is this a collections agency?
+A: No. The agent reminds your own customers, in your business name, about invoices you issued. It does not buy or collect debts for others.
+
+Q: Can I control the tone?
+A: Yes. You approve every message and the full schedule before anything is sent.
+
+Q: Can a customer stop the reminders?
+A: Yes. Every text and email has an opt-out, and you can pause any account yourself.
+
+---
+
+# AI-Ready Websites
+
+URL: https://www.vargersoft.com/ai/ai-ready-websites/
+Price: New website: $2,450 one time; Update of an existing website: $1,250 one time; Care plan (optional): $149 per month
+
+A website people can read, and machines can too.
+
+Many websites look fine to a person and are almost empty to a machine. The content loads late, the pages share one title, and there is no structured data. Search engines and AI assistants read what the server sends first, and on those sites it is very little.
+
+Delivers every page as complete HTML, readable without running scripts.
+
+Gives each page its own title, description, headings and address.
+
+Adds structured data so machines know your services, prices, hours and location.
+
+Publishes the site in English and Spanish with the correct language tags.
+
+Loads fast on a phone.
+
+Up to 10 pages for a new site, or a full update of your existing pages.
+
+Sitemap, robots file and submission to Google Search Console and Bing.
+
+Contact form, click-to-call and map.
+
+Your code and content are yours. Hosting on your own account.
+
+Optional care plan at $149/month: updates, backups and a monthly check.
+
+Q: How do I know if my site has this problem?
+A: Open your page, choose "View page source" and search for a sentence from your home page. If it is not there, machines are not seeing it either. We check this for free on the first call.
+
+Q: Do I have to change my hosting or domain?
+A: No. We work with the hosting and domain you already have.
+
+Q: Does this guarantee a first-page ranking?
+A: No, and nobody honest can promise that. It removes the technical reasons a site gets ignored and gives your content a fair chance.
+
+---
+
+# AI Visibility (GEO)
+
+URL: https://www.vargersoft.com/ai/ai-visibility/
+Price: Setup: $1,500 one time; Monthly service: $299 per month
+
+When someone asks an AI who does what you do, be in the answer.
+
+People now ask an assistant instead of typing a search: "who repairs transmissions near me?". The assistant builds its answer from pages it can read and trust. If your site does not answer the question in plain words, you are not part of the answer.
+
+Audits what AI assistants and search engines can actually read on your site.
+
+Rewrites key pages to answer real customer questions in the first lines.
+
+Adds structured data for your business, services, prices and FAQs.
+
+Keeps your name, address, phone and hours consistent across the web.
+
+Tracks every month whether assistants mention you for the questions that matter.
+
+Written audit with the list of fixes in order of impact.
+
+Up to 10 pages rewritten in answer-first format, in both languages.
+
+Structured data, sitemap, robots rules for AI crawlers and an llms.txt file.
+
+Monthly report with the questions tested and what each assistant answered.
+
+Q: Can you guarantee ChatGPT will recommend my business?
+A: No. Nobody controls what an AI assistant answers. We control what it can read about you, and we report every month what it actually says.
+
+Q: Is this different from SEO?
+A: It builds on SEO. Clean pages and useful content help in both places. GEO adds answer-first writing, structured data and tracking of AI answers.
+
+Q: How soon will I see a change?
+A: Search engines and assistants refresh on their own schedule, usually over weeks. The first monthly report sets the baseline we measure against.
+
+---
+
+# Agent-Ready Websites
+
+URL: https://www.vargersoft.com/ai/agent-ready-websites/
+Price: Setup: $1,950 one time; Monthly service: $199 per month
+
+The next visitor to your website may be an AI agent doing an errand for a customer.
+
+AI assistants are starting to do tasks, not only answer questions: compare prices, check availability, book a slot. An agent that has to guess its way through buttons and forms gives up or gets it wrong. A site that tells the agent exactly what it offers and how to ask gets the booking.
+
+Publishes your services, prices and hours in a format agents read directly.
+
+Sets up an MCP server so AI assistants can query your catalog and availability.
+
+Adds WebMCP tools to key pages, ready for browsers as they adopt the standard.
+
+Decides with you which actions an agent may take and which need a person.
+
+MCP server hosted and monitored, with a log of every request.
+
+Up to 5 agent actions, such as "list services", "check availability" or "request a quote".
+
+Structured data and machine-readable catalog files.
+
+Updates as the standards change. WebMCP is still an early draft.
+
+Q: Is this technology ready today?
+A: Part of it. MCP servers work today with assistants that support them. WebMCP, the browser side, is still in trial in Chrome and not available to every user. We set up what works now and keep the rest current.
+
+Q: Can an agent charge a card or change my data?
+A: Only if you allow it. By default agents can read and request, and a person approves anything that costs money.
+
+Q: Do I need an AI-ready website first?
+A: Yes. Agents rely on the same clean pages and structured data. If your site needs that work, we do it first.
+
+---
+
+# How much does an AI receptionist cost for a small business?
+
+URL: https://www.vargersoft.com/resources/ai-receptionist-cost-small-business/
+
+An AI receptionist is usually paid in two parts: a one-time setup fee and a monthly fee that includes a block of call minutes. At VARGERSOFT the AI Phone Receptionist costs $1,950 to set up and $349 a month with 500 minutes included, and $0.35 for each extra minute.
+
+What the setup fee pays for
+
+Setup is the work of making the agent yours: writing the script around your services and prices, choosing the voice, connecting your calendar, setting the rules for when a call goes to a person, and testing it with real scenarios in both languages.
+
+What the monthly fee pays for
+
+The monthly fee covers the phone line, the voice and AI usage for your included minutes, the call summaries, and the monthly review where the script is adjusted from real calls.
+
+How to estimate your minutes
+
+Count the calls you get in a normal week and multiply by the length of a typical call. A shop with 40 calls a week at about three minutes each uses roughly 480 minutes a month. If you do not know your numbers, your phone bill or carrier portal shows them.
+
+Questions to ask any provider
+
+Is there a contract, or is it month to month?
+
+What happens when I pass my included minutes?
+
+Does it really answer in Spanish, or only read a translated script?
+
+Who owns the call summaries and recordings?
+
+Can it transfer to a person, and can I keep my number?
+
+---
+
+# AI receptionist vs. answering service vs. hiring: which fits?
+
+URL: https://www.vargersoft.com/resources/ai-receptionist-vs-answering-service-vs-hiring/
+
+An AI receptionist fits when most calls are routine: hours, prices, booking and messages. It answers at any hour in English and Spanish. A live answering service fits when callers need a person but not your person. A hired receptionist fits when the job is much more than the phone. Many businesses combine an AI receptionist with staff who take the transferred calls.
+
+Where an AI receptionist is the wrong choice
+
+When most calls are emotional, complex or negotiated, a person should answer. The AI is still useful after hours and for overflow, but it should not be the only voice a caller can reach.
+
+A simple way to decide
+
+Write down the last twenty calls and mark each one as routine or not. If fifteen or more are routine, an AI receptionist will carry most of the load and your staff keep the rest.
+
+---
+
+# How to answer business calls in English and Spanish without hiring
+
+URL: https://www.vargersoft.com/resources/answer-business-calls-in-english-and-spanish/
+
+The simplest way to answer calls in both languages without hiring is an AI receptionist that detects the caller's language and answers in it. The caller does not press a button or wait for a bilingual employee. Other options are a phone menu, a bilingual answering service, or forwarding Spanish calls to one bilingual person.
+
+Option 1: a phone menu
+
+"For English press 1, para español oprima 2." It is cheap and familiar. Its weakness is what happens after the button: someone still has to answer in that language.
+
+Option 2: one bilingual employee
+
+It works until that person is at lunch, on another call or on vacation. The business then answers in one language again.
+
+Option 3: a bilingual answering service
+
+A person answers and takes a message in either language. Ask whether Spanish is covered at every hour or only during certain shifts.
+
+Option 4: an AI receptionist
+
+The agent listens to the first words, recognizes the language and continues in it. It can book, answer questions and take messages, and it sends you the summary in the language you choose.
+
+What to check before you choose
+
+Call your own number after hours and see what a customer hears.
+
+Ask a Spanish speaker to test any service with a real question.
+
+Make sure written follow-ups, such as texts and emails, are bilingual too.
+
+---
+
+# SEO vs. AEO vs. GEO: what each one means
+
+URL: https://www.vargersoft.com/resources/seo-vs-aeo-vs-geo/
+
+SEO, search engine optimization, helps your pages rank in search results. AEO, answer engine optimization, shapes your content so a search engine or assistant can lift a direct answer from it. GEO, generative engine optimization, helps AI assistants such as ChatGPT, Claude and Perplexity read, trust and cite your business when they write an answer. The three share one foundation: pages a machine can read and content that answers real questions.
+
+What should a small business do first?
+
+Make sure each page arrives as complete HTML, with its own title and description.
+
+Write one page per service, and answer the main question in the first two sentences.
+
+Publish your prices, hours, service area and contact details in text, not only in images.
+
+Add structured data for your business, services and FAQs.
+
+Keep your name, address and phone identical everywhere they appear.
+
+What nobody can promise
+
+No one controls what a search engine ranks or what an AI assistant says. Honest work removes the technical reasons you are ignored and measures the result over time. Be careful with anyone who guarantees a first position or a recommendation.
+
+---
+
+# What is llms.txt, and does your website need it?
+
+URL: https://www.vargersoft.com/resources/what-is-llms-txt/
+
+llms.txt is a plain Markdown file placed at the root of a website that gives AI systems a short summary of the site and links to its most important pages. It is a proposal from 2024, not an official standard. Studies published in 2026 found that AI crawlers rarely request it, and Google has said its search products do not use it. It costs little to publish, but it will not make an unreadable website readable.
+
+What goes inside the file
+
+A title, a one-paragraph description of the business, and short lists of links grouped under headings such as Services, Pricing and Contact. A second file, llms-full.txt, can hold the full text of those pages.
+
+What the evidence says
+
+Independent studies in 2026 measured how often AI crawlers ask for the file, and the answer was almost never. One analysis reported that most sites with a valid file received no requests for it in a month. The tools that do read it today are mostly coding assistants working with developer documentation.
+
+Should you publish one?
+
+Yes, if it takes minutes, because a short accurate summary does no harm. Do not pay for it as if it were a ranking tool. Put the real effort into the things assistants demonstrably read: complete HTML pages, clear answers and structured data.
+
+The file that matters more: robots.txt
+
+robots.txt decides which crawlers may read your site at all, and the major AI crawlers follow it. A robots file that blocks them removes you from their answers, whatever your llms.txt says.
+
+---
+
+# What are MCP and WebMCP, in plain words?
+
+URL: https://www.vargersoft.com/resources/what-is-mcp-and-webmcp/
+
+MCP, the Model Context Protocol, is an open standard that lets an AI assistant connect to outside tools and data, such as a catalog, a calendar or a booking system. WebMCP is a newer proposal that lets a web page offer its own tools to an AI agent running in the visitor's browser. MCP is in wide use today. WebMCP is still a draft, in trial in Chrome, and not yet available to every user.
+
+MCP: a standard plug for AI
+
+Before MCP, every connection between an assistant and a system was built by hand. MCP, introduced by Anthropic in November 2024, defines one way to describe a tool: what it does, what it needs and what it returns. A business that publishes an MCP server lets compatible assistants look up its services or availability directly.
+
+WebMCP: tools inside the page
+
+With WebMCP the page itself tells the agent what it can do there, for example "search products" or "request a quote", instead of the agent guessing from buttons and forms. As of late 2026 it is a draft from a W3C community group. Chrome offers it through a trial, and the way a page declares its tools changed during 2026, so early tutorials are already out of date.
+
+What should a business do now?
+
+First make the site readable: complete HTML, clear pages, structured data.
+
+Publish an MCP server if customers or partners already use assistants that support it.
+
+Add WebMCP tools as an experiment, and expect to update them as the draft changes.
+
+Decide which actions an agent may take alone and which need a person to approve.
+
+---
+
+# How to prepare your website for AI agents
+
+URL: https://www.vargersoft.com/resources/how-to-prepare-your-website-for-ai-agents/
+
+To prepare a website for AI agents, make every page readable without running scripts, state your services, prices, hours and location in plain text, add structured data, allow AI crawlers in robots.txt, and give agents a clear way to act, such as a simple form or an MCP server. Most of this is the same work that helps search engines and people.
+
+Step 1: check what a machine sees
+
+Open a page, choose "View page source" and search for a sentence you can read on screen. If it is missing, the content is added later by scripts, and many crawlers will never see it.
+
+Step 2: say the facts in text
+
+Agents compare businesses on facts: what you do, where, when, and for how much. Put them in sentences and tables. A price that only appears inside an image does not exist for a machine.
+
+Step 3: add structured data
+
+Structured data is a labeled copy of the same facts in a format machines read without guessing: this is the business name, this is a service, this is its price. It is invisible to visitors and useful to every crawler.
+
+Step 4: open the door
+
+Check robots.txt. If it blocks AI crawlers, assistants cannot use your pages in their answers. Allow the ones you want and keep a sitemap that lists every page.
+
+Step 5: make the action simple
+
+An agent that wants to book or ask for a quote needs a short path: a form with clear labels, or tools published through an MCP server. Decide which requests can be confirmed automatically and which a person approves.
+
+---
+
+# What should a small business automate first?
+
+URL: https://www.vargersoft.com/resources/what-to-automate-first-in-a-small-business/
+
+Automate first the task that is repeated every day, follows the same steps each time and costs you customers when it is done late. For most small businesses that is answering the phone, following up on quotes or confirming appointments. Fix the process before you automate it, because automating a broken process only makes it fail faster.
+
+Three questions to find the task
+
+Does it happen at least once a day?
+
+Could you write its steps on one page?
+
+Does a customer wait, or leave, when it is late?
+
+A task with three yes answers is a good first candidate. A task that needs judgment every time is not.
+
+Fix it on paper first
+
+Write the steps as they really happen, not as they should. Remove the ones nobody needs. Decide what the right result looks like. Only then choose a tool.
+
+Set one number and one date
+
+Before you start, pick the number the automation should move, such as missed calls per week or days to collect an invoice, and the date you will check it. If the number has not moved by that date, change the plan.
+
+What to leave alone
+
+Keep people on the moments that build trust: a complaint, a negotiation, bad news. Automation should carry the routine so your team has time for those.
+
+---
+
+# Frequently Asked Questions
+
+URL: https://www.vargersoft.com/faq/
+
+
+
+Q: What does VARGERSOFT do?
+A: VARGERSOFT builds AI agents, apps and websites for small and mid-size businesses. The agents answer calls and messages, book appointments, send quotes and remind customers to pay, in English and Spanish. VARGERSOFT is the software division of VARGER Group LLC, in Conroe, Texas.
+
+Q: How much does an AI agent cost?
+A: Each agent has a one-time setup fee and a monthly fee. The Website AI Assistant is $850 setup plus $179 a month. The AI Phone Receptionist is $1,950 setup plus $349 a month with 500 minutes included. Every price is on the AI Agents page.
+
+Q: How long does setup take?
+A: Seven business days for an AI agent, counted from the day we receive your business information and access to your calendar or phone line. Websites and custom software are quoted with their own timeline.
+
+Q: Do the agents really work in Spanish?
+A: Yes. Every agent works in English and Spanish. The phone receptionist detects the language the caller speaks and answers in it, and the chat assistant switches when the visitor does.
+
+Q: Is there a long-term contract?
+A: No. Service is month to month and you can cancel at any time. The setup fee is paid once.
+
+Q: Who owns my data?
+A: You do. Call summaries, conversations, leads and content belong to your business, and you can export them when you ask. We do not sell customer data.
+
+Q: Will my customers know they are talking to an AI?
+A: Yes. The agents introduce themselves as virtual assistants. They sound natural, but we do not present them as people, and they transfer to a person when the customer asks.
+
+Q: What happens when the agent does not know an answer?
+A: It says so, takes the customer's details and sends them to you. The agents answer from information you approve and do not invent prices or policies.
+
+Q: Can you work with the phone number and website I already have?
+A: Yes. You keep your number and forward calls to the agent. The chat assistant installs on WordPress, Wix, Shopify, Hostinger and custom sites.
+
+Q: What is GEO, and is it different from SEO?
+A: SEO helps your pages rank in search results. GEO, generative engine optimization, helps AI assistants such as ChatGPT, Claude and Perplexity read and cite your business in their answers. GEO builds on good SEO and adds answer-first writing and structured data.
+
+Q: Do you build custom software and apps too?
+A: Yes. We build custom business apps, dashboards and mobile apps at a fixed price agreed before work starts. The Apps page shows products we built and run ourselves.
+
+Q: Where are you located, and who do you serve?
+A: We are in Conroe, Texas, and work with businesses across the Houston area, the rest of the United States and Latin America, in English and Spanish.
+
+Q: How do I get started?
+A: Send a message from the Contact page or write to sales@vargersoft.com. We reply within one business day and start with a free 20-minute call about your operation.
+
+---
+
+# About VARGERSOFT
+
+URL: https://www.vargersoft.com/about/
+
+We built the software we could not buy
+
+For years we bought business software for our own companies, and for years we ended up running the business from a spreadsheet next to it. Then we noticed the same spreadsheet on every other owner's desk: hardware, parts, transportation, manufacturing. Small and mid-size businesses are sold enterprise software with features removed and the price barely reduced. VARGERSOFT exists to close that gap.
+
+Anyone can write code now. Knowing what to build is the hard part.
+
+AI made software cheap to produce. It did not make it easier to know which step of a process is actually costing the money. That takes having signed the payroll, chased the missing part and closed a month that did not add up. We use AI as a tool and bring the operating judgment ourselves.
+
+Where the experience comes from
+
+VARGER Group LLC was formed in Texas in 2026. The team behind it has engineered processes and run operating businesses since 2002: eight years in automotive quality engineering on OEM programs for GM, Ford, Volvo, Nissan and Stellantis, and more than fifteen years building and running retail, manufacturing and service companies.
