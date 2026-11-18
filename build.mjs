@@ -420,7 +420,7 @@ function pageDownloads(c) {
 function pageIndustries(c) {
   const { t, L } = c;
   const title = t(['AI Agents by Industry', 'Agentes de IA por Industria']);
-  const desc = t(['How AI agents fit repair shops, clinics, contractors, law firms, retail and distribution, with the agents we recommend for each.', 'Cómo encajan los agentes de IA en talleres, clínicas, contratistas, despachos, tiendas y distribución, con los agentes que recomendamos para cada uno.']);
+  const desc = t(['How AI voice receptionists and AI agents fit construction, roofing, manufacturing, oil and gas, repair shops, clinics, contractors, law firms, retail and distribution, with the agents we recommend for each.', 'Cómo encajan la recepcionista de IA con voz y los agentes de IA en constructoras, roofing, industria, petroleras, talleres, clínicas, contratistas, despachos, tiendas y distribución, con los agentes que recomendamos para cada uno.']);
   const cr = crumbs([[t(['Industries', 'Industrias']), L('/industries/')]], c);
   const body = `<section class="sec page-head"><div class="wrap">${cr.html}${head(c, t(home.indEyebrow), t(home.indTitle), desc)}</div></section>
 <section class="sec"><div class="wrap"><div class="grid g3">${industries.map(n => `<a class="card ind" href="${L('/industries/' + n.slug + '/')}"><span class="svc-ico">${icon(n.icon)}</span><h3>${esc(t(n.name))}</h3><p>${esc(t(n.pain))}</p><span class="more">${t(['See the agents that fit', 'Ver los agentes que encajan'])} ${icon('arrow', 'ico sm')}</span></a>`).join('')}</div></div></section>${ctaBand(c)}`;
@@ -428,8 +428,9 @@ function pageIndustries(c) {
   for (const n of industries) {
     const cr2 = crumbs([[t(['Industries', 'Industrias']), L('/industries/')], [t(n.name), L('/industries/' + n.slug + '/')]], c);
     const b = `<section class="sec page-head"><div class="wrap">${cr2.html}<span class="svc-ico big">${icon(n.icon)}</span>${head(c, t(home.indEyebrow), t(['AI agents for ', 'Agentes de IA para ']) + t(n.name).toLowerCase(), t(n.pain))}</div></section>
+<section class="sec alt"><div class="wrap narrow prose"><h2>${esc(t(['AI voice receptionist for ', 'Recepcionista de IA con voz para ']) + t(n.name).toLowerCase())}</h2><p>${esc(t(n.voice || ['The AI voice receptionist answers every call on the first ring, 24/7, in English or Spanish. It answers questions with your approved information, books appointments, takes messages, transfers to a person when needed and emails you a summary of every call.', 'La recepcionista de IA con voz contesta cada llamada al primer timbre, 24/7, en inglés o español. Responde con tu información aprobada, agenda citas, toma recados, transfiere a una persona cuando hace falta y te manda por correo un resumen de cada llamada.']))}</p><p><a class="btn" href="${L('/ai/ai-receptionist/')}">${esc(t(['See the AI Voice Receptionist', 'Ver la Recepcionista de IA con Voz']))}</a> <a class="btn ghost" href="${L('/resources/what-is-an-ai-voice-receptionist/')}">${esc(t(['How it works', 'Cómo funciona']))}</a></p></div></section>
 <section class="sec"><div class="wrap"><h2>${t(['The agents that fit', 'Los agentes que encajan'])}</h2><div class="grid g4">${n.fits.map(f => serviceCard(svc(f), c)).join('')}</div>${n.note ? `<p class="callout">${icon('check', 'ico sm')} ${esc(t(n.note))}</p>` : ''}</div></section>${ctaBand(c)}`;
-    add(c, { path: '/industries/' + n.slug + '/', title: t(['AI Agents for ', 'Agentes de IA para ']) + t(n.name) + ' | VARGERSOFT', desc: t(n.desc), body: b, ld: [cr2.ld] });
+    add(c, { path: '/industries/' + n.slug + '/', title: (n.title ? t(n.title) : t(['AI Agents for ', 'Agentes de IA para ']) + t(n.name)) + ' | VARGERSOFT', desc: t(n.desc), body: b, ld: [cr2.ld] });
   }
 }
 function pageResources(c) {

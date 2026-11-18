@@ -120,6 +120,43 @@ export const work = [
 
 export const industries = [
   {
+    slug: 'construction', icon: 'hardhat',
+    name: ['Construction companies', 'Constructoras'],
+    title: ['AI Voice Receptionist for Construction Companies', 'Recepcionista de IA con Voz para Constructoras'],
+    desc: ['AI voice receptionist for construction companies: answers every call from the job site or the office, takes bid requests, schedules site visits and routes subcontractors, 24/7 in English and Spanish.', 'Recepcionista de IA con voz para constructoras: contesta cada llamada de la obra o la oficina, toma solicitudes de cotización, agenda visitas a obra y canaliza a subcontratistas, 24/7 en inglés y español.'],
+    pain: ['Project managers live on the job site. Calls from new clients, suppliers and subcontractors land on a phone nobody can pick up, and a lost bid request is a lost project.', 'Los residentes de obra viven en la obra. Las llamadas de clientes nuevos, proveedores y subcontratistas caen en un teléfono que nadie puede contestar, y una solicitud de cotización perdida es un proyecto perdido.'],
+    voice: ['The AI voice receptionist answers on the first ring, asks the caller what they need (new project, supplier delivery, subcontractor, existing job), takes the project details for a bid, books a site visit on your calendar and sends the right person a summary. Crews and clients who speak Spanish get answered in Spanish.', 'La recepcionista de IA con voz contesta al primer timbre, pregunta qué necesita quien llama (proyecto nuevo, entrega de proveedor, subcontratista, obra en curso), toma los datos del proyecto para cotizar, agenda la visita a obra en tu calendario y le manda el resumen a la persona correcta. A las cuadrillas y clientes que hablan español se les contesta en español.'],
+    fits: ['ai-receptionist', 'quote-follow-up-agent', 'appointment-agent', 'collections-agent'],
+  },
+  {
+    slug: 'roofing', icon: 'hardhat',
+    name: ['Roofing companies', 'Empresas de techos (roofing)'],
+    title: ['AI Voice Receptionist for Roofing Companies', 'Recepcionista de IA con Voz para Empresas de Roofing'],
+    desc: ['AI voice receptionist for roofers: answers storm-season call spikes 24/7, books free inspections, takes insurance-claim details and follows up on every estimate, in English and Spanish.', 'Recepcionista de IA con voz para roofing: atiende las olas de llamadas en temporada de tormentas 24/7, agenda inspecciones gratis, toma datos de reclamos al seguro y da seguimiento a cada presupuesto, en inglés y español.'],
+    pain: ['After a storm the phone does not stop, and every homeowner calls three roofers. The one that answers first and books the inspection gets the job.', 'Después de una tormenta el teléfono no para, y cada dueño de casa le llama a tres roofers. El que contesta primero y agenda la inspección se queda con el trabajo.'],
+    voice: ['The AI voice receptionist can take many calls at the same time, so no caller hits voicemail during a storm surge. It asks for the address, the type of damage and the insurance company, books the inspection and texts you the lead in seconds.', 'La recepcionista de IA con voz puede atender muchas llamadas al mismo tiempo, así que nadie cae en buzón durante una ola de tormenta. Pide la dirección, el tipo de daño y la aseguradora, agenda la inspección y te manda el prospecto en segundos.'],
+    fits: ['ai-receptionist', 'appointment-agent', 'quote-follow-up-agent'],
+  },
+  {
+    slug: 'manufacturing-factories', icon: 'gear',
+    name: ['Manufacturing plants and factories', 'Industria, plantas y fábricas'],
+    title: ['AI Voice Receptionist for Manufacturers and Factories', 'Recepcionista de IA con Voz para Industria y Fábricas'],
+    desc: ['AI voice receptionist for manufacturing plants: answers customer, supplier and carrier calls 24/7 across shifts, takes RFQs, gives order-status updates and routes calls to the right department, in English and Spanish.', 'Recepcionista de IA con voz para plantas industriales y fábricas: contesta llamadas de clientes, proveedores y transportistas 24/7 en todos los turnos, toma solicitudes de cotización (RFQ), informa el estado de pedidos y canaliza al departamento correcto, en inglés y español.'],
+    pain: ['A plant runs three shifts, but the front office works one. Customers asking for a quote, carriers at the gate and suppliers with a question all wait for someone to call back.', 'Una planta trabaja tres turnos, pero la oficina trabaja uno. Clientes que piden cotización, transportistas en la caseta y proveedores con dudas esperan a que alguien les regrese la llamada.'],
+    voice: ['The AI voice receptionist answers every shift, identifies who is calling (customer, supplier, carrier, job applicant), takes RFQ details, books dock appointments and routes to sales, purchasing, shipping or HR with a written summary. It speaks English and Spanish with plant staff and drivers.', 'La recepcionista de IA con voz contesta en todos los turnos, identifica quién llama (cliente, proveedor, transportista, candidato), toma los datos de la cotización, agenda citas de andén y canaliza a ventas, compras, embarques o recursos humanos con un resumen escrito. Habla inglés y español con el personal de planta y los choferes.'],
+    fits: ['ai-receptionist', 'quote-follow-up-agent', 'appointment-agent', 'website-assistant'],
+  },
+  {
+    slug: 'oil-gas-refineries', icon: 'truck',
+    name: ['Oil and gas companies and refineries', 'Petroleras y refinerías'],
+    title: ['AI Voice Receptionist for Oil and Gas Companies and Refineries', 'Recepcionista de IA con Voz para Petroleras y Refinerías'],
+    desc: ['AI voice receptionist for oil and gas companies, oilfield services and refineries: answers 24/7 across shifts, dispatches service requests, books contractor and vendor check-ins and routes calls, in English and Spanish.', 'Recepcionista de IA con voz para petroleras, servicios petroleros y refinerías: contesta 24/7 en todos los turnos, canaliza solicitudes de servicio, agenda la entrada de contratistas y proveedores y dirige las llamadas, en inglés y español.'],
+    pain: ['Field crews, contractors, vendors and customers call around the clock, and the office line cannot keep up with 24-hour operations.', 'Cuadrillas de campo, contratistas, proveedores y clientes llaman a toda hora, y la línea de la oficina no alcanza para una operación de 24 horas.'],
+    voice: ['The AI voice receptionist answers at any hour, sorts each call (service request, contractor check-in, vendor, delivery, customer), records the job details, books appointments and sends the on-call person a summary right away. Urgent calls follow your escalation list to a person.', 'La recepcionista de IA con voz contesta a cualquier hora, clasifica cada llamada (solicitud de servicio, entrada de contratista, proveedor, entrega, cliente), registra los datos del trabajo, agenda citas y le manda el resumen al responsable de guardia al momento. Las llamadas urgentes siguen tu lista de escalamiento hasta una persona.'],
+    note: ['The agent handles calls and routing. It does not replace your emergency, safety or spill-response procedures; urgent and safety calls go straight to a person.', 'El agente atiende y canaliza llamadas. No sustituye tus procedimientos de emergencia, seguridad o derrames; las llamadas urgentes y de seguridad pasan directo a una persona.'],
+    fits: ['ai-receptionist', 'appointment-agent', 'quote-follow-up-agent'],
+  },
+  {
     slug: 'auto-diesel-repair', icon: 'wrench',
     name: ['Auto and diesel repair shops', 'Talleres mecánicos y diésel'],
     desc: ['AI agents for repair shops: answer calls while you are under the hood, book jobs, send quotes and remind customers to pay.', 'Agentes de IA para talleres: contestan mientras estás bajo el cofre, agendan trabajos, mandan cotizaciones y recuerdan pagos.'],
