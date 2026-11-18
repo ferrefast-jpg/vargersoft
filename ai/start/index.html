@@ -24,7 +24,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/fonts/rajdhani-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/site.css?v=2026-11-18">
+<link rel="stylesheet" href="/css/site.css?v=2026-11-18d">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://www.vargersoft.com/#org","name":"VARGERSOFT","legalName":"VARGER Group LLC","url":"https://www.vargersoft.com/","logo":"https://www.vargersoft.com/img/icon-512.png","email":"sales@vargersoft.com","slogan":"Smart software. Real business.","address":{"@type":"PostalAddress","addressLocality":"Conroe","addressRegion":"TX","addressCountry":"US"},"sameAs":["https://www.linkedin.com/company/varger-group"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.vargersoft.com/"},{"@type":"ListItem","position":2,"name":"AI Agents","item":"https://www.vargersoft.com/ai/"},{"@type":"ListItem","position":3,"name":"Start your AI receptionist","item":"https://www.vargersoft.com/ai/start/"}]}</script>
 </head>
@@ -34,7 +34,7 @@
   <div class="wrap top-in">
     <a class="brand" href="/" aria-label="VARGERSOFT"><img src="/img/logo-nav.webp" alt="VARGERSOFT" width="111" height="48"></a>
     <nav class="nav" id="nav" aria-label="Main">
-      <a href="/ai/" aria-current="page">AI Agents</a><a href="/apps/">Apps</a><a href="/downloads/">Downloads</a><a href="/industries/">Industries</a><a href="/resources/">Resources</a><a href="/faq/">FAQ</a>
+      <a href="/ai/ai-receptionist/" class="hot">AI Receptionist</a><a href="/ai/" aria-current="page">AI Agents</a><a href="/apps/">Apps</a><a href="/downloads/">Downloads</a><a href="/industries/">Industries</a><a href="/resources/">Resources</a><a href="/faq/">FAQ</a>
       <a class="nav-work" href="/work/">Work</a>
     </nav>
     <div class="top-act">
@@ -48,8 +48,10 @@
 <section class="sec page-head"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/ai/">AI Agents</a></li><li aria-current="page">Start your AI receptionist</li></ol></nav><p class="eyebrow">Onboarding</p><h1>Start your AI receptionist</h1><p class="lead">Tell us about your business in 5 minutes. We build your bilingual AI receptionist, you test it, then we connect it to your phone.</p>
   <div class="grid g4 steps-ico"><div class="card"><span class="status">Step 1</span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 9h16M4 14h16M10 4v16"/></svg><h3>Fill this form</h3><p>5 minutes: your business, hours, services and prices.</p></div><div class="card"><span class="status">Step 2</span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></svg><h3>We build her</h3><p>Your assistant gets her own name, badge and the playbook for your industry.</p></div><div class="card"><span class="status">Step 3</span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/><path d="M15 4a5 5 0 0 1 5 5M15 7.5a1.5 1.5 0 0 1 1.5 1.5"/></svg><h3>You test her</h3><p>We send you a link to talk to her and you tell us what to adjust.</p></div><div class="card"><span class="status">Step 4</span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0z"/><path d="M12 17v4"/></svg><h3>We connect her</h3><p>To a new number or your current one, with a step-by-step guide.</p></div></div></div></section>
 <section class="sec"><div class="wrap narrow">
+<div class="demo-band paid-ok" style="justify-content:flex-start;margin-bottom:1.4rem" id="pagoOk" hidden><span class="band-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><div style="flex:1"><h3>Payment received. Thank you!</h3><p>Last step: fill this form so we can build your receptionist. It takes 5 minutes.</p></div></div>
 <form class="form" id="alta" novalidate>
   <input type="hidden" name="servicio" value="ai-receptionist">
+  <input type="hidden" name="stripe_session" id="stripeSession">
   <input name="sitio_web_2" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
   <label>Business name<input name="negocio" required maxlength="120"></label>
   <label>Industry<select name="giro"><option value="generico">Other business</option><option value="taller_diesel">Diesel / truck repair shop</option><option value="refaccionaria">Auto or truck parts store</option><option value="clinica_dental">Dental clinic</option><option value="clinica_medica">Medical office</option><option value="despacho_legal">Law firm</option><option value="contratista">Contractor / remodeling</option><option value="hvac_plomeria">A/C, heating &amp; plumbing</option><option value="restaurante">Restaurant</option><option value="salon_belleza">Salon / spa</option><option value="veterinaria">Veterinary clinic</option><option value="bienes_raices">Real estate</option><option value="agencia_ia">Agency / software</option></select></label>
@@ -83,7 +85,7 @@
   </div>
   <div class="wrap foot-end"><p>VARGERSOFT is a division of VARGER Group LLC · Conroe, Texas, USA</p><p>© 2026 VARGER Group LLC. All rights reserved.</p></div>
 </footer>
-<script src="/js/site.js?v=2026-11-18" defer></script>
+<script src="/js/site.js?v=2026-11-18d" defer></script>
 <elevenlabs-convai agent-id="agent_6501m7nyr3eyfgsaypksn87xnmad" variant="compact" action-text="Talk to Sofía" start-call-text="Start call" end-call-text="End" expand-text="Talk to Sofía" listening-text="Listening…" speaking-text="Sofía is speaking"></elevenlabs-convai>
 <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
