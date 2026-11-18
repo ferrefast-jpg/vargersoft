@@ -226,12 +226,38 @@ function spotlight(c, onHome) {
   <p class="eyebrow">${esc(t(['Featured product', 'Producto estrella']))}</p>
   <${onHome ? 'h2' : 'h2'}>${esc(t(['AI Receptionist: never miss a call again', 'Recepcionista IA: no vuelvas a perder una llamada']))}</${onHome ? 'h2' : 'h2'}>
   <div class="grid g3 slides">${slides.map(([ic, h, p, list], k) => `<div class="card slide"><span class="status">${k + 1} / 3</span><div class="slide-art">${illus(ic === 'chart' ? 'spark' : ic, t(h))}</div><h3>${esc(t(h))}</h3><p>${esc(t(p))}</p>${list ? `<ul class="checks">${list.map(x => `<li>${esc(t(x))}</li>`).join('')}</ul>` : ''}</div>`).join('')}</div>
+  ${onHome ? `<h3 class="mt flow-title">${esc(t(['How it works: from demo to your live line', 'Cómo funciona: del demo a tu línea']))}</h3>${flowDiagram(c)}` : ''}
   <div class="demo-band"><span class="band-ico">${icon('phone', 'ico')}</span><div class="band-txt"><h3>${esc(t(['Live demo: talk to Sofía', 'Demo en vivo: habla con Sofía']))}</h3><p>${esc(t(['She is the product. Ask her anything about VARGERSOFT in English or Spanish, then give her your name and number.', 'Ella es el producto. Pregúntale lo que quieras de VARGERSOFT en inglés o español y déjale tu nombre y teléfono.']))}</p></div>
     <div class="hero-cta">${talkBtn(c, '')}</div></div>
   <div class="demo-band real"><span class="band-ico">${icon('bot', 'ico')}</span><div class="band-txt"><h3>${esc(t(['Now with your business', 'Ahora con tu negocio']))}</h3><p>${esc(t(['Your own assistant with her name, badge and your industry playbook: setup $1,950 · $349/month with 500 minutes · extra minute $0.35.', 'Tu propia asistente con su nombre, gafete y la guía de tu giro: instalación $1,950 · $349 al mes con 500 minutos · minuto extra $0.35.']))}</p></div>
     <div class="hero-cta">${payBtn(c)}${onHome ? `<a class="btn ghost" href="${L('/ai/ai-receptionist/')}">${esc(t(['See how it works', 'Ver cómo funciona']))}</a>` : ''}</div></div>
 </div></section>`;
 }
+
+// ---------- Flujo completo: demo → pago → instalación (íconos + flechas) ----------
+const FLOW = [
+  ['try', 'chat', ['Talk to Sofía', 'Habla con Sofía'], ['Free live demo, English or Spanish.', 'Demo gratis en vivo, en inglés o español.']],
+  ['pay', 'check', ['Pay & activate', 'Paga y activa'], ['Secure Stripe checkout: $1,950 setup + $349/mo.', 'Pago seguro con Stripe: $1,950 instalación + $349/mes.']],
+  ['pay', 'mail', ['Check your email', 'Revisa tu correo'], ['Receipt + your setup link, right away.', 'Recibo + tu enlace de alta, al instante.']],
+  ['setup', 'sheet', ['Fill the form', 'Llena el formulario'], ['5 minutes: hours, services, prices.', '5 minutos: horario, servicios, precios.']],
+  ['setup', 'bot', ['We build her', 'La armamos'], ['Her name, badge and your industry playbook. 1 business day.', 'Su nombre, gafete y la guía de tu giro. 1 día hábil.']],
+  ['setup', 'phone', ['You test her', 'La pruebas'], ['We send you a link. Tell us what to adjust.', 'Te mandamos un enlace. Nos dices qué ajustar.']],
+  ['setup', 'plug', ['Connect your line', 'Conecta tu línea'], ['New number or call forwarding. Live!', 'Número nuevo o desvío de llamadas. ¡En línea!']],
+];
+const FASE = { try: ['Try it', 'Pruébala'], pay: ['Pay', 'Pago'], setup: ['Setup', 'Instalación'] };
+function flowDiagram(c, here = -1) {
+  const { t } = c;
+  const steps = FLOW.map(([fase, ic, h, p], i) => `<li class="flow-step f-${fase}${i === here ? ' here' : ''}${here > -1 && i < here ? ' done' : ''}">
+    <span class="flow-n">${i + 1}</span><span class="flow-fase">${esc(t(FASE[fase]))}</span>
+    <span class="flow-ico">${icon(i < here ? 'check' : ic, 'ico')}</span>
+    <h3>${esc(t(h))}</h3><p>${esc(t(p))}</p>${i === here ? `<span class="flow-here">${esc(t(['You are here', 'Estás aquí']))}</span>` : ''}</li>`);
+  return `<ol class="flow" aria-label="${esc(t(['How it works, step by step', 'Cómo funciona, paso a paso']))}">${steps.join(`<li class="flow-arrow" aria-hidden="true">${icon('next', 'ico')}</li>`)}</ol>`;
+}
+function flowSection(c, title, here = -1, alt = true) {
+  const { t } = c;
+  return `<section class="sec${alt ? ' alt' : ''}"><div class="wrap"><p class="eyebrow">${esc(t(['How it works', 'Cómo funciona']))}</p><h2>${esc(title)}</h2>${flowDiagram(c, here)}</div></section>`;
+}
+
 function installGuide(c) {
   const { t } = c;
   const steps = [
@@ -245,8 +271,8 @@ function installGuide(c) {
     ['B', ['Keep your number · recommended', 'Conserva tu número · recomendado'], ['You answer first; if you don\'t pick up in 4 rings, Sofía does. One code on your phone.', 'Tú contestas primero; si no levantas en 4 timbres, contesta ella. Un código en tu teléfono.']],
     ['C', ['She answers everything', 'Ella contesta todo'], ['Every call goes to her and she transfers to you when needed.', 'Todas las llamadas van a ella y te transfiere cuando hace falta.']],
   ];
-  return `<section class="sec alt"><div class="wrap"><p class="eyebrow">${esc(t(['Installation', 'Instalación']))}</p><h2>${esc(t(['Live in 4 steps', 'Lista en 4 pasos']))}</h2>
-  <div class="grid g4 steps-ico">${steps.map(([ic, h, p]) => `<div class="card">${icon(ic, 'ico big')}<h3>${esc(t(h))}</h3><p>${esc(t(p))}</p></div>`).join('')}</div>
+  return `<section class="sec alt"><div class="wrap"><p class="eyebrow">${esc(t(['Installation', 'Instalación']))}</p><h2>${esc(t(['From demo to live line in 7 steps', 'Del demo a tu línea en 7 pasos']))}</h2>
+  ${flowDiagram(c)}
   <h3 class="mt">${esc(t(['How it connects to your phone', 'Cómo se conecta a tu teléfono']))}</h3>
   <div class="grid g3">${opts.map(([k, h, p]) => `<div class="card opt"><span class="status">${t(['Option', 'Opción'])} ${k}</span><h3>${esc(t(h))}</h3><p>${esc(t(p))}</p></div>`).join('')}</div>
   <p class="pnote">${esc(t(['Works with AT&T, T-Mobile, Verizon and most office lines. We guide you step by step and you can undo it any time.', 'Funciona con AT&T, T-Mobile, Verizon y la mayoría de líneas de oficina. Te guiamos paso a paso y se puede quitar cuando quieras.']))}</p>
@@ -467,7 +493,7 @@ function pageStart(c) {
   const f = (name, label, attrs = '', full = false) => `<label${full ? ' class="full"' : ''}>${esc(t(label))}<input name="${name}" ${attrs}></label>`;
   const ta = (name, label, ph) => `<label class="full">${esc(t(label))}<textarea name="${name}" rows="4" placeholder="${esc(t(ph))}"></textarea></label>`;
   const body = `<section class="sec page-head"><div class="wrap">${cr.html}${head(c, t(['Onboarding', 'Alta']), title, desc)}
-  <div class="grid g4 steps-ico">${steps.map(([ic, h, p], k) => `<div class="card"><span class="status">${t(['Step', 'Paso'])} ${k + 1}</span>${icon(ic, 'ico')}<h3>${esc(t(h))}</h3><p>${esc(t(p))}</p></div>`).join('')}</div></div></section>
+  ${flowDiagram(c, 3)}</div></section>
 <section class="sec"><div class="wrap narrow">
 <div class="demo-band paid-ok" style="justify-content:flex-start;margin-bottom:1.4rem" id="pagoOk" hidden><span class="band-ico">${icon('check', 'ico')}</span><div style="flex:1"><h3>${esc(t(['Payment received. Thank you!', '¡Pago recibido, gracias!']))}</h3><p>${esc(t(['Last step: fill this form so we can build your receptionist. It takes 5 minutes.', 'Último paso: llena este formulario para armar tu recepcionista. Toma 5 minutos.']))}</p></div></div>
 <form class="form" id="alta" novalidate>

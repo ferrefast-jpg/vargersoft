@@ -29,6 +29,7 @@ const P = {
   layers: '<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5M3 16l9 5 9-5"/>',
   file: '<path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/>',
   arrow: '<path d="M7 17L17 7M9 7h8v8"/>',
+  next: '<path d="M4 12h15"/><path d="M13 6l6 6-6 6"/>',
   ext: '<path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v6H4V6h6"/>',
   mail: '<rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/>',
   pin: '<path d="M12 21s7-6.300 7-11a7 7 0 0 0-14 0c0 4.700 7 11 7 11z"/><circle cx="12" cy="10" r="2.500"/>',
