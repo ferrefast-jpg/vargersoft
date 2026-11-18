@@ -164,7 +164,7 @@ ${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`
   <div class="wrap top-in">
     <a class="brand" href="${L('/')}" aria-label="${site.name}"><img src="/img/logo-nav.webp" alt="${site.name}" width="111" height="48"></a>
     <nav class="nav" id="nav" aria-label="${t(['Main', 'Principal'])}">
-      ${nav.map(n => `<a href="${L(n.href)}"${p.path.startsWith(n.href) ? ' aria-current="page"' : ''}>${t(n.label)}</a>`).join('')}
+      ${nav.map(n => `<a href="${L(n.href)}"${n.hot ? ' class="hot"' : ''}${p.path === n.href || (!n.hot && p.path.startsWith(n.href) && p.path !== '/ai/ai-receptionist/') ? ' aria-current="page"' : ''}>${t(n.label)}</a>`).join('')}
       <a class="nav-work" href="${L('/work/')}"${p.path.startsWith('/work/') ? ' aria-current="page"' : ''}>${t(['Work', 'Trabajo'])}</a>
     </nav>
     <div class="top-act">
@@ -201,6 +201,58 @@ function add(c, p) {
 }
 const head = (c, eyebrow, h, text, tag = 'h1') => `<p class="eyebrow">${esc(eyebrow)}</p><${tag}>${esc(h)}</${tag}>${text ? `<p class="lead">${esc(text)}</p>` : ''}`;
 
+// ---------- Producto estrella: Recepcionista IA (intro de valor → demo → tu negocio → pago) ----------
+const STRIPE_RECEPCIONISTA = process.env.STRIPE_RECEPCIONISTA || (process.env.STAGING ? 'https://buy.stripe.com/test_4gMdRa4Kp2YU3va9IQ0gw00' : '');
+const TALK_URL = 'https://elevenlabs.io/app/talk-to?agent_id=agent_6501m7nyr3eyfgsaypksn87xnmad';
+function payBtn(c, cls = '') {
+  const { t, L } = c;
+  return STRIPE_RECEPCIONISTA
+    ? `<a class="btn ${cls}" href="${STRIPE_RECEPCIONISTA}" data-pay>${icon('check', 'ico sm')} ${esc(t(['Pay & activate', 'Pagar y activar']))}</a>`
+    : `<a class="btn ${cls}" href="${L('/ai/start/')}?service=ai-receptionist">${esc(t(['Activate my receptionist', 'Activar mi recepcionista']))}</a>`;
+}
+function talkBtn(c, cls = 'ghost') {
+  const { t } = c;
+  return `<a class="btn ${cls}" href="${TALK_URL}" data-talk target="_blank" rel="noopener">${icon('phone', 'ico sm')} ${esc(t(['Talk to Sofía now', 'Habla con Sofía ahora']))}</a>`;
+}
+function spotlight(c, onHome) {
+  const { t, L } = c;
+  const slides = [
+    ['phone', ['What it is', 'Qué es'], ['A receptionist with a natural voice that answers your business line 24/7, in English or Spanish, without asking.', 'Una recepcionista con voz natural que contesta tu línea 24/7, en inglés o español, sin preguntar.'], null],
+    ['calendar', ['How it helps', 'Cómo te ayuda'], ['Answers prices, hours and services from your own info, takes name and phone, books, and emails you a summary of every call.', 'Responde precios, horarios y servicios con tu información, toma nombre y teléfono, agenda y te manda por correo el resumen de cada llamada.'], null],
+    ['chart', ['What you gain', 'Qué ganas'], ['44% of business calls go unanswered (Invoca, 2026, 70M calls). 82% of callers would try a competitor instead (CallRail, 2025).', 'El 44% de las llamadas a negocios no se contesta (Invoca, 2026, 70 millones de llamadas). El 82% buscaría a la competencia (CallRail, 2025).'],
+      [['No missed calls, day or night', 'Cero llamadas perdidas, de día y de noche'], ['Half your callers speak Spanish? Covered', '¿La mitad llama en español? Cubierto'], ['From $349/month, less than a part-time hire', 'Desde $349 al mes, menos que medio turno']]],
+  ];
+  return `<section class="sec spot" id="recepcionista"><div class="wrap">
+  <p class="eyebrow">${esc(t(['Featured product', 'Producto estrella']))}</p>
+  <${onHome ? 'h2' : 'h2'}>${esc(t(['AI Receptionist: never miss a call again', 'Recepcionista IA: no vuelvas a perder una llamada']))}</${onHome ? 'h2' : 'h2'}>
+  <div class="grid g3 slides">${slides.map(([ic, h, p, list], k) => `<div class="card slide"><span class="status">${k + 1} / 3</span><div class="slide-art">${illus(ic === 'chart' ? 'spark' : ic, t(h))}</div><h3>${esc(t(h))}</h3><p>${esc(t(p))}</p>${list ? `<ul class="checks">${list.map(x => `<li>${esc(t(x))}</li>`).join('')}</ul>` : ''}</div>`).join('')}</div>
+  <div class="demo-band"><span class="band-ico">${icon('phone', 'ico')}</span><div class="band-txt"><h3>${esc(t(['Live demo: talk to Sofía', 'Demo en vivo: habla con Sofía']))}</h3><p>${esc(t(['She is the product. Ask her anything about VARGERSOFT in English or Spanish, then give her your name and number.', 'Ella es el producto. Pregúntale lo que quieras de VARGERSOFT en inglés o español y déjale tu nombre y teléfono.']))}</p></div>
+    <div class="hero-cta">${talkBtn(c, '')}</div></div>
+  <div class="demo-band real"><span class="band-ico">${icon('bot', 'ico')}</span><div class="band-txt"><h3>${esc(t(['Now with your business', 'Ahora con tu negocio']))}</h3><p>${esc(t(['Your own assistant with her name, badge and your industry playbook: setup $1,950 · $349/month with 500 minutes · extra minute $0.35.', 'Tu propia asistente con su nombre, gafete y la guía de tu giro: instalación $1,950 · $349 al mes con 500 minutos · minuto extra $0.35.']))}</p></div>
+    <div class="hero-cta">${payBtn(c)}${onHome ? `<a class="btn ghost" href="${L('/ai/ai-receptionist/')}">${esc(t(['See how it works', 'Ver cómo funciona']))}</a>` : ''}</div></div>
+</div></section>`;
+}
+function installGuide(c) {
+  const { t } = c;
+  const steps = [
+    ['sheet', ['1. Tell us about your business', '1. Cuéntanos de tu negocio'], ['5-minute form: hours, services, prices and common questions.', 'Formulario de 5 minutos: horario, servicios, precios y preguntas frecuentes.']],
+    ['bot', ['2. We build her', '2. La armamos'], ['Name, badge and your industry playbook. Ready in 1 business day.', 'Nombre, gafete y la guía de tu giro. Lista en 1 día hábil.']],
+    ['phone', ['3. You test her', '3. La pruebas'], ['We send you a link to talk to her and adjust what you want.', 'Te mandamos un enlace para hablarle y ajustamos lo que quieras.']],
+    ['plug', ['4. Connect your phone', '4. Conecta tu teléfono'], ['Pick one: new number, forward when you can\'t answer (recommended), or forward every call.', 'Elige: número nuevo, desvío cuando no contestas (recomendado) o desvío de todas las llamadas.']],
+  ];
+  const opts = [
+    ['A', ['New number', 'Número nuevo'], ['We give you a local Houston number. Put it on Google, your site and your truck.', 'Te damos un número local de Houston. Ponlo en Google, tu sitio y tu camioneta.']],
+    ['B', ['Keep your number · recommended', 'Conserva tu número · recomendado'], ['You answer first; if you don\'t pick up in 4 rings, Sofía does. One code on your phone.', 'Tú contestas primero; si no levantas en 4 timbres, contesta ella. Un código en tu teléfono.']],
+    ['C', ['She answers everything', 'Ella contesta todo'], ['Every call goes to her and she transfers to you when needed.', 'Todas las llamadas van a ella y te transfiere cuando hace falta.']],
+  ];
+  return `<section class="sec alt"><div class="wrap"><p class="eyebrow">${esc(t(['Installation', 'Instalación']))}</p><h2>${esc(t(['Live in 4 steps', 'Lista en 4 pasos']))}</h2>
+  <div class="grid g4 steps-ico">${steps.map(([ic, h, p]) => `<div class="card">${icon(ic, 'ico big')}<h3>${esc(t(h))}</h3><p>${esc(t(p))}</p></div>`).join('')}</div>
+  <h3 class="mt">${esc(t(['How it connects to your phone', 'Cómo se conecta a tu teléfono']))}</h3>
+  <div class="grid g3">${opts.map(([k, h, p]) => `<div class="card opt"><span class="status">${t(['Option', 'Opción'])} ${k}</span><h3>${esc(t(h))}</h3><p>${esc(t(p))}</p></div>`).join('')}</div>
+  <p class="pnote">${esc(t(['Works with AT&T, T-Mobile, Verizon and most office lines. We guide you step by step and you can undo it any time.', 'Funciona con AT&T, T-Mobile, Verizon y la mayoría de líneas de oficina. Te guiamos paso a paso y se puede quitar cuando quieras.']))}</p>
+</div></section>`;
+}
+
 // ---------- páginas ----------
 function pageHome(c) {
   const { t, L } = c;
@@ -213,12 +265,14 @@ function pageHome(c) {
   <div class="wrap hero-in">
     <img class="hero-logo" src="/img/logo.webp" alt="${site.name} — ${esc(t(site.tagline))}" width="692" height="300" fetchpriority="high">
     <p class="chip">${icon('pin', 'ico sm')} ${site.place}</p>
-    <h1><span>${esc(t(home.h1a))}</span> <span class="g">${esc(t(home.h1b))}</span></h1>
-    <p class="hero-sub">${esc(t(home.sub))}</p>
-    <div class="hero-cta"><a class="btn" href="${L('/contact/')}">${esc(t(ui.book))}</a><a class="btn ghost" href="${L('/ai/')}">${esc(t(ui.viewAll))}</a></div>
+    <h1><span>${esc(t(['Your AI receptionist.', 'Tu recepcionista con IA.']))}</span> <span class="g">${esc(t(['English and Spanish.', 'En inglés y español.']))}</span></h1>
+    <p class="hero-sub">${esc(t(['She answers every call 24/7, books, quotes and emails you a summary. From $349/month. Talk to her right now.', 'Contesta cada llamada 24/7, agenda, cotiza y te manda un resumen por correo. Desde $349 al mes. Háblale ahora mismo.']))}</p>
+    <div class="hero-cta">${talkBtn(c, '')}${payBtn(c, 'ghost')}</div>
+    <ul class="feats">${[['clock', ['24/7, nights & weekends', '24/7, noches y fines']], ['globe', ['English · Español', 'Inglés · Español']], ['calendar', ['Books appointments', 'Agenda citas']], ['mail', ['Summary of every call', 'Resumen de cada llamada']], ['phone', ['Your number or a new one', 'Tu número o uno nuevo']]].map(([ic, l]) => `<li>${icon(ic, 'ico')}<span>${esc(t(l))}</span></li>`).join('')}</ul>
     <p class="strap">${esc(t(home.strap))}</p>
   </div>
 </section>
+${spotlight(c, true)}
 <section class="sec dock-sec"><div class="wrap"><p class="dock-title">${esc(t(home.dock))}</p>${dock(c)}</div></section>
 <section class="sec" id="what"><div class="wrap">${head(c, t(home.whatEyebrow), t(home.whatTitle), '', 'h2')}
   <div class="grid g4">${home.what.map(w => `<a class="card what" href="${L(w.href)}"><span class="svc-ico">${icon(w.icon)}</span><h3>${esc(t(w.title))}</h3><p>${esc(t(w.text))}</p></a>`).join('')}</div></div></section>
@@ -282,8 +336,9 @@ function pageService(s, c) {
   const body = `<section class="sec page-head"><div class="wrap two top-align">
   <div>${cr.html}${head(c, t(home.agentsEyebrow), t(s.name), t(s.lead))}
     <p class="pills"><span>${icon('clock', 'ico sm')} ${t(ui.setupTime)}</span><span>${icon('globe', 'ico sm')} English / Español</span></p>
-    <div class="hero-cta"><a class="btn" href="${L(['ai-receptionist','website-assistant'].includes(s.slug) ? '/ai/start/' : '/contact/')}?service=${s.slug}">${esc(t(ui.start))}</a><a class="btn ghost" href="${L('/contact/')}">${esc(t(ui.book))}</a></div></div>
+    <div class="hero-cta">${s.slug === 'ai-receptionist' ? talkBtn(c, '') + payBtn(c, 'ghost') : `<a class="btn" href="${L(['ai-receptionist','website-assistant'].includes(s.slug) ? '/ai/start/' : '/contact/')}?service=${s.slug}">${esc(t(ui.start))}</a><a class="btn ghost" href="${L('/contact/')}">${esc(t(ui.book))}</a>`}</div></div>
   <div class="illus-box">${illus(s.icon, t(s.name))}</div></div></section>
+${s.slug === 'ai-receptionist' ? spotlight(c, false) + installGuide(c) : ''}
 <section class="sec"><div class="wrap two top-align">
   <div class="prose"><h2>${t(ui.problem)}</h2><p>${esc(t(s.problem))}</p>
     <h2>${t(ui.does)}</h2><ul class="checks">${s.does.map(d => `<li>${esc(t(d))}</li>`).join('')}</ul>
@@ -292,7 +347,7 @@ function pageService(s, c) {
     ${lines.map(l => `<div class="pline"><span>${esc(l.label)}</span><b>${money(l.amount)}</b><small>${esc(l.unit)}</small></div>`).join('')}
     ${s.priceNote ? `<p class="pnote">${esc(t(s.priceNote))}</p>` : ''}
     <p class="pnote">${t(ui.cancel)}</p>
-    <a class="btn full" href="${L(['ai-receptionist','website-assistant'].includes(s.slug) ? '/ai/start/' : '/contact/')}?service=${s.slug}">${esc(t(ui.start))}</a></aside></div></section>
+    ${s.slug === 'ai-receptionist' ? payBtn(c, 'full') + `<p class="pnote">${t(['Secure payment with Stripe. Your assistant is built and tested with you before we connect your phone.', 'Pago seguro con Stripe. Tu asistente se arma y se prueba contigo antes de conectar tu teléfono.'])}</p>` : `<a class="btn full" href="${L(['ai-receptionist','website-assistant'].includes(s.slug) ? '/ai/start/' : '/contact/')}?service=${s.slug}">${esc(t(ui.start))}</a>`}</aside></div></section>
 <section class="sec alt"><div class="wrap narrow"><h2>${t(ui.faq)}</h2>${faqBlock(s.faq, c, 1)}</div></section>
 <section class="sec"><div class="wrap"><h2>${t(ui.related)}</h2><div class="grid g4">${rel.map(x => serviceCard(x, c)).join('')}</div></div></section>${ctaBand(c, '?service=' + s.slug)}`;
   const offers = s.priceLines
@@ -414,8 +469,10 @@ function pageStart(c) {
   const body = `<section class="sec page-head"><div class="wrap">${cr.html}${head(c, t(['Onboarding', 'Alta']), title, desc)}
   <div class="grid g4 steps-ico">${steps.map(([ic, h, p], k) => `<div class="card"><span class="status">${t(['Step', 'Paso'])} ${k + 1}</span>${icon(ic, 'ico')}<h3>${esc(t(h))}</h3><p>${esc(t(p))}</p></div>`).join('')}</div></div></section>
 <section class="sec"><div class="wrap narrow">
+<div class="demo-band paid-ok" style="justify-content:flex-start;margin-bottom:1.4rem" id="pagoOk" hidden><span class="band-ico">${icon('check', 'ico')}</span><div style="flex:1"><h3>${esc(t(['Payment received. Thank you!', '¡Pago recibido, gracias!']))}</h3><p>${esc(t(['Last step: fill this form so we can build your receptionist. It takes 5 minutes.', 'Último paso: llena este formulario para armar tu recepcionista. Toma 5 minutos.']))}</p></div></div>
 <form class="form" id="alta" novalidate>
   <input type="hidden" name="servicio" value="ai-receptionist">
+  <input type="hidden" name="stripe_session" id="stripeSession">
   <input name="sitio_web_2" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
   ${f('negocio', ['Business name', 'Nombre del negocio'], 'required maxlength="120"')}
   <label>${t(['Industry', 'Giro'])}<select name="giro">${GIROS.map(([v, n]) => `<option value="${v}">${esc(t(n))}</option>`).join('')}</select></label>
