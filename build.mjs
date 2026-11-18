@@ -191,6 +191,8 @@ ${p.body}
   <div class="wrap foot-end"><p>${t(ui.footerLine)}</p><p>© 2026 ${site.legal}. ${t(ui.rights)}</p></div>
 </footer>
 <script src="/js/site.js?v=${site.updated}" defer></script>
+<elevenlabs-convai agent-id="agent_6501m7nyr3eyfgsaypksn87xnmad" variant="compact" action-text="${t(['Talk to Sofía', 'Habla con Sofía'])}" start-call-text="${t(['Start call', 'Iniciar llamada'])}" end-call-text="${t(['End', 'Colgar'])}" expand-text="${t(['Talk to Sofía', 'Habla con Sofía'])}" listening-text="${t(['Listening…', 'Escuchando…'])}" speaking-text="${t(['Sofía is speaking', 'Sofía está hablando'])}"></elevenlabs-convai>
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>`;
 }
