@@ -72,3 +72,13 @@
   const sent = d.querySelector('[data-sent]');
   if (sent && q.get('sent') === '1') { sent.hidden = false; if (form) form.hidden = true; }
 })();
+
+// Botón "Habla con Sofía": abre el widget de voz de la página; si no carga, abre la demo en otra pestaña.
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('[data-talk]');
+  if (!a) return;
+  var w = document.querySelector('elevenlabs-convai');
+  var root = w && w.shadowRoot;
+  var btn = root && (root.querySelector('button[aria-label*="call" i], button[aria-label*="llamada" i]') || root.querySelector('button'));
+  if (btn) { e.preventDefault(); btn.click(); try { w.scrollIntoView({ block: 'end' }); } catch (_) {} }
+});
