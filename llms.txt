@@ -42,6 +42,7 @@ Prices in USD. AI agents are set up in 7 business days and billed month to month
 ## Guides
 
 - [Resources: Plain Guides on AI for Business](https://www.vargersoft.com/resources/): Plain-language guides on AI receptionists, SEO, AEO and GEO, llms.txt, MCP and WebMCP, and what a small business should automate first.
+- [How much does an AI chatbot for a website cost in 2026?](https://www.vargersoft.com/resources/website-ai-chatbot-cost/): What a business pays for an AI chatbot on its website: setup, monthly fee and usage, the three price levels on the market, and VARGERSOFT prices.
 - [How much does an AI receptionist cost for a small business?](https://www.vargersoft.com/resources/ai-receptionist-cost-small-business/): What you pay for an AI phone receptionist: setup, monthly fee and minutes, with VARGERSOFT prices and the questions to ask any provider.
 - [AI receptionist vs. answering service vs. hiring: which fits?](https://www.vargersoft.com/resources/ai-receptionist-vs-answering-service-vs-hiring/): A plain comparison of an AI receptionist, a live answering service and a hired receptionist: hours, languages, what each handles well and where each falls short.
 - [How to answer business calls in English and Spanish without hiring](https://www.vargersoft.com/resources/answer-business-calls-in-english-and-spanish/): Four ways a small business can answer callers in English and Spanish, from a phone menu to an AI receptionist that detects the language on its own.
