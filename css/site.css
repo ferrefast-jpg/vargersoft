@@ -238,3 +238,13 @@ a.card:hover{border-color:var(--g);transform:translateY(-4px);box-shadow:0 14px 
 .demo-band h3{margin:0 0 .3rem}.demo-band p{margin:0;max-width:60ch}
 .demo-band .hero-cta{margin:0}
 .mt{margin-top:2rem}.opt .status{margin-bottom:.4rem}
+
+.slide-art{color:var(--g);height:170px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);background:#020a05;border-radius:var(--r);margin:.4rem 0 .6rem}
+.slide-art svg{height:150px;width:auto}
+.ico.big{width:64px;height:64px}
+.feats{list-style:none;padding:0;margin:1.6rem 0 0;display:flex;flex-wrap:wrap;gap:.8rem 1.4rem}
+.feats li{display:flex;align-items:center;gap:.55rem;font:600 .95rem/1.2 var(--hd);letter-spacing:.06em;text-transform:uppercase;color:#e7efe9}
+.feats .ico{width:36px;height:36px;color:var(--g);padding:6px;border:1px solid var(--line2);border-radius:var(--r);background:rgba(34,197,94,.08)}
+.band-ico .ico{width:64px;height:64px;color:var(--g);padding:10px;border:1px solid var(--g);border-radius:50%;background:rgba(34,197,94,.1)}
+.band-txt{flex:1;min-width:240px}
+.steps-ico .ico,.steps-ico .ico.big{width:64px;height:64px;color:var(--g)}
