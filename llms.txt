@@ -7,7 +7,7 @@ Prices in USD. AI agents are set up in 7 business days and billed month to month
 ## AI agents and services
 
 - [AI Agents for Small and Mid-Size Businesses](https://www.vargersoft.com/ai/): Eight AI services that answer calls and chats, book appointments, send quotes, follow up and make your business readable to AI. English and Spanish. Prices on the page.
-- [AI Phone Receptionist for Small Business](https://www.vargersoft.com/ai/ai-receptionist/): A natural-sounding AI receptionist that answers every call in English or Spanish, books appointments and takes messages. $1,950 setup + $349/month.
+- [AI Voice Receptionist Agent That Answers Calls 24/7](https://www.vargersoft.com/ai/ai-receptionist/): AI voice receptionist agent with a natural voice that answers every call in English or Spanish, books appointments and takes messages. $1,950 setup + $349/month.
 - [Website AI Assistant and Chatbot](https://www.vargersoft.com/ai/website-assistant/): An AI chat assistant for your website that answers questions, captures leads and books appointments in English and Spanish. $850 setup + $179/month.
 - [AI Appointment Scheduling Agent](https://www.vargersoft.com/ai/appointment-agent/): An AI agent that books, confirms and reschedules appointments by phone and text in English and Spanish. $1,450 setup + $249/month.
 - [AI Quote and Lead Follow-up Agent](https://www.vargersoft.com/ai/quote-follow-up-agent/): An AI agent that answers SMS and WhatsApp, sends quotes and follows up with every lead in English and Spanish. $2,450 setup + $399/month.
@@ -19,7 +19,7 @@ Prices in USD. AI agents are set up in 7 business days and billed month to month
 
 ## Prices
 
-- AI Phone Receptionist: Setup $1,950 (one time), Monthly service $349 (per month)
+- AI Voice Receptionist: Setup $1,950 (one time), Monthly service $349 (per month)
 - Website AI Assistant: Setup $850 (one time), Monthly service $179 (per month)
 - Appointment Agent: Setup $1,450 (one time), Monthly service $249 (per month)
 - Quote & Follow-up Agent: Setup $2,450 (one time), Monthly service $399 (per month)
@@ -42,6 +42,7 @@ Prices in USD. AI agents are set up in 7 business days and billed month to month
 ## Guides
 
 - [Resources: Plain Guides on AI for Business](https://www.vargersoft.com/resources/): Plain-language guides on AI receptionists, SEO, AEO and GEO, llms.txt, MCP and WebMCP, and what a small business should automate first.
+- [What is an AI voice receptionist and how does it work?](https://www.vargersoft.com/resources/what-is-an-ai-voice-receptionist/): An AI voice receptionist is a voice agent that answers your business phone, talks like a person, books appointments and sends you a summary. How it works, what it costs and how to choose one.
 - [How much does an AI chatbot for a website cost in 2026?](https://www.vargersoft.com/resources/website-ai-chatbot-cost/): What a business pays for an AI chatbot on its website: setup, monthly fee and usage, the three price levels on the market, and VARGERSOFT prices.
 - [How much does an AI receptionist cost for a small business?](https://www.vargersoft.com/resources/ai-receptionist-cost-small-business/): What you pay for an AI phone receptionist: setup, monthly fee and minutes, with VARGERSOFT prices and the questions to ask any provider.
 - [AI receptionist vs. answering service vs. hiring: which fits?](https://www.vargersoft.com/resources/ai-receptionist-vs-answering-service-vs-hiring/): A plain comparison of an AI receptionist, a live answering service and a hired receptionist: hours, languages, what each handles well and where each falls short.
@@ -54,7 +55,7 @@ Prices in USD. AI agents are set up in 7 business days and billed month to month
 
 ## Company
 
-- [VARGERSOFT | AI Agents, Apps and Websites for Small Business](https://www.vargersoft.com/): VARGERSOFT builds bilingual AI agents, apps and AI-ready websites for small and mid-size businesses. Fixed prices. Conroe / Houston, Texas.
+- [AI Voice Receptionist and AI Agents for Business](https://www.vargersoft.com/): AI voice receptionist that answers your calls 24/7 in English and Spanish, plus AI agents and AI-ready websites. VARGERSOFT builds bilingual AI agents, apps and AI-ready websites for small and mid-size businesses across the United States. Fixed prices, setup in 7 business days.
 - [Apps Built by VARGERSOFT](https://www.vargersoft.com/apps/): Eight apps designed, built and run by VARGERSOFT: DERATE, Paternoster, Fresh or Toss, CaseAlerta, Recalert, SignatureForever, Scorlee and BajaBill.
 - [Our Work: App Design, Mascots, Paywalls and Screens](https://www.vargersoft.com/work/): Real art and product from apps VARGERSOFT designed and built: mascots, app screens, store pages, paywalls and full-screen illustration.
 - [Templates and Kits: Excel, Google Sheets and Notion](https://www.vargersoft.com/downloads/): Operations templates for inventory, quality, cash flow, point of sale and fleet maintenance, plus AI kits launching soon.
