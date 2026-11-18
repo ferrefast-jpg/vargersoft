@@ -55,10 +55,10 @@ export const ui = {
 export const services = [
   {
     slug: 'ai-receptionist', icon: 'phone', featured: true,
-    name: ['AI Phone Receptionist', 'Recepcionista IA por Teléfono'],
+    name: ['AI Voice Receptionist', 'Recepcionista de IA con Voz'],
     short: ['Answers every call 24/7 in English or Spanish, books appointments and emails you a summary.', 'Contesta cada llamada 24/7 en inglés o español, agenda citas y te manda un resumen por correo.'],
-    title: ['AI Phone Receptionist for Small Business', 'Recepcionista IA por Teléfono para Negocios'],
-    desc: ['A natural-sounding AI receptionist that answers every call in English or Spanish, books appointments and takes messages. $1,950 setup + $349/month.', 'Recepcionista con IA y voz natural que contesta cada llamada en inglés o español, agenda citas y toma recados. $1,950 de instalación + $349 al mes.'],
+    title: ['AI Voice Receptionist Agent That Answers Calls 24/7', 'Recepcionista de IA con Voz: Agente que Contesta Llamadas 24/7'],
+    desc: ['AI voice receptionist agent with a natural voice that answers every call in English or Spanish, books appointments and takes messages. $1,950 setup + $349/month.', 'Recepcionista de IA con voz natural: un agente que contesta cada llamada en inglés o español, agenda citas y toma recados. $1,950 de instalación + $349 al mes.'],
     lead: ['A phone line that always answers, in the language your caller speaks.', 'Una línea que siempre contesta, en el idioma de quien llama.'],
     problem: ['A missed call is usually a customer who calls the next business on the list. Most small businesses miss calls at lunch, after hours and whenever the counter is busy. And when the caller speaks Spanish and nobody on shift does, the call ends in thirty seconds.', 'Una llamada perdida casi siempre es un cliente que le marca al siguiente negocio de la lista. La mayoría de los negocios pierden llamadas a la hora de comer, fuera de horario y cuando el mostrador está lleno. Y si quien llama habla español y nadie en turno lo habla, la llamada dura treinta segundos.'],
     does: [

@@ -1,6 +1,30 @@
 // Guías. Formato de respuesta directa: el primer párrafo contesta el título. [inglés, español]
 export const guides = [
   {
+    slug: 'what-is-an-ai-voice-receptionist', icon: 'phone',
+    title: ['What is an AI voice receptionist and how does it work?', '¿Qué es una recepcionista de IA con voz y cómo funciona?'],
+    desc: ['An AI voice receptionist is a voice agent that answers your business phone, talks like a person, books appointments and sends you a summary. How it works, what it costs and how to choose one.', 'Una recepcionista de IA con voz es un agente de voz que contesta el teléfono de tu negocio, habla como persona, agenda citas y te manda un resumen. Cómo funciona, cuánto cuesta y cómo elegir una.'],
+    answer: ['An AI voice receptionist is an AI agent that answers your business phone with a natural voice, 24 hours a day. It understands what the caller says, answers questions with your approved information, books appointments on your calendar, transfers to a person when needed and emails you a summary of every call. The VARGERSOFT AI Voice Receptionist works in English and Spanish and costs $1,950 to set up and $349 a month with 500 minutes included.', 'Una recepcionista de IA con voz es un agente de inteligencia artificial que contesta el teléfono de tu negocio con voz natural, las 24 horas. Entiende lo que dice quien llama, responde con tu información aprobada, agenda citas en tu calendario, transfiere a una persona cuando hace falta y te manda por correo un resumen de cada llamada. La Recepcionista de IA con Voz de VARGERSOFT funciona en inglés y español y cuesta $1,950 de instalación y $349 al mes con 500 minutos incluidos.'],
+    sections: [
+      { h: ['How an AI voice agent answers a call', 'Cómo contesta una llamada un agente de voz con IA'], list: [
+        ['The call rings to your number, or to a new number, and the agent picks up on the first ring.', 'La llamada entra a tu número, o a uno nuevo, y el agente contesta al primer timbre.'],
+        ['Speech recognition turns what the caller says into text in real time.', 'El reconocimiento de voz convierte en texto lo que dice la persona, en tiempo real.'],
+        ['The AI decides the answer using only the script and information you approved.', 'La IA decide la respuesta usando solo el guion y la información que tú aprobaste.'],
+        ['A natural voice speaks the answer back, in the caller\'s language.', 'Una voz natural dice la respuesta, en el idioma de quien llama.'],
+        ['It books, transfers or takes a message, then emails you the summary.', 'Agenda, transfiere o toma el recado, y luego te manda el resumen por correo.'],
+      ] },
+      { h: ['AI voice receptionist vs. phone menu (IVR)', 'Recepcionista de IA con voz vs. menú telefónico (IVR)'], p: [['A phone menu makes callers press numbers and often ends in voicemail. A voice agent holds a real conversation: the caller just says what they need, and the agent solves it or routes it. That is why callers hang up less.', 'Un menú telefónico obliga a marcar números y muchas veces termina en buzón. Un agente de voz sostiene una conversación real: la persona solo dice lo que necesita y el agente lo resuelve o lo canaliza. Por eso la gente cuelga menos.']] },
+      { h: ['Which businesses use one', 'Qué negocios la usan'], p: [['Any business where a missed call is a lost sale: home services like plumbing, HVAC and roofing; dental and medical offices; law firms; auto and truck repair; salons; real estate. It works the same in any state, because it lives on the phone line, not in a building.', 'Cualquier negocio donde una llamada perdida es una venta perdida: servicios del hogar como plomería, aire acondicionado y techos; consultorios dentales y médicos; despachos de abogados; talleres de autos y camiones; salones; bienes raíces. Funciona igual en cualquier estado, porque vive en la línea telefónica, no en un local.']] },
+      { h: ['What to check before you choose one', 'Qué revisar antes de elegir una'], list: [
+        ['Does the voice sound natural, and can you hear a sample call first?', '¿La voz suena natural, y puedes escuchar una llamada de prueba antes?'],
+        ['Does it speak Spanish natively, not a translated script?', '¿Habla español de verdad, no un guion traducido?'],
+        ['Does it connect to your calendar and transfer to a person?', '¿Se conecta a tu calendario y transfiere a una persona?'],
+        ['Is it month to month, and how much is each extra minute?', '¿Es mes a mes, y cuánto cuesta cada minuto extra?'],
+      ] },
+    ],
+    related: ['ai-receptionist', 'appointment-agent'],
+  },
+  {
     slug: 'website-ai-chatbot-cost', icon: 'chat',
     title: ['How much does an AI chatbot for a website cost in 2026?', '¿Cuánto cuesta un chatbot con IA para un sitio web en 2026?'],
     desc: ['What a business pays for an AI chatbot on its website: setup, monthly fee and usage, the three price levels on the market, and VARGERSOFT prices.', 'Lo que paga un negocio por un chatbot con IA en su sitio web: instalación, mensualidad y uso, los tres niveles de precio del mercado y los precios de VARGERSOFT.'],
@@ -30,7 +54,7 @@ export const guides = [
     slug: 'ai-receptionist-cost-small-business', icon: 'tag',
     title: ['How much does an AI receptionist cost for a small business?', '¿Cuánto cuesta una recepcionista con IA para un negocio pequeño?'],
     desc: ['What you pay for an AI phone receptionist: setup, monthly fee and minutes, with VARGERSOFT prices and the questions to ask any provider.', 'Lo que se paga por una recepcionista telefónica con IA: instalación, mensualidad y minutos, con los precios de VARGERSOFT y las preguntas para cualquier proveedor.'],
-    answer: ['An AI receptionist is usually paid in two parts: a one-time setup fee and a monthly fee that includes a block of call minutes. At VARGERSOFT the AI Phone Receptionist costs $1,950 to set up and $349 a month with 500 minutes included, and $0.35 for each extra minute.', 'Una recepcionista con IA normalmente se paga en dos partes: un pago único de instalación y una mensualidad que incluye un bloque de minutos. En VARGERSOFT la Recepcionista IA por Teléfono cuesta $1,950 de instalación y $349 al mes con 500 minutos incluidos, y $0.35 por cada minuto extra.'],
+    answer: ['An AI receptionist is usually paid in two parts: a one-time setup fee and a monthly fee that includes a block of call minutes. At VARGERSOFT the AI Voice Receptionist costs $1,950 to set up and $349 a month with 500 minutes included, and $0.35 for each extra minute.', 'Una recepcionista con IA normalmente se paga en dos partes: un pago único de instalación y una mensualidad que incluye un bloque de minutos. En VARGERSOFT la Recepcionista de IA con Voz cuesta $1,950 de instalación y $349 al mes con 500 minutos incluidos, y $0.35 por cada minuto extra.'],
     sections: [
       { h: ['What the setup fee pays for', 'Qué cubre la instalación'], p: [['Setup is the work of making the agent yours: writing the script around your services and prices, choosing the voice, connecting your calendar, setting the rules for when a call goes to a person, and testing it with real scenarios in both languages.', 'La instalación es el trabajo de hacer tuyo al agente: escribir el guion con tus servicios y precios, elegir la voz, conectar tu calendario, definir cuándo una llamada pasa a una persona y probarlo con casos reales en ambos idiomas.']] },
       { h: ['What the monthly fee pays for', 'Qué cubre la mensualidad'], p: [['The monthly fee covers the phone line, the voice and AI usage for your included minutes, the call summaries, and the monthly review where the script is adjusted from real calls.', 'La mensualidad cubre la línea telefónica, el uso de voz e IA de tus minutos incluidos, los resúmenes de llamadas y la revisión mensual donde se ajusta el guion con llamadas reales.']] },
