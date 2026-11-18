@@ -193,7 +193,7 @@ a.card:hover{border-color:var(--g);transform:translateY(-4px);box-shadow:0 14px 
 .form{display:grid;grid-template-columns:1fr 1fr;gap:1rem;border:1px solid var(--line2);background:var(--card);padding:1.6rem;border-radius:var(--r)}
 .form label{display:grid;gap:.4rem;font:600 .8rem/1 var(--hd);letter-spacing:.1em;text-transform:uppercase;color:#cdd6cf}
 .form .full,.form .btn,.form-note{grid-column:1/-1}
-.form input,.form textarea{background:#000;border:1px solid var(--line2);color:#fff;font:400 1rem/1.4 var(--bd);padding:.8rem .9rem;border-radius:var(--r);width:100%}
+.form input,.form textarea,.form select{background:#000;border:1px solid var(--line2);color:#fff;font:400 1rem/1.4 var(--bd);padding:.8rem .9rem;border-radius:var(--r);width:100%}
 .form input:focus,.form textarea:focus{outline:none;border-color:var(--g);box-shadow:0 0 0 3px rgba(34,197,94,.2)}
 .form-note{font-size:.86rem;color:var(--mut);margin:0}
 .hp{position:absolute;left:-9999px}
@@ -225,3 +225,6 @@ a.card:hover{border-color:var(--g);transform:translateY(-4px);box-shadow:0 14px 
   .band-in{flex-direction:column;align-items:flex-start}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+
+.form select{background:#000;border:1px solid var(--line2);color:#fff;font:400 1rem/1.4 var(--bd);padding:.8rem .9rem;border-radius:var(--r);width:100%}
+.steps-ico .ico{width:40px;height:40px;color:var(--g)}
