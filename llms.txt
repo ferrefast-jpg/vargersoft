@@ -15,6 +15,7 @@ Prices in USD. AI agents are set up in 7 business days and billed month to month
 - [AI-Ready Website Design and Updates](https://www.vargersoft.com/ai/ai-ready-websites/): We build or update your website so Google, ChatGPT and other AI assistants can read every page: fast, bilingual and structured. New site $2,450, update $1,250.
 - [AI Visibility: GEO and AEO Services](https://www.vargersoft.com/ai/ai-visibility/): GEO and AEO for small business: structured data, answer-ready content and monthly tracking so AI assistants can read and cite you. $1,500 setup + $299/month.
 - [Agent-Ready Websites: MCP and WebMCP Setup](https://www.vargersoft.com/ai/agent-ready-websites/): We prepare your website for AI agents: an MCP server for your catalog and bookings, WebMCP tools on your pages and clean machine-readable data. $1,950 setup + $199/month.
+- [Start your AI receptionist](https://www.vargersoft.com/ai/start/): Tell us about your business in 5 minutes. We build your bilingual AI receptionist, you test it, then we connect it to your phone.
 
 ## Prices
 
