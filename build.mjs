@@ -241,7 +241,7 @@ function installGuide(c) {
     ['plug', ['4. Connect your phone', '4. Conecta tu teléfono'], ['Pick one: new number, forward when you can\'t answer (recommended), or forward every call.', 'Elige: número nuevo, desvío cuando no contestas (recomendado) o desvío de todas las llamadas.']],
   ];
   const opts = [
-    ['A', ['New number', 'Número nuevo'], ['We give you a local Houston number. Put it on Google, your site and your truck.', 'Te damos un número local de Houston. Ponlo en Google, tu sitio y tu camioneta.']],
+    ['A', ['New number', 'Número nuevo'], ['We give you a new local number in your area. Put it on Google, your site and your truck.', 'Te damos un número local nuevo de tu zona. Ponlo en Google, tu sitio y tu camioneta.']],
     ['B', ['Keep your number · recommended', 'Conserva tu número · recomendado'], ['You answer first; if you don\'t pick up in 4 rings, Sofía does. One code on your phone.', 'Tú contestas primero; si no levantas en 4 timbres, contesta ella. Un código en tu teléfono.']],
     ['C', ['She answers everything', 'Ella contesta todo'], ['Every call goes to her and she transfers to you when needed.', 'Todas las llamadas van a ella y te transfiere cuando hace falta.']],
   ];
@@ -301,7 +301,7 @@ ${spotlight(c, true)}
     { '@context': 'https://schema.org', '@type': 'WebSite', '@id': site.url + '/#site', url: site.url + '/', name: site.name, inLanguage: ['en', 'es'], publisher: { '@id': site.url + '/#org' } },
     { '@context': 'https://schema.org', '@type': 'ProfessionalService', '@id': site.url + '/#service', name: site.name, url: site.url + '/', image: site.url + '/img/og.jpg', email: site.email, priceRange: '$$',
       address: orgLd.address, parentOrganization: { '@id': site.url + '/#org' }, knowsLanguage: ['en', 'es'],
-      areaServed: ['Conroe, TX', 'The Woodlands, TX', 'Spring, TX', 'Tomball, TX', 'Houston, TX', 'United States'],
+      areaServed: { '@type': 'Country', name: 'United States' },
       hasOfferCatalog: { '@type': 'OfferCatalog', name: 'AI agents', itemListElement: services.map(s => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: s.name[c.i], url: abs(c.L('/ai/' + s.slug + '/')) } })) } },
     faqLd(faq.slice(0, 6), c),
   ];
