@@ -282,7 +282,7 @@ function pageService(s, c) {
   const body = `<section class="sec page-head"><div class="wrap two top-align">
   <div>${cr.html}${head(c, t(home.agentsEyebrow), t(s.name), t(s.lead))}
     <p class="pills"><span>${icon('clock', 'ico sm')} ${t(ui.setupTime)}</span><span>${icon('globe', 'ico sm')} English / Español</span></p>
-    <div class="hero-cta"><a class="btn" href="${L('/contact/')}?service=${s.slug}">${esc(t(ui.start))}</a><a class="btn ghost" href="${L('/contact/')}">${esc(t(ui.book))}</a></div></div>
+    <div class="hero-cta"><a class="btn" href="${L(['ai-receptionist','website-assistant'].includes(s.slug) ? '/ai/start/' : '/contact/')}?service=${s.slug}">${esc(t(ui.start))}</a><a class="btn ghost" href="${L('/contact/')}">${esc(t(ui.book))}</a></div></div>
   <div class="illus-box">${illus(s.icon, t(s.name))}</div></div></section>
 <section class="sec"><div class="wrap two top-align">
   <div class="prose"><h2>${t(ui.problem)}</h2><p>${esc(t(s.problem))}</p>
@@ -292,7 +292,7 @@ function pageService(s, c) {
     ${lines.map(l => `<div class="pline"><span>${esc(l.label)}</span><b>${money(l.amount)}</b><small>${esc(l.unit)}</small></div>`).join('')}
     ${s.priceNote ? `<p class="pnote">${esc(t(s.priceNote))}</p>` : ''}
     <p class="pnote">${t(ui.cancel)}</p>
-    <a class="btn full" href="${L('/contact/')}?service=${s.slug}">${esc(t(ui.start))}</a></aside></div></section>
+    <a class="btn full" href="${L(['ai-receptionist','website-assistant'].includes(s.slug) ? '/ai/start/' : '/contact/')}?service=${s.slug}">${esc(t(ui.start))}</a></aside></div></section>
 <section class="sec alt"><div class="wrap narrow"><h2>${t(ui.faq)}</h2>${faqBlock(s.faq, c, 1)}</div></section>
 <section class="sec"><div class="wrap"><h2>${t(ui.related)}</h2><div class="grid g4">${rel.map(x => serviceCard(x, c)).join('')}</div></div></section>${ctaBand(c, '?service=' + s.slug)}`;
   const offers = s.priceLines
@@ -398,6 +398,46 @@ function pageAbout(c) {
   add(c, { path: '/about/', title: title + ' | VARGERSOFT', desc, body, ld: [cr.ld, { '@context': 'https://schema.org', '@type': 'AboutPage', name: title, url: abs(L('/about/')), about: { '@id': site.url + '/#org' } }],
     llm: { name: title, text: story.flatMap(([h, p]) => [t(h), t(p)]) } });
 }
+const GIROS = [['generico',['Other business','Otro negocio']],['taller_diesel',['Diesel / truck repair shop','Taller diésel / camiones']],['refaccionaria',['Auto or truck parts store','Refaccionaria']],['clinica_dental',['Dental clinic','Clínica dental']],['clinica_medica',['Medical office','Consultorio médico']],['despacho_legal',['Law firm','Despacho legal']],['contratista',['Contractor / remodeling','Contratista / remodelación']],['hvac_plomeria',['A/C, heating & plumbing','A/C, calefacción y plomería']],['restaurante',['Restaurant','Restaurante']],['salon_belleza',['Salon / spa','Salón de belleza / spa']],['veterinaria',['Veterinary clinic','Veterinaria']],['bienes_raices',['Real estate','Bienes raíces']],['agencia_ia',['Agency / software','Agencia / software']]];
+const ALTA_URL = 'https://pawcwvwchlzgrrijipqu.supabase.co/functions/v1/alta-cliente';
+function pageStart(c) {
+  const { t, L } = c;
+  const title = t(['Start your AI receptionist', 'Activa tu recepcionista IA']);
+  const desc = t(['Tell us about your business in 5 minutes. We build your bilingual AI receptionist, you test it, then we connect it to your phone.', 'Cuéntanos de tu negocio en 5 minutos. Armamos tu recepcionista IA bilingüe, la pruebas y la conectamos a tu teléfono.']);
+  const cr = crumbs([[t(['AI Agents', 'Agentes IA']), L('/ai/')], [title, L('/ai/start/')]], c);
+  const steps = [['sheet',['Fill this form','Llena este formulario'],['5 minutes: your business, hours, services and prices.','5 minutos: tu negocio, horario, servicios y precios.']],
+    ['spark',['We build her','La armamos'],['Your assistant gets her own name, badge and the playbook for your industry.','Tu asistente recibe nombre, gafete y la guía de tu giro.']],
+    ['phone',['You test her','La pruebas'],['We send you a link to talk to her and you tell us what to adjust.','Te mandamos un enlace para hablar con ella y nos dices qué ajustar.']],
+    ['plug',['We connect her','La conectamos'],['To a new number or your current one, with a step-by-step guide.','A un número nuevo o al tuyo, con guía paso a paso.']]];
+  const f = (name, label, attrs = '', full = false) => `<label${full ? ' class="full"' : ''}>${esc(t(label))}<input name="${name}" ${attrs}></label>`;
+  const ta = (name, label, ph) => `<label class="full">${esc(t(label))}<textarea name="${name}" rows="4" placeholder="${esc(t(ph))}"></textarea></label>`;
+  const body = `<section class="sec page-head"><div class="wrap">${cr.html}${head(c, t(['Onboarding', 'Alta']), title, desc)}
+  <div class="grid g4 steps-ico">${steps.map(([ic, h, p], k) => `<div class="card"><span class="status">${t(['Step', 'Paso'])} ${k + 1}</span>${icon(ic, 'ico')}<h3>${esc(t(h))}</h3><p>${esc(t(p))}</p></div>`).join('')}</div></div></section>
+<section class="sec"><div class="wrap narrow">
+<form class="form" id="alta" novalidate>
+  <input type="hidden" name="servicio" value="ai-receptionist">
+  <input name="sitio_web_2" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+  ${f('negocio', ['Business name', 'Nombre del negocio'], 'required maxlength="120"')}
+  <label>${t(['Industry', 'Giro'])}<select name="giro">${GIROS.map(([v, n]) => `<option value="${v}">${esc(t(n))}</option>`).join('')}</select></label>
+  ${f('contacto', ['Your name', 'Tu nombre'], 'required maxlength="120" autocomplete="name"')}
+  ${f('telefono', ['Phone', 'Teléfono'], 'required type="tel" autocomplete="tel"')}
+  ${f('correo', ['Email (call summaries go here)', 'Correo (aquí llegan los resúmenes)'], 'required type="email" autocomplete="email"', true)}
+  ${f('sitio_web', ['Website (optional)', 'Sitio web (opcional)'], 'type="url" placeholder="https://"')}
+  ${f('zona', ['Address or service area', 'Dirección o zona de servicio'])}
+  ${ta('horario', ['Business hours', 'Horario'], ['Mon–Fri 8am–6pm, Sat 8am–2pm', 'Lun–Vie 8–6, Sáb 8–2'])}
+  ${ta('servicios', ['Services and prices she can share', 'Servicios y precios que puede dar'], ['Oil change $89. Diagnostic $120. Brakes from $250…', 'Cambio de aceite $89. Diagnóstico $120. Frenos desde $250…'])}
+  ${ta('preguntas', ['Questions customers always ask (with the answer)', 'Preguntas que siempre hacen (con su respuesta)'], ['Do you take walk-ins? Yes, until 4pm…', '¿Atienden sin cita? Sí, hasta las 4…'])}
+  ${ta('transferir', ['When should she pass the call to a person?', '¿Cuándo debe pasar la llamada a una persona?'], ['Emergencies, complaints, quotes over $2,000…', 'Emergencias, quejas, cotizaciones mayores a $2,000…'])}
+  <label>${t(['Phone number', 'Número'])}<select name="numero"><option value="conservar">${t(['Keep my number (she answers when I can\'t)', 'Conservar mi número (ella contesta cuando no puedo)'])}</option><option value="nuevo">${t(['New number', 'Número nuevo'])}</option><option value="todas">${t(['She answers every call', 'Ella contesta todas'])}</option></select></label>
+  <label>${t(['Languages', 'Idiomas'])}<select name="idioma"><option value="auto">English + Español</option><option value="es">Español</option><option value="en">English</option></select></label>
+  ${f('nombre_asistente', ['Assistant name (optional)', 'Nombre de la asistente (opcional)'], 'maxlength="30" placeholder="Sofía, Lucía, Elena…"', true)}
+  <button class="btn" type="submit">${t(['Send and build my assistant', 'Enviar y armar mi asistente'])}</button>
+  <p class="form-note" data-msg>${t(['Setup $1,950 · $349/month with 500 minutes · extra minute $0.35. You pay only after you approve her.', 'Instalación $1,950 · $349 al mes con 500 minutos · minuto extra $0.35. Pagas hasta que la apruebes.'])}</p>
+</form></div></section>
+<script>(function(){var f=document.getElementById('alta');var q=new URLSearchParams(location.search).get('service');if(q)f.servicio.value=q;f.addEventListener('submit',async function(e){e.preventDefault();var m=f.querySelector('[data-msg]'),b=f.querySelector('button');var d=Object.fromEntries(new FormData(f));if(!d.negocio||!d.contacto||!d.correo||!d.telefono){m.textContent=${JSON.stringify(t(['Please fill business, name, phone and email.', 'Llena negocio, nombre, teléfono y correo.']))};return;}b.disabled=true;m.textContent=${JSON.stringify(t(['Sending…', 'Enviando…']))};try{var r=await fetch('${ALTA_URL}',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});var j=await r.json();if(j.ok){f.innerHTML='<div class="full"><h2>'+${JSON.stringify(t(['Received!', '¡Recibido!']))}+'</h2><p>'+${JSON.stringify(t(['Your assistant is being built:', 'Tu asistente está en preparación:']))}+' <b>'+(j.asistente||'')+'</b> · '+(j.gafete||'')+'. '+${JSON.stringify(t(['Check your email for next steps.', 'Revisa tu correo para los siguientes pasos.']))}+'</p></div>';}else{m.textContent=j.error||'Error';b.disabled=false;}}catch(x){m.textContent='Error. sales@vargersoft.com';b.disabled=false;}});})();</script>`;
+  add(c, { path: '/ai/start/', title: title + ' | VARGERSOFT', desc, body, ld: [cr.ld] });
+}
+
 function pageContact(c) {
   const { t, L } = c;
   const title = t(['Contact VARGERSOFT', 'Contacto VARGERSOFT']);
@@ -432,7 +472,7 @@ fs.cpSync('static', OUT, { recursive: true });
 for (const lang of LANGS) {
   const c = ctx(lang);
   pageHome(c); pageAiHub(c); services.forEach(s => pageService(s, c)); pageApps(c); pageWork(c); pageDownloads(c);
-  pageIndustries(c); pageResources(c); pageFaq(c); pageAbout(c); pageContact(c); pageSupport(c);
+  pageIndustries(c); pageResources(c); pageFaq(c); pageAbout(c); pageContact(c); pageStart(c); pageSupport(c);
   pageLegal(privacy, 'privacy', c); pageLegal(terms, 'terms', c);
 }
 for (const p of pages) {
