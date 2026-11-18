@@ -25,7 +25,11 @@ Cada texto vive como `[inglés, español]`. Para cambiar un precio o un texto se
 ## Publicación
 
 `dist/` es el sitio. En Hostinger se despliega como sitio estático (el formulario usa `contact.php`).
-INDEXNOW_KEY=b6ffddba74ba251504f8b39fbe91c3d0
 
 ## IndexNow (Bing, ChatGPT Search, Yandex)
 
+Llave en `static/b6ffddba74ba251504f8b39fbe91c3d0.txt`. Tras cada publicación, avisar a Bing por URL: `https://www.bing.com/indexnow?url=<URL>&key=b6ffddba74ba251504f8b39fbe91c3d0` (desde el Chrome de Juan con fetch no-cors; la red del contenedor no llega a indexnow).
+
+## SEO diario
+
+Rutina y bitácora en el doc del proyecto Vargersoft `claude/vargersoft-seo-diario.md`.
