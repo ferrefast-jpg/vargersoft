@@ -303,6 +303,36 @@ A: Yes. Agents rely on the same clean pages and structured data. If your site ne
 
 ---
 
+# How much does an AI chatbot for a website cost in 2026?
+
+URL: https://www.vargersoft.com/resources/website-ai-chatbot-cost/
+
+An AI chatbot for a business website usually costs a setup fee plus a monthly fee. Do-it-yourself tools start around $20 to $100 a month but you build and train them yourself. A done-for-you bilingual assistant from VARGERSOFT costs $850 to set up and $179 a month, and it answers, captures leads and books appointments in English and Spanish.
+
+What drives the price
+
+Three things set the cost: how much of your information the chatbot must learn, whether it only answers or also takes actions like booking and quoting, and how many conversations it handles each month. A chatbot that answers ten questions costs far less than one that books jobs into your calendar.
+
+The hidden cost of "cheap"
+
+A low monthly price often means you do the setup, write every answer and fix it when it gets something wrong. Count your own hours. If the chatbot never gets trained well, visitors still leave without an answer.
+
+How to know it pays for itself
+
+Take your average sale and your close rate. If one extra customer a month covers the monthly fee, the chatbot pays for itself. A shop with a $400 average job needs one new job a month to cover $179.
+
+Questions to ask before you buy
+
+Does it answer only from my approved information?
+
+Does it work in Spanish natively, not by machine translation?
+
+Can it book appointments and send me the lead right away?
+
+Is it month to month, and do I own the conversations?
+
+---
+
 # How much does an AI receptionist cost for a small business?
 
 URL: https://www.vargersoft.com/resources/ai-receptionist-cost-small-business/
