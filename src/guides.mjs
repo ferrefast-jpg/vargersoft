@@ -1,6 +1,32 @@
 // Guías. Formato de respuesta directa: el primer párrafo contesta el título. [inglés, español]
 export const guides = [
   {
+    slug: 'website-ai-chatbot-cost', icon: 'chat',
+    title: ['How much does an AI chatbot for a website cost in 2026?', '¿Cuánto cuesta un chatbot con IA para un sitio web en 2026?'],
+    desc: ['What a business pays for an AI chatbot on its website: setup, monthly fee and usage, the three price levels on the market, and VARGERSOFT prices.', 'Lo que paga un negocio por un chatbot con IA en su sitio web: instalación, mensualidad y uso, los tres niveles de precio del mercado y los precios de VARGERSOFT.'],
+    answer: ['An AI chatbot for a business website usually costs a setup fee plus a monthly fee. Do-it-yourself tools start around $20 to $100 a month but you build and train them yourself. A done-for-you bilingual assistant from VARGERSOFT costs $850 to set up and $179 a month, and it answers, captures leads and books appointments in English and Spanish.', 'Un chatbot con IA para el sitio web de un negocio normalmente cuesta una instalación más una mensualidad. Las herramientas para hacerlo tú mismo empiezan entre $20 y $100 al mes, pero tú lo armas y lo entrenas. Un asistente bilingüe hecho por VARGERSOFT cuesta $850 de instalación y $179 al mes, y responde, captura prospectos y agenda citas en inglés y español.'],
+    table: {
+      head: [['Option', 'Opción'], ['Typical price', 'Precio típico'], ['Who does the work', 'Quién hace el trabajo']],
+      rows: [
+        [['Do-it-yourself chatbot builder', 'Constructor de chatbot hazlo tú'], ['$20–$100 per month', '$20–$100 al mes'], ['You write, train and update it', 'Tú lo escribes, entrenas y actualizas']],
+        [['Done-for-you assistant (VARGERSOFT)', 'Asistente llave en mano (VARGERSOFT)'], ['$850 setup + $179 per month', '$850 instalación + $179 al mes'], ['Built, tested and reviewed monthly for you', 'Se arma, se prueba y se revisa cada mes por ti']],
+        [['Custom enterprise build', 'Desarrollo empresarial a la medida'], ['$10,000 and up', 'Desde $10,000'], ['A development team over weeks or months', 'Un equipo de desarrollo durante semanas o meses']],
+      ],
+    },
+    sections: [
+      { h: ['What drives the price', 'Qué mueve el precio'], p: [['Three things set the cost: how much of your information the chatbot must learn, whether it only answers or also takes actions like booking and quoting, and how many conversations it handles each month. A chatbot that answers ten questions costs far less than one that books jobs into your calendar.', 'Tres cosas definen el costo: cuánta de tu información debe aprender el chatbot, si solo responde o también actúa (agendar, cotizar) y cuántas conversaciones atiende al mes. Un chatbot que contesta diez preguntas cuesta mucho menos que uno que mete trabajos a tu calendario.']] },
+      { h: ['The hidden cost of "cheap"', 'El costo escondido de lo "barato"'], p: [['A low monthly price often means you do the setup, write every answer and fix it when it gets something wrong. Count your own hours. If the chatbot never gets trained well, visitors still leave without an answer.', 'Una mensualidad baja muchas veces significa que tú haces la instalación, escribes cada respuesta y la corriges cuando se equivoca. Cuenta tus propias horas. Si el chatbot nunca queda bien entrenado, los visitantes se siguen yendo sin respuesta.']] },
+      { h: ['How to know it pays for itself', 'Cómo saber si se paga solo'], p: [['Take your average sale and your close rate. If one extra customer a month covers the monthly fee, the chatbot pays for itself. A shop with a $400 average job needs one new job a month to cover $179.', 'Toma tu venta promedio y tu tasa de cierre. Si un cliente extra al mes cubre la mensualidad, el chatbot se paga solo. Un negocio con un trabajo promedio de $400 necesita un trabajo nuevo al mes para cubrir $179.']] },
+      { h: ['Questions to ask before you buy', '¿Qué preguntar antes de comprar?'], list: [
+        ['Does it answer only from my approved information?', '¿Responde solo con mi información aprobada?'],
+        ['Does it work in Spanish natively, not by machine translation?', '¿Funciona en español de verdad, no con traducción automática?'],
+        ['Can it book appointments and send me the lead right away?', '¿Puede agendar citas y mandarme el prospecto al momento?'],
+        ['Is it month to month, and do I own the conversations?', '¿Es mes a mes, y las conversaciones son mías?'],
+      ] },
+    ],
+    related: ['website-assistant', 'ai-receptionist'],
+  },
+  {
     slug: 'ai-receptionist-cost-small-business', icon: 'tag',
     title: ['How much does an AI receptionist cost for a small business?', '¿Cuánto cuesta una recepcionista con IA para un negocio pequeño?'],
     desc: ['What you pay for an AI phone receptionist: setup, monthly fee and minutes, with VARGERSOFT prices and the questions to ask any provider.', 'Lo que se paga por una recepcionista telefónica con IA: instalación, mensualidad y minutos, con los precios de VARGERSOFT y las preguntas para cualquier proveedor.'],

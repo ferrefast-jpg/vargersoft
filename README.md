@@ -25,3 +25,7 @@ Cada texto vive como `[inglés, español]`. Para cambiar un precio o un texto se
 ## Publicación
 
 `dist/` es el sitio. En Hostinger se despliega como sitio estático (el formulario usa `contact.php`).
+INDEXNOW_KEY=b6ffddba74ba251504f8b39fbe91c3d0
+
+## IndexNow (Bing, ChatGPT Search, Yandex)
+
