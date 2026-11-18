@@ -248,3 +248,4 @@ a.card:hover{border-color:var(--g);transform:translateY(-4px);box-shadow:0 14px 
 .band-ico .ico{width:64px;height:64px;color:var(--g);padding:10px;border:1px solid var(--g);border-radius:50%;background:rgba(34,197,94,.1)}
 .band-txt{flex:1;min-width:240px}
 .steps-ico .ico,.steps-ico .ico.big{width:64px;height:64px;color:var(--g)}
+.svc-ico{width:64px!important;height:64px!important}.svc-ico .ico,.svc-ico svg{width:36px!important;height:36px!important}

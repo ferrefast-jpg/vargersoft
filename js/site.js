@@ -82,3 +82,4 @@ document.addEventListener('click', function (e) {
   var btn = root && (root.querySelector('button[aria-label*="call" i], button[aria-label*="llamada" i]') || root.querySelector('button'));
   if (btn) { e.preventDefault(); btn.click(); try { w.scrollIntoView({ block: 'end' }); } catch (_) {} }
 });
+(function(){try{var q=new URLSearchParams(location.search);if(q.get('pago')==='ok'){var b=document.getElementById('pagoOk');if(b){b.hidden=false;}var s=document.getElementById('stripeSession');if(s){s.value=q.get('session')||'';}}}catch(e){}})();
