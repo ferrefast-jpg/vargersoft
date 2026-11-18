@@ -4,7 +4,7 @@ export const site = {
   legal: 'VARGER Group LLC',
   url: 'https://www.vargersoft.com',
   email: 'sales@vargersoft.com',
-  place: 'Conroe / Houston, Texas',
+  place: 'Conroe, Texas',
   tagline: ['Smart software. Real business.', 'Software inteligente. Negocio real.'],
   updated: '2026-11-18d',
 };
