@@ -21,7 +21,7 @@ export const nav = [
 
 export const ui = {
   quote: ['Get a quote', 'Cotizar'],
-  book: ['Book a free 20-min call', 'Agenda una llamada gratis de 20 min'],
+  book: ['Send us your project', 'Envíanos tu proyecto'],
   start: ['Start setup', 'Iniciar instalación'],
   viewAgent: ['View agent', 'Ver agente'],
   viewAll: ['See all agents', 'Ver todos los agentes'],

@@ -98,7 +98,7 @@ function crumbs(list, c) {
 }
 function ctaBand(c, topic = '') {
   const { t, L } = c;
-  return `<section class="band"><div class="wrap band-in"><div><h2>${esc(t(home.contactTitle))}</h2><p>${esc(t(home.contactText))}</p></div><div class="band-cta"><a class="btn" href="${L('/contact/')}${topic}">${esc(t(ui.book))}</a><a class="btn ghost" href="mailto:${site.email}">${icon('mail', 'ico sm')} ${site.email}</a></div></div></section>`;
+  return `<section class="band"><div class="wrap band-in"><div><h2>${esc(t(['Try it, pay online, activate it yourself', 'Pruébala, paga en línea y actívala tú mismo']))}</h2><p>${esc(t(['Talk to Sofía, pay by card and fill in your setup form. No calls, no appointments.', 'Habla con Sofía, paga con tarjeta y llena tu formulario de alta. Sin llamadas ni citas.']))}</p></div><div class="band-cta">${talkBtn(c, '')}${payBtn(c, 'ghost')}</div></div></section>`;
 }
 function contactForm(c) {
   const { t, lang } = c;
@@ -134,6 +134,7 @@ function layout(c, p) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google" content="notranslate">
 ${STAGING ? '<meta name="robots" content="noindex, nofollow">\n' : ''}<title>${esc(title)}</title>
 <meta name="description" content="${esc(p.desc)}">
 <link rel="canonical" href="${url}">
@@ -191,7 +192,7 @@ ${p.body}
   <div class="wrap foot-end"><p>${t(ui.footerLine)}</p><p>© 2026 ${site.legal}. ${t(ui.rights)}</p></div>
 </footer>
 <script src="/js/site.js?v=${site.updated}" defer></script>
-<elevenlabs-convai agent-id="agent_6501m7nyr3eyfgsaypksn87xnmad" variant="compact" action-text="${t(['Talk to Sofía', 'Habla con Sofía'])}" start-call-text="${t(['Start call', 'Iniciar llamada'])}" end-call-text="${t(['End', 'Colgar'])}" expand-text="${t(['Talk to Sofía', 'Habla con Sofía'])}" listening-text="${t(['Listening…', 'Escuchando…'])}" speaking-text="${t(['Sofía is speaking', 'Sofía está hablando'])}"></elevenlabs-convai>
+<elevenlabs-convai agent-id="agent_6501m7nyr3eyfgsaypksn87xnmad"${lang === 'es' ? ' override-language="es"' : ''} variant="compact" action-text="${t(['Talk to Sofía', 'Habla con Sofía'])}" start-call-text="${t(['Start call', 'Iniciar llamada'])}" end-call-text="${t(['End', 'Colgar'])}" expand-text="${t(['Talk to Sofía', 'Habla con Sofía'])}" listening-text="${t(['Listening…', 'Escuchando…'])}" speaking-text="${t(['Sofía is speaking', 'Sofía está hablando'])}"></elevenlabs-convai>
 <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>`;
