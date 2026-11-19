@@ -6,7 +6,7 @@ export const site = {
   email: 'sales@vargersoft.com',
   place: 'Conroe, Texas',
   tagline: ['Smart software. Real business.', 'Software inteligente. Negocio real.'],
-  updated: '2026-11-18e',
+  updated: '2026-11-19',
 };
 
 export const nav = [

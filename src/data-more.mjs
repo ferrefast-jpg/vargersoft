@@ -159,8 +159,10 @@ export const industries = [
   {
     slug: 'auto-diesel-repair', icon: 'wrench',
     name: ['Auto and diesel repair shops', 'Talleres mecánicos y diésel'],
-    desc: ['AI agents for repair shops: answer calls while you are under the hood, book jobs, send quotes and remind customers to pay.', 'Agentes de IA para talleres: contestan mientras estás bajo el cofre, agendan trabajos, mandan cotizaciones y recuerdan pagos.'],
+    title: ['AI Voice Receptionist for Auto and Diesel Repair Shops', 'Recepcionista de IA con Voz para Talleres Mecánicos y Diésel'],
+    desc: ['AI voice receptionist for auto and diesel repair shops: answers every call while you are under the hood, books jobs, takes vehicle details, follows up on quotes and reminds customers to pay, 24/7 in English and Spanish.', 'Recepcionista de IA con voz para talleres mecánicos y diésel: contesta cada llamada mientras estás bajo el cofre, agenda trabajos, toma los datos del vehículo, da seguimiento a cotizaciones y recuerda pagos, 24/7 en inglés y español.'],
     pain: ['The phone rings while everyone has their hands in an engine. The caller wants a price and a time, and calls the next shop if nobody answers.', 'El teléfono suena mientras todos tienen las manos en un motor. El cliente quiere precio y fecha, y le marca al siguiente taller si nadie contesta.'],
+    voice: ['The AI voice receptionist picks up so your mechanics do not have to. It asks for the vehicle (year, make, model, or unit number for fleets), the problem and when they can drop it off, books the job on your calendar and sends the shop a summary. Drivers who speak Spanish get answered in Spanish.', 'La recepcionista de IA con voz contesta para que tus mecánicos no tengan que soltar la herramienta. Pregunta por el vehículo (año, marca, modelo, o número de unidad en flotillas), la falla y cuándo lo pueden dejar, agenda el trabajo en tu calendario y le manda el resumen al taller. A los choferes que hablan español se les contesta en español.'],
     fits: ['ai-receptionist', 'quote-follow-up-agent', 'appointment-agent', 'collections-agent'],
   },
   {
@@ -174,8 +176,10 @@ export const industries = [
   {
     slug: 'contractors', icon: 'hardhat',
     name: ['Contractors: HVAC, plumbing, electrical', 'Contratistas: A/C, plomería, electricidad'],
-    desc: ['AI agents for contractors: answer emergency calls at any hour, book visits, send quotes and follow up on every estimate.', 'Agentes de IA para contratistas: contestan urgencias a cualquier hora, agendan visitas, mandan cotizaciones y dan seguimiento.'],
+    title: ['AI Voice Receptionist for HVAC, Plumbing and Electrical Contractors', 'Recepcionista de IA con Voz para Contratistas de A/C, Plomería y Electricidad'],
+    desc: ['AI voice receptionist for HVAC, plumbing and electrical contractors: answers emergency and service calls 24/7, books service visits, takes job details and follows up on every estimate, in English and Spanish.', 'Recepcionista de IA con voz para contratistas de A/C, plomería y electricidad: contesta urgencias y llamadas de servicio 24/7, agenda visitas, toma los datos del trabajo y da seguimiento a cada presupuesto, en inglés y español.'],
     pain: ['The best jobs call when you are on a roof or under a sink. An estimate that nobody follows up on is work you already did for free.', 'Los mejores trabajos llaman cuando estás en un techo o bajo un fregadero. Un presupuesto sin seguimiento es trabajo que ya hiciste gratis.'],
+    voice: ['The AI voice receptionist answers on the first ring, day or night. It asks what is wrong (no cooling, a leak, a breaker that keeps tripping), takes the address and the best time, books the service visit on your calendar and sends the technician a summary. Calls you mark as emergencies follow your on-call list to a person. Customers who speak Spanish get answered in Spanish.', 'La recepcionista de IA con voz contesta al primer timbre, de día o de noche. Pregunta qué pasa (no enfría, una fuga, un breaker que se bota), toma la dirección y el mejor horario, agenda la visita en tu calendario y le manda el resumen al técnico. Las llamadas que marques como urgencia siguen tu lista de guardia hasta una persona. A los clientes que hablan español se les contesta en español.'],
     fits: ['ai-receptionist', 'quote-follow-up-agent', 'appointment-agent'],
   },
   {
