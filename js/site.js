@@ -83,3 +83,6 @@ document.addEventListener('click', function (e) {
   if (btn) { e.preventDefault(); btn.click(); try { w.scrollIntoView({ block: 'end' }); } catch (_) {} }
 });
 (function(){try{var q=new URLSearchParams(location.search);if(q.get('pago')==='ok'){var b=document.getElementById('pagoOk');if(b){b.hidden=false;}var s=document.getElementById('stripeSession');if(s){s.value=q.get('session')||'';}}}catch(e){}})();
+
+// Visitante con navegador en español en una página en inglés: ofrecer la versión en español (sin redirigir).
+(function(){try{if(document.documentElement.lang!=='en')return;var l=(navigator.languages||[navigator.language||'']).join(',').toLowerCase();if(!/(^|,)es/.test(l))return;if(sessionStorage.getItem('vs-es-hide'))return;var alt=document.querySelector('a.lang');if(!alt)return;var b=document.createElement('div');b.className='es-hint';b.innerHTML='<span>¿Prefieres español?</span> <a href="'+alt.getAttribute('href')+'">Ver en español</a> <button type="button" aria-label="Cerrar">×</button>';b.querySelector('button').onclick=function(){b.remove();try{sessionStorage.setItem('vs-es-hide','1')}catch(e){}};document.body.appendChild(b);}catch(e){}})();
