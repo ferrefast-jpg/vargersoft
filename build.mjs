@@ -202,7 +202,7 @@ function add(c, p) {
 const head = (c, eyebrow, h, text, tag = 'h1') => `<p class="eyebrow">${esc(eyebrow)}</p><${tag}>${esc(h)}</${tag}>${text ? `<p class="lead">${esc(text)}</p>` : ''}`;
 
 // ---------- Producto estrella: Recepcionista IA (intro de valor → demo → tu negocio → pago) ----------
-const STRIPE_RECEPCIONISTA = process.env.STRIPE_RECEPCIONISTA || (process.env.STAGING ? 'https://buy.stripe.com/test_4gMdRa4Kp2YU3va9IQ0gw00' : '');
+const STRIPE_RECEPCIONISTA = process.env.STRIPE_RECEPCIONISTA || (process.env.STAGING ? 'https://buy.stripe.com/test_4gMdRa4Kp2YU3va9IQ0gw00' : 'https://buy.stripe.com/aFa5kEb8N7fa5Di3ks0gw07');
 const TALK_URL = 'https://elevenlabs.io/app/talk-to?agent_id=agent_6501m7nyr3eyfgsaypksn87xnmad';
 function payBtn(c, cls = '') {
   const { t, L } = c;
@@ -494,8 +494,12 @@ function pageStart(c) {
   const f = (name, label, attrs = '', full = false) => `<label${full ? ' class="full"' : ''}>${esc(t(label))}<input name="${name}" ${attrs}></label>`;
   const ta = (name, label, ph) => `<label class="full">${esc(t(label))}<textarea name="${name}" rows="4" placeholder="${esc(t(ph))}"></textarea></label>`;
   const body = `<section class="sec page-head"><div class="wrap">${cr.html}${head(c, t(['Onboarding', 'Alta']), title, desc)}
-  ${flowDiagram(c, 3)}</div></section>
-<section class="sec"><div class="wrap narrow">
+  <div data-flow="pago">${flowDiagram(c, 1)}</div><div data-flow="alta" hidden>${flowDiagram(c, 3)}</div></div></section>
+<section class="sec" id="gate"><div class="wrap narrow">
+<div class="demo-band" style="flex-direction:column;align-items:flex-start;gap:1rem"><div style="display:flex;gap:1.2rem;align-items:center"><span class="band-ico">${icon('check', 'ico')}</span><div><h3>${esc(t(['Step 2: activate your plan', 'Paso 2: activa tu plan']))}</h3><p>${esc(t(['The setup form opens right after your secure Stripe payment: $1,950 setup + $349/month with 500 minutes. Not sure yet? Talk to Sofía first.', 'El formulario de alta se abre justo después de tu pago seguro con Stripe: $1,950 de instalación + $349 al mes con 500 minutos. ¿Aún no te decides? Habla primero con Sofía.']))}</p></div></div>
+<div class="hero-cta">${payBtn(c)}${talkBtn(c, 'ghost')}</div></div>
+</div></section>
+<section class="sec" id="altaSec" hidden><div class="wrap narrow">
 <div class="demo-band paid-ok" style="justify-content:flex-start;margin-bottom:1.4rem" id="pagoOk" hidden><span class="band-ico">${icon('check', 'ico')}</span><div style="flex:1"><h3>${esc(t(['Payment received. Thank you!', '¡Pago recibido, gracias!']))}</h3><p>${esc(t(['Last step: fill this form so we can build your receptionist. It takes 5 minutes.', 'Último paso: llena este formulario para armar tu recepcionista. Toma 5 minutos.']))}</p></div></div>
 <form class="form" id="alta" novalidate>
   <input type="hidden" name="servicio" value="ai-receptionist">
@@ -518,7 +522,7 @@ function pageStart(c) {
   <button class="btn" type="submit">${t(['Send and build my assistant', 'Enviar y armar mi asistente'])}</button>
   <p class="form-note" data-msg>${t(['Setup $1,950 · $349/month with 500 minutes · extra minute $0.35. You pay only after you approve her.', 'Instalación $1,950 · $349 al mes con 500 minutos · minuto extra $0.35. Pagas hasta que la apruebes.'])}</p>
 </form></div></section>
-<script>(function(){var f=document.getElementById('alta');var q=new URLSearchParams(location.search).get('service');if(q)f.servicio.value=q;f.addEventListener('submit',async function(e){e.preventDefault();var m=f.querySelector('[data-msg]'),b=f.querySelector('button');var d=Object.fromEntries(new FormData(f));if(!d.negocio||!d.contacto||!d.correo||!d.telefono){m.textContent=${JSON.stringify(t(['Please fill business, name, phone and email.', 'Llena negocio, nombre, teléfono y correo.']))};return;}b.disabled=true;m.textContent=${JSON.stringify(t(['Sending…', 'Enviando…']))};try{var r=await fetch('${ALTA_URL}',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});var j=await r.json();if(j.ok){f.innerHTML='<div class="full"><h2>'+${JSON.stringify(t(['Received!', '¡Recibido!']))}+'</h2><p>'+${JSON.stringify(t(['Your assistant is being built:', 'Tu asistente está en preparación:']))}+' <b>'+(j.asistente||'')+'</b> · '+(j.gafete||'')+'. '+${JSON.stringify(t(['Check your email for next steps.', 'Revisa tu correo para los siguientes pasos.']))}+'</p></div>';}else{m.textContent=j.error||'Error';b.disabled=false;}}catch(x){m.textContent='Error. sales@vargersoft.com';b.disabled=false;}});})();</script>`;
+<script>(function(){var f=document.getElementById('alta');var P=new URLSearchParams(location.search);var q=P.get('service');if(q)f.servicio.value=q;var ses=P.get('session')||'';var pagado=/^cs_(test|live)_/.test(ses);var gate=document.getElementById('gate'),sec=document.getElementById('altaSec');function modo(alta){sec.hidden=!alta;gate.hidden=alta;document.querySelector('[data-flow=alta]').hidden=!alta;document.querySelector('[data-flow=pago]').hidden=alta;}modo(pagado||q==='website-assistant');f.addEventListener('submit',async function(e){e.preventDefault();var m=f.querySelector('[data-msg]'),b=f.querySelector('button');var d=Object.fromEntries(new FormData(f));if(!d.negocio||!d.contacto||!d.correo||!d.telefono){m.textContent=${JSON.stringify(t(['Please fill business, name, phone and email.', 'Llena negocio, nombre, teléfono y correo.']))};return;}b.disabled=true;m.textContent=${JSON.stringify(t(['Sending…', 'Enviando…']))};try{var r=await fetch('${ALTA_URL}',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});var j=await r.json();if(j.ok){f.innerHTML='<div class="full"><h2>'+${JSON.stringify(t(['Received!', '¡Recibido!']))}+'</h2><p>'+${JSON.stringify(t(['Your assistant is being built:', 'Tu asistente está en preparación:']))}+' <b>'+(j.asistente||'')+'</b> · '+(j.gafete||'')+'. '+${JSON.stringify(t(['Check your email for next steps.', 'Revisa tu correo para los siguientes pasos.']))}+'</p></div>';}else{m.textContent=j.error||'Error';b.disabled=false;if(j.pago===false){modo(false);gate.scrollIntoView({behavior:'smooth'});}}}catch(x){m.textContent='Error. sales@vargersoft.com';b.disabled=false;}});})();</script>`;
   add(c, { path: '/ai/start/', title: title + ' | VARGERSOFT', desc, body, ld: [cr.ld] });
 }
 
