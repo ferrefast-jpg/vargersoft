@@ -9,6 +9,7 @@ import { icon, illus, appleLogo } from './src/icons.mjs';
 
 const STAGING = process.env.STAGING === '1'; // dirección de prueba: no indexar
 const OUT = STAGING ? 'dist-staging' : 'dist';
+const ASSET_V = '2026-11-19a'; // solo para refrescar CSS/JS; no toca sitemap ni schema
 const LANGS = ['en', 'es'];
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const money = n => '$' + n.toLocaleString('en-US');
@@ -156,7 +157,7 @@ ${STAGING ? '<meta name="robots" content="noindex, nofollow">\n' : ''}<title>${e
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/fonts/rajdhani-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/site.css?v=${site.updated}">
+<link rel="stylesheet" href="/css/site.css?v=${ASSET_V}">
 ${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join('\n')}
 </head>
 <body class="${p.cls || ''}">
@@ -166,11 +167,9 @@ ${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`
     <a class="brand" href="${L('/')}" aria-label="${site.name}"><img src="/img/logo-nav.webp" alt="${site.name}" width="111" height="48"></a>
     <nav class="nav" id="nav" aria-label="${t(['Main', 'Principal'])}">
       ${nav.map(n => `<a href="${L(n.href)}"${n.hot ? ' class="hot"' : ''}${p.path === n.href || (!n.hot && p.path.startsWith(n.href) && p.path !== '/ai/ai-receptionist/') ? ' aria-current="page"' : ''}>${t(n.label)}</a>`).join('')}
-      <a class="nav-work" href="${L('/work/')}"${p.path.startsWith('/work/') ? ' aria-current="page"' : ''}>${t(['Work', 'Trabajo'])}</a>
     </nav>
     <div class="top-act">
       <a class="lang" href="${alt}" hreflang="${lang === 'es' ? 'en' : 'es'}" aria-label="${lang === 'es' ? 'Switch to English' : 'Cambiar a español'}"><b${lang === 'en' ? ' class="on"' : ''}>EN</b><i>|</i><b${lang === 'es' ? ' class="on"' : ''}>ES</b></a>
-      <a class="btn sm quote" href="${L('/contact/')}">${t(ui.quote)}</a>
       <button class="burger" type="button" aria-controls="nav" aria-expanded="false" aria-label="${t(ui.menu)}">${icon('menu')}</button>
     </div>
   </div>
@@ -182,16 +181,17 @@ ${p.body}
   <div class="wrap foot-in">
     <div class="foot-brand"><img src="/img/logo-nav.webp" alt="${site.name}" width="148" height="64" loading="lazy"><p>${t(site.tagline)}</p><p class="muted">${site.legal}<br>${site.place}, USA</p></div>
     <div><h2>${t(['AI Agents', 'Agentes IA'])}</h2><ul>${services.map(s => `<li><a href="${L('/ai/' + s.slug + '/')}">${esc(t(s.name))}</a></li>`).join('')}</ul></div>
+    <div><h2>${t(['Industries', 'Industrias'])}</h2><ul>${industries.map(n => `<li><a href="${L('/industries/' + n.slug + '/')}">${esc(t(n.name))}</a></li>`).join('')}</ul></div>
     <div><h2>${t(['Company', 'Empresa'])}</h2><ul>
       <li><a href="${L('/work/')}">${t(['Our work', 'Nuestro trabajo'])}</a></li><li><a href="${L('/apps/')}">Apps</a></li><li><a href="${L('/downloads/')}">${t(['Downloads', 'Descargas'])}</a></li>
-      <li><a href="${L('/industries/')}">${t(['Industries', 'Industrias'])}</a></li><li><a href="${L('/resources/')}">${t(['Resources', 'Recursos'])}</a></li><li><a href="${L('/about/')}">${t(['About', 'Acerca de'])}</a></li><li><a href="${L('/faq/')}">${t(['FAQ', 'Preguntas'])}</a></li></ul></div>
+      <li><a href="${L('/resources/')}">${t(['Resources', 'Recursos'])}</a></li><li><a href="${L('/resources/what-is-an-ai-voice-receptionist/')}">${t(['What is an AI voice receptionist?', '¿Qué es una recepcionista de IA con voz?'])}</a></li><li><a href="${L('/about/')}">${t(['About', 'Acerca de'])}</a></li><li><a href="${L('/faq/')}">${t(['FAQ', 'Preguntas'])}</a></li></ul></div>
     <div><h2>${t(['Contact', 'Contacto'])}</h2><ul>
       <li><a href="mailto:${site.email}">${site.email}</a></li><li><a href="${L('/contact/')}">${t(['Contact form', 'Formulario de contacto'])}</a></li><li><a href="${L('/support/')}">${t(['Support', 'Soporte'])}</a></li>
       <li><a href="https://www.linkedin.com/company/varger-group" rel="noopener" target="_blank">LinkedIn</a></li><li><a href="${L('/privacy/')}">${t(['Privacy', 'Privacidad'])}</a></li><li><a href="${L('/terms/')}">${t(['Terms', 'Términos'])}</a></li></ul></div>
   </div>
   <div class="wrap foot-end"><p>${t(ui.footerLine)}</p><p>© 2026 ${site.legal}. ${t(ui.rights)}</p></div>
 </footer>
-<script src="/js/site.js?v=${site.updated}" defer></script>
+<script src="/js/site.js?v=${ASSET_V}" defer></script>
 <elevenlabs-convai agent-id="agent_6501m7nyr3eyfgsaypksn87xnmad"${lang === 'es' ? ' override-language="es"' : ''} variant="compact" action-text="${t(['Talk to Sofía', 'Habla con Sofía'])}" start-call-text="${t(['Start call', 'Iniciar llamada'])}" end-call-text="${t(['End', 'Colgar'])}" expand-text="${t(['Talk to Sofía', 'Habla con Sofía'])}" listening-text="${t(['Listening…', 'Escuchando…'])}" speaking-text="${t(['Sofía is speaking', 'Sofía está hablando'])}"></elevenlabs-convai>
 <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
@@ -215,8 +215,8 @@ function talkBtn(c, cls = 'ghost') {
   const { t } = c;
   return `<a class="btn ${cls}" href="${TALK_URL}" data-talk target="_blank" rel="noopener">${icon('phone', 'ico sm')} ${esc(t(['Talk to Sofía now', 'Habla con Sofía ahora']))}</a>`;
 }
-function spotlight(c, onHome) {
-  const { t, L } = c;
+function spotlight(c) {
+  const { t } = c;
   const slides = [
     ['phone', ['What it is', 'Qué es'], ['A receptionist with a natural voice that answers your business line 24/7, in English or Spanish, without asking.', 'Una recepcionista con voz natural que contesta tu línea 24/7, en inglés o español, sin preguntar.'], null],
     ['calendar', ['How it helps', 'Cómo te ayuda'], ['Answers prices, hours and services from your own info, takes name and phone, books, and emails you a summary of every call.', 'Responde precios, horarios y servicios con tu información, toma nombre y teléfono, agenda y te manda por correo el resumen de cada llamada.'], null],
@@ -225,14 +225,23 @@ function spotlight(c, onHome) {
   ];
   return `<section class="sec spot" id="recepcionista"><div class="wrap">
   <p class="eyebrow">${esc(t(['Featured product', 'Producto estrella']))}</p>
-  <${onHome ? 'h2' : 'h2'}>${esc(t(['AI Receptionist: never miss a call again', 'Recepcionista IA: no vuelvas a perder una llamada']))}</${onHome ? 'h2' : 'h2'}>
+  <h2>${esc(t(['AI Receptionist: never miss a call again', 'Recepcionista IA: no vuelvas a perder una llamada']))}</h2>
   <div class="grid g3 slides">${slides.map(([ic, h, p, list], k) => `<div class="card slide"><span class="status">${k + 1} / 3</span><div class="slide-art">${illus(ic === 'chart' ? 'spark' : ic, t(h))}</div><h3>${esc(t(h))}</h3><p>${esc(t(p))}</p>${list ? `<ul class="checks">${list.map(x => `<li>${esc(t(x))}</li>`).join('')}</ul>` : ''}</div>`).join('')}</div>
-  ${onHome ? `<h3 class="mt flow-title">${esc(t(['How it works: from demo to your live line', 'Cómo funciona: del demo a tu línea']))}</h3>${flowDiagram(c)}` : ''}
-  <div class="demo-band"><span class="band-ico">${icon('phone', 'ico')}</span><div class="band-txt"><h3>${esc(t(['Live demo: talk to Sofía', 'Demo en vivo: habla con Sofía']))}</h3><p>${esc(t(['She is the product. Ask her anything about VARGERSOFT in English or Spanish, then give her your name and number.', 'Ella es el producto. Pregúntale lo que quieras de VARGERSOFT en inglés o español y déjale tu nombre y teléfono.']))}</p></div>
-    <div class="hero-cta">${talkBtn(c, '')}</div></div>
-  <div class="demo-band real"><span class="band-ico">${icon('bot', 'ico')}</span><div class="band-txt"><h3>${esc(t(['Now with your business', 'Ahora con tu negocio']))}</h3><p>${esc(t(['Your own assistant with her name, badge and your industry playbook: setup $1,950 · $349/month with 500 minutes · extra minute $0.35.', 'Tu propia asistente con su nombre, gafete y la guía de tu giro: instalación $1,950 · $349 al mes con 500 minutos · minuto extra $0.35.']))}</p></div>
-    <div class="hero-cta">${payBtn(c)}${onHome ? `<a class="btn ghost" href="${L('/ai/ai-receptionist/')}">${esc(t(['See how it works', 'Ver cómo funciona']))}</a>` : ''}</div></div>
 </div></section>`;
+}
+// Enlace discreto al precio (no es botón: un solo botón principal por pantalla)
+function priceLink(c) {
+  return `<a class="more jump" href="#price">${esc(c.t(['See price', 'Ver precio']))} ${icon('arrow', 'ico sm')}</a>`;
+}
+// Portada: 3 pasos (Pruébala · Paga · Actívala)
+const TRES = [
+  ['try', 'chat', ['Try it', 'Pruébala'], ['Talk to Sofía for free, in English or Spanish.', 'Habla con Sofía gratis, en inglés o español.']],
+  ['pay', 'check', ['Pay', 'Paga'], ['Secure Stripe checkout. Receipt and setup link right away.', 'Pago seguro con Stripe. Recibo y enlace de alta al instante.']],
+  ['setup', 'plug', ['Activate it', 'Actívala'], ['Fill the 5-minute form and connect your line.', 'Llena el formulario de 5 minutos y conecta tu línea.']],
+];
+function threeSteps(c) {
+  const { t } = c;
+  return `<ol class="tres" aria-label="${esc(t(['How it works, in three steps', 'Cómo funciona, en tres pasos']))}">${TRES.map(([fase, ic, h, p], i) => `<li class="tres-step f-${fase}"><span class="tres-n">${i + 1}</span><span class="flow-ico">${icon(ic, 'ico')}</span><h3>${esc(t(h))}</h3><p>${esc(t(p))}</p></li>`).join(`<li class="flow-arrow" aria-hidden="true">${icon('next', 'ico')}</li>`)}</ol>`;
 }
 
 // ---------- Flujo completo: demo → pago → instalación (íconos + flechas) ----------
@@ -272,7 +281,7 @@ function installGuide(c) {
     ['B', ['Keep your number · recommended', 'Conserva tu número · recomendado'], ['You answer first; if you don\'t pick up in 4 rings, Sofía does. One code on your phone.', 'Tú contestas primero; si no levantas en 4 timbres, contesta ella. Un código en tu teléfono.']],
     ['C', ['She answers everything', 'Ella contesta todo'], ['Every call goes to her and she transfers to you when needed.', 'Todas las llamadas van a ella y te transfiere cuando hace falta.']],
   ];
-  return `<section class="sec alt"><div class="wrap"><p class="eyebrow">${esc(t(['Installation', 'Instalación']))}</p><h2>${esc(t(['From demo to live line in 7 steps', 'Del demo a tu línea en 7 pasos']))}</h2>
+  return `<section class="sec alt" id="how"><div class="wrap"><p class="eyebrow">${esc(t(['Installation', 'Instalación']))}</p><h2>${esc(t(['From demo to live line in 7 steps', 'Del demo a tu línea en 7 pasos']))}</h2>
   ${flowDiagram(c)}
   <h3 class="mt">${esc(t(['How it connects to your phone', 'Cómo se conecta a tu teléfono']))}</h3>
   <div class="grid g3">${opts.map(([k, h, p]) => `<div class="card opt"><span class="status">${t(['Option', 'Opción'])} ${k}</span><h3>${esc(t(h))}</h3><p>${esc(t(p))}</p></div>`).join('')}</div>
@@ -283,47 +292,39 @@ function installGuide(c) {
 // ---------- páginas ----------
 function pageHome(c) {
   const { t, L } = c;
-  const pick = ['scorlee-feliz', 'casealerta-screen-1', 'paternoster-amanecer', 'freshie-fresh', 'freshortoss-result', 'casealerta-paywall', 'scorlee-celebrando', 'paternoster-vitral', 'freshie-eat-soon', 'casealerta-screen-3', 'paternoster-oro', 'freshortoss-home'];
-  const all = work.flatMap(w => w.items.map(it => ({ it, kind: w.kind })));
-  const feat = pick.map(k => all.find(a => a.it.img === k)).filter(Boolean);
+  const rec = svc('ai-receptionist');
+  const lines = priceLines(rec, c);
   const body = `
 <section class="hero">
   <canvas class="fx" data-fx aria-hidden="true"></canvas>
   <div class="wrap hero-in">
     <img class="hero-logo" src="/img/logo.webp" alt="${site.name} — ${esc(t(site.tagline))}" width="692" height="300" fetchpriority="high">
     <p class="chip">${icon('pin', 'ico sm')} ${site.place}</p>
-    <h1><span>${esc(t(['Your AI receptionist.', 'Tu recepcionista con IA.']))}</span> <span class="g">${esc(t(['English and Spanish.', 'En inglés y español.']))}</span></h1>
+    <h1><span>${esc(t(['AI Voice Receptionist.', 'Recepcionista de IA con voz.']))}</span> <span class="g">${esc(t(['English and Spanish.', 'En inglés y español.']))}</span></h1>
     <p class="hero-sub">${esc(t(['She answers every call 24/7, books, quotes and emails you a summary. From $349/month. Talk to her right now.', 'Contesta cada llamada 24/7, agenda, cotiza y te manda un resumen por correo. Desde $349 al mes. Háblale ahora mismo.']))}</p>
-    <div class="hero-cta">${talkBtn(c, '')}${payBtn(c, 'ghost')}</div>
+    <div class="hero-cta">${talkBtn(c, '')}${priceLink(c)}</div>
     <ul class="feats">${[['clock', ['24/7, nights & weekends', '24/7, noches y fines']], ['globe', ['English · Español', 'Inglés · Español']], ['calendar', ['Books appointments', 'Agenda citas']], ['mail', ['Summary of every call', 'Resumen de cada llamada']], ['phone', ['Your number or a new one', 'Tu número o uno nuevo']]].map(([ic, l]) => `<li>${icon(ic, 'ico')}<span>${esc(t(l))}</span></li>`).join('')}</ul>
     <p class="strap">${esc(t(home.strap))}</p>
   </div>
 </section>
-${spotlight(c, true)}
-<section class="sec dock-sec"><div class="wrap"><p class="dock-title">${esc(t(home.dock))}</p>${dock(c)}</div></section>
-<section class="sec" id="what"><div class="wrap">${head(c, t(home.whatEyebrow), t(home.whatTitle), '', 'h2')}
-  <div class="grid g4">${home.what.map(w => `<a class="card what" href="${L(w.href)}"><span class="svc-ico">${icon(w.icon)}</span><h3>${esc(t(w.title))}</h3><p>${esc(t(w.text))}</p></a>`).join('')}</div></div></section>
-<section class="sec alt" id="agents"><div class="wrap">${head(c, t(home.agentsEyebrow), t(home.agentsTitle), t(home.agentsText), 'h2')}
-  <div class="grid g4">${services.map(s => serviceCard(s, c)).join('')}</div></div></section>
-<section class="sec" id="work"><div class="wrap">${head(c, t(home.workEyebrow), t(home.workTitle), t(home.workText), 'h2')}</div>
-  <div class="rail" tabindex="0" aria-label="${esc(t(home.workTitle))}">${feat.map(f => workItem(f.it, f.kind, c)).join('')}</div>
-  <div class="wrap center"><a class="btn ghost" href="${L('/work/')}">${esc(t(home.workCta))} ${icon('arrow', 'ico sm')}</a></div></section>
-<section class="sec alt" id="apps"><div class="wrap">${head(c, t(home.appsEyebrow), t(home.appsTitle), t(home.appsText), 'h2')}
-  <div class="grid g4 apps-grid">${apps.map(a => appCard(a, c)).join('')}</div></div></section>
-<section class="sec" id="why"><div class="wrap">${head(c, t(home.whyEyebrow), t(home.whyTitle), '', 'h2')}
-  <div class="grid g4">${home.why.map(w => `<div class="card flat"><span class="svc-ico">${icon(w.icon)}</span><h3>${esc(t(w.title))}</h3><p>${esc(t(w.text))}</p></div>`).join('')}</div></div></section>
-<section class="sec alt" id="track"><div class="wrap two"><div>${head(c, t(home.trackEyebrow), t(home.trackTitle), '', 'h2')}<p>${esc(t(home.trackText))}</p><a class="more" href="${L('/about/')}">${t(['About VARGERSOFT', 'Acerca de VARGERSOFT'])} ${icon('arrow', 'ico sm')}</a></div>
-  <div class="nums">${home.numbers.map(n => `<div class="num"><b data-count="${n.n}">${n.n}</b>${n.suffix ? `<i>${n.suffix}</i>` : ''}<span>${esc(t(n.label))}</span></div>`).join('')}</div></div></section>
-<section class="sec" id="process"><div class="wrap">${head(c, t(home.processEyebrow), t(home.processTitle), '', 'h2')}
-  <ol class="steps">${home.process.map((s, n) => `<li><span class="step-n">0${n + 1}</span><h3>${esc(t(s.title))}</h3><p>${esc(t(s.text))}</p></li>`).join('')}</ol></div></section>
-<section class="sec alt" id="industries"><div class="wrap">${head(c, t(home.indEyebrow), t(home.indTitle), '', 'h2')}
-  <div class="grid g3">${industries.map(n => `<a class="card ind" href="${L('/industries/' + n.slug + '/')}"><span class="svc-ico">${icon(n.icon)}</span><h3>${esc(t(n.name))}</h3><p>${esc(t(n.pain))}</p></a>`).join('')}</div></div></section>
-<section class="sec" id="guides"><div class="wrap">${head(c, t(home.guidesEyebrow), t(home.guidesTitle), '', 'h2')}
-  <div class="grid g4">${guides.slice(0, 4).map(g => guideCard(g, c)).join('')}</div><p class="center"><a class="more" href="${L('/resources/')}">${t(['All guides', 'Todas las guías'])} ${icon('arrow', 'ico sm')}</a></p></div></section>
-<section class="sec alt" id="faq"><div class="wrap narrow">${head(c, 'FAQ', t(home.faqTitle), '', 'h2')}${faqBlock(faq.slice(0, 6), c, 1)}<p class="center"><a class="more" href="${L('/faq/')}">${t(['All questions', 'Todas las preguntas'])} ${icon('arrow', 'ico sm')}</a></p></div></section>
-<section class="sec" id="contact"><div class="wrap two">
-  <div>${head(c, t(home.contactEyebrow), t(home.contactTitle), t(home.contactText), 'h2')}<p class="contact-line">${icon('mail', 'ico sm')} <a href="mailto:${site.email}">${site.email}</a></p><p class="contact-line">${icon('pin', 'ico sm')} ${site.place}</p></div>
-  ${contactForm(c)}</div></section>`;
+<section class="sec" id="how"><div class="wrap">
+  <div class="sec-head center">${head(c, t(['How it works', 'Cómo funciona']), t(['Three steps. No calls, no appointments.', 'Tres pasos. Sin llamadas ni citas.']), '', 'h2')}</div>
+  ${threeSteps(c)}
+  <p class="center after"><a class="more" href="${L('/ai/ai-receptionist/')}#how">${esc(t(['AI Voice Receptionist: all 7 steps', 'Recepcionista de IA con Voz: los 7 pasos']))} ${icon('arrow', 'ico sm')}</a></p>
+</div></section>
+<section class="sec alt" id="price"><div class="wrap two price-two">
+  <div>${head(c, t(ui.price), t(['One price. No contract.', 'Un precio. Sin contrato.']), t(['Your own receptionist, with her name and your business information.', 'Tu propia recepcionista, con su nombre y la información de tu negocio.']), 'h2')}
+    <ul class="checks">${[['500 minutes of calls every month', '500 minutos de llamadas cada mes'], ['Your number or a new one', 'Tu número o uno nuevo'], ['English and Spanish, 24/7', 'Inglés y español, 24/7'], ['A summary of every call by email', 'Resumen de cada llamada por correo']].map(x => `<li>${esc(t(x))}</li>`).join('')}</ul>
+    <a class="more" href="${L('/ai/ai-receptionist/')}">${esc(t(['AI Voice Receptionist: what is included', 'Recepcionista de IA con Voz: qué incluye']))} ${icon('arrow', 'ico sm')}</a></div>
+  <aside class="pricebox" aria-label="${t(ui.price)}">
+    ${lines.map(l => `<div class="pline"><span>${esc(l.label)}</span><b>${money(l.amount)}</b><small>${esc(l.unit)}</small></div>`).join('')}
+    <p class="pnote">${esc(t(rec.priceNote))}</p>
+    ${payBtn(c, 'full')}
+    <p class="pnote">${t(['Secure payment with Stripe.', 'Pago seguro con Stripe.'])} ${t(ui.cancel)}</p></aside>
+</div></section>
+<section class="sec dock-sec" id="apps"><div class="wrap"><p class="dock-title">${esc(t(home.dock))}</p>${dock(c)}
+  <p class="center after"><a class="more" href="${L('/apps/')}">${esc(t(ui.allApps))} ${icon('arrow', 'ico sm')}</a></p></div></section>
+<section class="sec" id="faq"><div class="wrap narrow"><div class="sec-head">${head(c, 'FAQ', t(home.faqTitle), '', 'h2')}</div>${faqBlock(faq.slice(0, 6), c, 0)}<p class="center after"><a class="more" href="${L('/faq/')}">${t(['All questions', 'Todas las preguntas'])} ${icon('arrow', 'ico sm')}</a></p></div></section>`;
   const ld = [
     { '@context': 'https://schema.org', '@type': 'WebSite', '@id': site.url + '/#site', url: site.url + '/', name: site.name, inLanguage: ['en', 'es'], publisher: { '@id': site.url + '/#org' } },
     { '@context': 'https://schema.org', '@type': 'ProfessionalService', '@id': site.url + '/#service', name: site.name, url: site.url + '/', image: site.url + '/img/og.jpg', email: site.email, priceRange: '$$',
@@ -363,14 +364,14 @@ function pageService(s, c) {
   const body = `<section class="sec page-head"><div class="wrap two top-align">
   <div>${cr.html}${head(c, t(home.agentsEyebrow), t(s.name), t(s.lead))}
     <p class="pills"><span>${icon('clock', 'ico sm')} ${t(ui.setupTime)}</span><span>${icon('globe', 'ico sm')} English / Español</span></p>
-    <div class="hero-cta">${s.slug === 'ai-receptionist' ? talkBtn(c, '') + payBtn(c, 'ghost') : `<a class="btn" href="${L(['ai-receptionist','website-assistant'].includes(s.slug) ? '/ai/start/' : '/contact/')}?service=${s.slug}">${esc(t(ui.start))}</a><a class="btn ghost" href="${L('/contact/')}">${esc(t(ui.book))}</a>`}</div></div>
+    <div class="hero-cta">${s.slug === 'ai-receptionist' ? talkBtn(c, '') + priceLink(c) : `<a class="btn" href="${L(['ai-receptionist','website-assistant'].includes(s.slug) ? '/ai/start/' : '/contact/')}?service=${s.slug}">${esc(t(ui.start))}</a><a class="btn ghost" href="${L('/contact/')}">${esc(t(ui.book))}</a>`}</div></div>
   <div class="illus-box">${illus(s.icon, t(s.name))}</div></div></section>
-${s.slug === 'ai-receptionist' ? spotlight(c, false) + installGuide(c) : ''}
+${s.slug === 'ai-receptionist' ? spotlight(c) + installGuide(c) : ''}
 <section class="sec"><div class="wrap two top-align">
   <div class="prose"><h2>${t(ui.problem)}</h2><p>${esc(t(s.problem))}</p>
     <h2>${t(ui.does)}</h2><ul class="checks">${s.does.map(d => `<li>${esc(t(d))}</li>`).join('')}</ul>
     <h2>${t(ui.includes)}</h2><ul class="checks">${s.includes.map(d => `<li>${esc(t(d))}</li>`).join('')}</ul></div>
-  <aside class="pricebox" aria-label="${t(ui.price)}"><h2>${t(ui.price)}</h2>
+  <aside class="pricebox" id="price" aria-label="${t(ui.price)}"><h2>${t(ui.price)}</h2>
     ${lines.map(l => `<div class="pline"><span>${esc(l.label)}</span><b>${money(l.amount)}</b><small>${esc(l.unit)}</small></div>`).join('')}
     ${s.priceNote ? `<p class="pnote">${esc(t(s.priceNote))}</p>` : ''}
     <p class="pnote">${t(ui.cancel)}</p>

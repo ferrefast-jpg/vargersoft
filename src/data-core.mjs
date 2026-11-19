@@ -11,12 +11,10 @@ export const site = {
 
 export const nav = [
   { href: '/ai/ai-receptionist/', label: ['AI Receptionist', 'Recepcionista IA'], hot: true },
-  { href: '/ai/', label: ['AI Agents', 'Agentes IA'] },
-  { href: '/apps/', label: ['Apps', 'Apps'] },
-  { href: '/downloads/', label: ['Downloads', 'Descargas'] },
+  { href: '/ai/', label: ['Agents', 'Agentes'] },
   { href: '/industries/', label: ['Industries', 'Industrias'] },
   { href: '/resources/', label: ['Resources', 'Recursos'] },
-  { href: '/faq/', label: ['FAQ', 'Preguntas'] },
+  { href: '/apps/', label: ['Apps', 'Apps'] },
 ];
 
 export const ui = {
