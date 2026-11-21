@@ -197,16 +197,20 @@ export const industries = [
   {
     slug: 'retail-hardware', icon: 'store',
     name: ['Retail and hardware stores', 'Tiendas y ferreterías'],
-    desc: ['AI agents and software for retail: answer stock and price questions, quote by message and keep inventory under control.', 'Agentes de IA y software para tiendas: responden existencias y precios, cotizan por mensaje y mantienen el inventario bajo control.'],
+    title: ['AI Voice Receptionist for Retail and Hardware Stores', 'Recepcionista de IA con Voz para Tiendas y Ferreterías'],
+    desc: ['AI voice receptionist for retail and hardware stores: answers every call 24/7, handles "do you have it?" and "how much?" questions with your approved information, takes orders and quote requests, in English and Spanish.', 'Recepcionista de IA con voz para tiendas y ferreterías: contesta cada llamada 24/7, resuelve el "¿lo tienes?" y "¿cuánto cuesta?" con tu información aprobada, toma pedidos y solicitudes de cotización, en inglés y español.'],
+    voice: ['The AI voice receptionist answers on the first ring so your staff can stay at the counter. It answers hours, location and general product questions with the information you approve, takes the caller\'s name and what they need, passes stock and price checks or special orders to your team with a summary, and transfers anything it cannot answer. Customers who speak Spanish get answered in Spanish.', 'La recepcionista de IA con voz contesta al primer timbre para que tu personal no deje el mostrador. Responde horario, ubicación y preguntas generales de productos con la información que tú apruebas, toma el nombre del cliente y lo que necesita, pasa a tu equipo con un resumen las consultas de existencias y precios o los pedidos especiales, y transfiere lo que no pueda resolver. A los clientes que hablan español se les contesta en español.'],
     pain: ['Half the calls ask the same two things: do you have it, and how much. Staff leave the counter to answer them.', 'La mitad de las llamadas preguntan lo mismo: ¿lo tienes? y ¿cuánto cuesta? El personal deja el mostrador para contestarlas.'],
     fits: ['website-assistant', 'ai-receptionist', 'quote-follow-up-agent', 'ai-ready-websites'],
   },
   {
     slug: 'distribution-wholesale', icon: 'boxes',
     name: ['Distribution and wholesale', 'Distribución y mayoreo'],
-    desc: ['AI agents and software for distributors: quote faster, follow up on every order and remind customers about open invoices.', 'Agentes de IA y software para distribuidores: cotizan más rápido, dan seguimiento a cada pedido y recuerdan facturas abiertas.'],
+    title: ['AI Voice Receptionist for Distributors and Wholesalers', 'Recepcionista de IA con Voz para Distribuidores y Mayoristas'],
+    desc: ['AI voice receptionist for distributors and wholesalers: answers every customer and supplier call 24/7, takes orders and quote requests, routes order-status and delivery calls, in English and Spanish.', 'Recepcionista de IA con voz para distribuidores y mayoristas: contesta cada llamada de clientes y proveedores 24/7, toma pedidos y solicitudes de cotización, y canaliza las llamadas de estatus de pedido y entregas, en inglés y español.'],
+    voice: ['The AI voice receptionist answers every call, including early-morning and after-hours orders. It sorts each call (new order, quote request, order status, delivery, supplier, billing), takes the account name and details, sends your sales or warehouse team a summary right away and transfers urgent calls to a person. Customers who speak Spanish get answered in Spanish.', 'La recepcionista de IA con voz contesta cada llamada, también los pedidos de madrugada y fuera de horario. Clasifica cada llamada (pedido nuevo, cotización, estatus de pedido, entrega, proveedor, cobranza), toma el nombre de la cuenta y los datos, le manda el resumen a tu equipo de ventas o almacén al momento y transfiere las urgentes a una persona. A los clientes que hablan español se les contesta en español.'],
     pain: ['Quotes wait in an inbox, and open invoices wait for someone to make an uncomfortable call.', 'Las cotizaciones esperan en una bandeja, y las facturas abiertas esperan a que alguien haga una llamada incómoda.'],
-    fits: ['quote-follow-up-agent', 'collections-agent', 'agent-ready-websites'],
+    fits: ['ai-receptionist', 'quote-follow-up-agent', 'collections-agent', 'agent-ready-websites'],
   },
 ];
 
