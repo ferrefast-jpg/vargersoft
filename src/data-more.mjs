@@ -212,6 +212,16 @@ export const industries = [
     pain: ['Quotes wait in an inbox, and open invoices wait for someone to make an uncomfortable call.', 'Las cotizaciones esperan en una bandeja, y las facturas abiertas esperan a que alguien haga una llamada incómoda.'],
     fits: ['ai-receptionist', 'quote-follow-up-agent', 'collections-agent', 'agent-ready-websites'],
   },
+  {
+    slug: 'trucking-transportation', icon: 'truck',
+    name: ['Trucking and transportation companies', 'Transporte y trucking'],
+    title: ['AI Voice Receptionist for Trucking and Transportation Companies', 'Recepcionista de IA con Voz para Empresas de Transporte y Trucking'],
+    desc: ['AI voice receptionist for trucking and transportation companies: answers shipper, broker, driver and applicant calls 24/7, takes load and quote requests, routes dispatch calls and books appointments, in English and Spanish.', 'Recepcionista de IA con voz para empresas de transporte y trucking: contesta llamadas de embarcadores, brokers, choferes y candidatos 24/7, toma solicitudes de carga y cotización, canaliza las llamadas a despacho y agenda citas, en inglés y español.'],
+    pain: ['Trucks roll day and night, but dispatch is one person on several phones. Shippers asking for a rate, brokers with a load and drivers looking for work all call while the line is busy.', 'Los camiones ruedan de día y de noche, pero despacho es una persona con varios teléfonos. Embarcadores que piden tarifa, brokers con una carga y choferes buscando trabajo llaman mientras la línea está ocupada.'],
+    voice: ['The AI voice receptionist answers every call, at any hour. It sorts each caller (shipper, broker, driver on the road, job applicant, billing), takes the load details for a quote (origin, destination, dates, equipment), passes load-status and dispatch calls to your team with a summary, and books interviews with driver applicants. Urgent calls follow your on-call list to a person. Drivers and customers who speak Spanish get answered in Spanish.', 'La recepcionista de IA con voz contesta cada llamada, a cualquier hora. Clasifica a quien llama (embarcador, broker, chofer en ruta, candidato, cobranza), toma los datos de la carga para cotizar (origen, destino, fechas, tipo de equipo), le pasa a tu equipo con un resumen las llamadas de estatus y despacho, y agenda entrevistas con choferes candidatos. Las llamadas urgentes siguen tu lista de guardia hasta una persona. A los choferes y clientes que hablan español se les contesta en español.'],
+    note: ['The agent answers and routes calls. It does not replace your dispatch, safety or compliance procedures; urgent and safety calls go straight to a person.', 'El agente atiende y canaliza llamadas. No sustituye tus procedimientos de despacho, seguridad o cumplimiento; las llamadas urgentes y de seguridad pasan directo a una persona.'],
+    fits: ['ai-receptionist', 'quote-follow-up-agent', 'appointment-agent', 'collections-agent'],
+  },
 ];
 
 export const templates = [
