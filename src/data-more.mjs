@@ -222,6 +222,16 @@ export const industries = [
     note: ['The agent answers and routes calls. It does not replace your dispatch, safety or compliance procedures; urgent and safety calls go straight to a person.', 'El agente atiende y canaliza llamadas. No sustituye tus procedimientos de despacho, seguridad o cumplimiento; las llamadas urgentes y de seguridad pasan directo a una persona.'],
     fits: ['ai-receptionist', 'quote-follow-up-agent', 'appointment-agent', 'collections-agent'],
   },
+  {
+    slug: 'real-estate', icon: 'pin',
+    name: ['Real estate agencies and brokerages', 'Inmobiliarias y agentes de bienes raíces'],
+    title: ['AI Voice Receptionist for Real Estate Agents and Brokerages', 'Recepcionista de IA con Voz para Inmobiliarias y Agentes de Bienes Raíces'],
+    desc: ['AI voice receptionist for real estate agents and brokerages: answers buyer, seller and renter calls 24/7, takes property inquiries from signs and listings, books showings and listing appointments, in English and Spanish.', 'Recepcionista de IA con voz para inmobiliarias y agentes de bienes raíces: contesta llamadas de compradores, vendedores e inquilinos 24/7, toma las consultas que llegan por letreros y anuncios, y agenda visitas y citas de captación, en inglés y español.'],
+    pain: ['Agents are at showings and closings all day. A buyer calls the number on a yard sign, nobody answers, and the next agent on the list gets the client.', 'Los agentes pasan el día en visitas y cierres. Un comprador llama al número del letrero, nadie contesta y el cliente se va con el siguiente agente de la lista.'],
+    voice: ['The AI voice receptionist answers every call, including evenings and weekends when most buyers call. It asks which property or listing the caller saw, whether they want to buy, sell or rent, their timeline and how to reach them; books showings and listing appointments on your calendar; and sends the agent a summary right away. It answers general questions with the listing information you approve and transfers hot leads to a person. Callers who speak Spanish get answered in Spanish.', 'La recepcionista de IA con voz contesta cada llamada, también en las tardes y los fines de semana, cuando llama la mayoría de los compradores. Pregunta qué propiedad o anuncio vio quien llama, si quiere comprar, vender o rentar, en qué plazo y cómo contactarlo; agenda visitas y citas de captación en tu calendario, y le manda el resumen al agente al momento. Responde preguntas generales con la información del anuncio que tú apruebas y transfiere a una persona los prospectos listos. A quienes hablan español se les contesta en español.'],
+    note: ['The agent answers calls, qualifies leads and books appointments. It does not give legal, tax or financing advice and does not negotiate prices.', 'El agente contesta llamadas, califica prospectos y agenda citas. No da asesoría legal, fiscal ni de financiamiento, y no negocia precios.'],
+    fits: ['ai-receptionist', 'appointment-agent', 'website-assistant', 'quote-follow-up-agent'],
+  },
 ];
 
 export const templates = [
