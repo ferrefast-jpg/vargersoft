@@ -232,6 +232,16 @@ export const industries = [
     note: ['The agent answers calls, qualifies leads and books appointments. It does not give legal, tax or financing advice and does not negotiate prices.', 'El agente contesta llamadas, califica prospectos y agenda citas. No da asesoría legal, fiscal ni de financiamiento, y no negocia precios.'],
     fits: ['ai-receptionist', 'appointment-agent', 'website-assistant', 'quote-follow-up-agent'],
   },
+  {
+    slug: 'salons-spas', icon: 'calendar',
+    name: ['Salons, barbershops and spas', 'Salones de belleza, barberías y spas'],
+    title: ['AI Voice Receptionist for Salons, Barbershops and Spas', 'Recepcionista de IA con Voz para Salones de Belleza, Barberías y Spas'],
+    desc: ['AI voice receptionist for salons, barbershops and spas: answers every call 24/7 while your team is with clients, books, confirms and reschedules appointments and answers service questions, in English and Spanish.', 'Recepcionista de IA con voz para salones de belleza, barberías y spas: contesta cada llamada 24/7 mientras tu equipo atiende clientes, agenda, confirma y reagenda citas y responde preguntas de servicios, en inglés y español.'],
+    pain: ['Stylists and therapists are with a client when the phone rings. Nobody wants to stop a haircut or a massage to answer, and the caller books somewhere else.', 'Estilistas y terapeutas están con un cliente cuando suena el teléfono. Nadie quiere parar un corte o un masaje para contestar, y quien llama agenda en otro lado.'],
+    voice: ['The AI voice receptionist answers on the first ring, including evenings and days off. It asks which service the caller wants and with whom, books the appointment on your calendar, confirms and reschedules existing ones, answers hours, location and general service questions with the information you approve, and sends the front desk a summary of every call. Callers who speak Spanish get answered in Spanish.', 'La recepcionista de IA con voz contesta al primer timbre, también en las tardes y en tus días de descanso. Pregunta qué servicio quiere quien llama y con quién, agenda la cita en tu calendario, confirma y reagenda las existentes, responde horario, ubicación y preguntas generales de servicios con la información que tú apruebas, y le manda a recepción un resumen de cada llamada. A quienes hablan español se les contesta en español.'],
+    note: ['The agent answers calls and manages appointments. It does not give medical or skin-care advice; those questions go to your staff.', 'El agente contesta llamadas y maneja citas. No da consejos médicos ni de cuidado de la piel; esas preguntas pasan a tu personal.'],
+    fits: ['ai-receptionist', 'appointment-agent', 'website-assistant'],
+  },
 ];
 
 export const templates = [
