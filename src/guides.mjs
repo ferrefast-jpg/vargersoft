@@ -92,6 +92,28 @@ export const guides = [
     related: ['ai-receptionist'],
   },
   {
+    slug: 'what-can-an-ai-receptionist-do', icon: 'phone',
+    title: ['What can an AI receptionist do for your business? 8 tasks it handles', '¿Qué hace una recepcionista IA por tu negocio? 8 tareas que resuelve'],
+    desc: ['The calls an AI voice receptionist handles on its own, the ones it passes to a person, and how to tell if your business is a fit. Works anywhere in the U.S., in English and Spanish.', 'Las llamadas que una recepcionista IA con voz resuelve sola, las que pasa a una persona y cómo saber si tu negocio califica. Funciona en todo EE.UU., en inglés y español.'],
+    answer: ['An AI receptionist answers every call with a natural voice, 24 hours a day. It answers common questions with your approved information, books and reschedules appointments on your calendar, takes messages, qualifies new customers, transfers urgent or complex calls to a person, and emails you a summary of each call. The VARGERSOFT AI Voice Receptionist does this in English and Spanish, for businesses in any state.', 'Una recepcionista IA contesta cada llamada con voz natural, las 24 horas. Responde las preguntas comunes con tu información aprobada, agenda y cambia citas en tu calendario, toma recados, filtra a los clientes nuevos, transfiere a una persona las llamadas urgentes o complicadas y te manda por correo un resumen de cada llamada. La Recepcionista de IA con Voz de VARGERSOFT hace esto en inglés y español, para negocios en cualquier estado.'],
+    sections: [
+      { h: ['8 tasks an AI receptionist handles', '8 tareas que resuelve una recepcionista IA'], list: [
+        ['Answers on the first ring, day, night, weekends and holidays.', 'Contesta al primer timbre, de día, de noche, fines de semana y días festivos.'],
+        ['Answers frequent questions: hours, services, service area and how to get started.', 'Responde las preguntas frecuentes: horario, servicios, zona de servicio y cómo empezar.'],
+        ['Books, confirms and reschedules appointments on your calendar.', 'Agenda, confirma y cambia citas en tu calendario.'],
+        ['Takes complete messages: name, phone, reason for the call and urgency.', 'Toma recados completos: nombre, teléfono, motivo de la llamada y urgencia.'],
+        ['Asks the questions you choose to qualify a new customer.', 'Hace las preguntas que tú eliges para filtrar a un cliente nuevo.'],
+        ['Transfers urgent or sensitive calls to the right person.', 'Transfiere a la persona correcta las llamadas urgentes o delicadas.'],
+        ['Detects the caller\'s language and answers in English or Spanish.', 'Detecta el idioma de quien llama y contesta en inglés o en español.'],
+        ['Emails you a summary of every call so nothing gets lost.', 'Te manda por correo el resumen de cada llamada para que nada se pierda.'],
+      ] },
+      { h: ['What it should not do', '¿Qué no debe hacer?'], p: [['A good AI receptionist only says what you approved. It does not invent prices, give legal, medical or financial advice, or negotiate. When a call goes beyond its script, it takes the message or transfers to a person.', 'Una buena recepcionista IA solo dice lo que tú aprobaste. No inventa precios, no da consejos legales, médicos ni financieros, y no negocia. Cuando una llamada sale de su guion, toma el recado o transfiere a una persona.']] },
+      { h: ['Is your business a fit?', '¿Tu negocio califica?'], p: [['It fits when you miss calls while you work, when most calls are routine, or when you get calls in Spanish and English. Contractors, repair shops, clinics, law firms, salons and real estate offices are common examples. It works the same in every state because it lives on your phone line.', 'Califica cuando pierdes llamadas mientras trabajas, cuando la mayoría de las llamadas son de rutina o cuando recibes llamadas en español y en inglés. Contratistas, talleres, clínicas, despachos de abogados, salones e inmobiliarias son ejemplos comunes. Funciona igual en todos los estados porque vive en tu línea telefónica.']] },
+      { h: ['AI receptionist, voicemail or phone menu?', '¿Recepcionista IA, buzón de voz o menú telefónico?'], p: [['Voicemail and phone menus wait for the caller to do the work. An AI receptionist holds a conversation, solves the routine request on the spot and hands you the rest already organized.', 'El buzón de voz y el menú telefónico esperan a que el cliente haga el trabajo. Una recepcionista IA sostiene una conversación, resuelve en ese momento la petición de rutina y te entrega el resto ya organizado.']] },
+    ],
+    related: ['ai-receptionist', 'appointment-agent'],
+  },
+  {
     slug: 'answer-business-calls-in-english-and-spanish', icon: 'globe',
     title: ['How to answer business calls in English and Spanish without hiring', '¿Cómo contestar llamadas de negocio en inglés y español sin contratar?'],
     desc: ['Four ways a small business can answer callers in English and Spanish, from a phone menu to an AI receptionist that detects the language on its own.', 'Cuatro formas en que un negocio pequeño puede atender llamadas en inglés y español, desde un menú telefónico hasta una recepcionista con IA que detecta el idioma sola.'],
